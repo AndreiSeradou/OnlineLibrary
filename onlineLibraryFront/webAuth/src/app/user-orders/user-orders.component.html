@@ -1,0 +1,27 @@
+<div class="container" >
+    <div class="row justify-content-center">
+      <div class="col-10">
+        <div class="card">
+  
+          <table class="table">
+            <thead>
+              <tr>
+  
+                <th scope="col">Id</th>
+                <th scope="col">Condition</th>
+                <th scope="col">Book Id</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let order of orderList">
+                <td>{{order.id}}</td>
+                <td>{{order.condition}}</td>
+                <td>{{order.book.id}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+  
+      </div>
+    </div>
+  </div>

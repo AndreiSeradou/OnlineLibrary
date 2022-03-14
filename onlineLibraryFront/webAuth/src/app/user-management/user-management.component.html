@@ -1,0 +1,29 @@
+<div class="container" >
+    <div class="row justify-content-center">
+      <div class="col-10">
+        <div class="card">
+  
+          <table class="table">
+            <thead>
+              <tr>
+  
+                <th scope="col">Id</th>
+                <th scope="col">Count</th>
+                <th scope="col">Name</th>
+                <th scope="col">Text</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let book of bookList">
+                <td>{{book.id}}</td>
+                <td>{{book.count}}</td>
+                <td>{{book.name}}</td>
+                <td>{{book.text}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+  
+      </div>
+    </div>
+  </div>
