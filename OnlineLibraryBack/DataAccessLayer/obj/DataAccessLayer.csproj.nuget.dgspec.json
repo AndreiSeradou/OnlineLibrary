@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\OnlineLibrary\\OnlineLibrary\\OnlineLibraryBack\\DataAccessLayer\\DataAccessLayer.csproj": {}
+    "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\ct\\OnlineLibrary\\OnlineLibraryBack\\DataAccessLayer\\DataAccessLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\OnlineLibrary\\OnlineLibrary\\OnlineLibraryBack\\DataAccessLayer\\DataAccessLayer.csproj": {
+    "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\ct\\OnlineLibrary\\OnlineLibraryBack\\DataAccessLayer\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\OnlineLibrary\\OnlineLibrary\\OnlineLibraryBack\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\ct\\OnlineLibrary\\OnlineLibraryBack\\DataAccessLayer\\DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\OnlineLibrary\\OnlineLibrary\\OnlineLibraryBack\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectPath": "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\ct\\OnlineLibrary\\OnlineLibraryBack\\DataAccessLayer\\DataAccessLayer.csproj",
         "packagesPath": "C:\\Users\\goldm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\OnlineLibrary\\OnlineLibrary\\OnlineLibraryBack\\DataAccessLayer\\obj\\",
+        "outputPath": "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\ct\\OnlineLibrary\\OnlineLibraryBack\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\goldm\\AppData\\Roaming\\NuGet\\NuGet.Config",

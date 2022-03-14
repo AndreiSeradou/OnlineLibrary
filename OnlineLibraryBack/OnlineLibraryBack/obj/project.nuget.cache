@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RkVz7XJ5Z0uPhPtHP03KMgJCeldSytrr8HBvwEn6FUKkZc7DECtm/Aq45bdtngkb6+FSFL7b6q/4KPw/GDxQSg==",
+  "dgSpecHash": "DgW3oRrHuXclhiNt9FKUvbvtvL0ZbHdIn6/955s93IkuLHNw9Mw3P6MGngmZjDKc5WySPSE+ii5d582mq6YwiA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\OnlineLibrary\\OnlineLibrary\\OnlineLibraryBack\\OnlineLibraryBack\\OnlineLibraryPresentationLayer.csproj",
+  "projectFilePath": "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\ct\\OnlineLibrary\\OnlineLibraryBack\\OnlineLibraryBack\\OnlineLibraryPresentationLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\goldm\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\goldm\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

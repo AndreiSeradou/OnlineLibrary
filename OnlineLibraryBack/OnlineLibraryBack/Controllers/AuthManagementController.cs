@@ -40,14 +40,14 @@ namespace OnlineLibraryBack.Controllers
             if (ModelState.IsValid)
             {
                 // We can utilise the model
-                var existingUser = await _userManager.FindByEmailAsync(user.Email).ConfigureAwait(false);
+                var existingUser = await _userManager.FindByNameAsync(user.Username).ConfigureAwait(false);
                
 
                 if (existingUser != null)
                 {
                     return BadRequest(new AuthResult(){
                             Errors = new List<string>() {
-                                "Email already in use"
+                                "Name already in use"
                             },
                             Success = false
                     });

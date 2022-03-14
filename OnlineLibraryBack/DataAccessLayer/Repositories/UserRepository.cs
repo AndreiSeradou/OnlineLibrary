@@ -39,10 +39,7 @@ namespace DataAccessLayer.Repositories
 
         public async Task<IdentityResult> UpdateAsync(User model, CancellationToken ct = default)
         {
-            //return await _userManager.UpdateAsync(model).ConfigureAwait(false);
-            var entityEntry = _apiDbContext.Users.Update(model);
-            await _apiDbContext.SaveChangesAsync(ct).ConfigureAwait(false);
-            return new IdentityResult();
+            return await _userManager.UpdateAsync(model).ConfigureAwait(false);
         }
     }
 }

@@ -2,7 +2,7 @@
 using BusinessLayer.Models.DTOs.Responses;
 using DataAccessLayer.Entities;
 
-namespace BusinessLayer.Models
+namespace BusinessLayer.Mapping
 {
     public class MappingConfiguration : Profile
     {

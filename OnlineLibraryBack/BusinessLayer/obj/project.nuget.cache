@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dzhWKCbV3VKeNXgvbwWKUNG6lh1vgCeCrmd383Aqe0g6/MFlI6N7fh9ZGEIWVKh8Sm7oW6ippaiE36PCygWdSw==",
+  "dgSpecHash": "o71Nvb/W86i0ULsBG/+GGalASi12T/53AmxJDCHKZbOfO513t/qjgTyzarbTg/R2xO09D7qe5UuZ97FGi0zEbQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\OnlineLibrary\\OnlineLibrary\\OnlineLibraryBack\\BusinessLayer\\BusinessLayer.csproj",
+  "projectFilePath": "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\ct\\OnlineLibrary\\OnlineLibraryBack\\BusinessLayer\\BusinessLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\goldm\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\goldm\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

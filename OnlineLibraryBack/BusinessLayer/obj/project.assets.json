@@ -5991,11 +5991,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\OnlineLibrary\\OnlineLibrary\\OnlineLibraryBack\\BusinessLayer\\BusinessLayer.csproj",
+      "projectUniqueName": "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\ct\\OnlineLibrary\\OnlineLibraryBack\\BusinessLayer\\BusinessLayer.csproj",
       "projectName": "BusinessLayer",
-      "projectPath": "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\OnlineLibrary\\OnlineLibrary\\OnlineLibraryBack\\BusinessLayer\\BusinessLayer.csproj",
+      "projectPath": "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\ct\\OnlineLibrary\\OnlineLibraryBack\\BusinessLayer\\BusinessLayer.csproj",
       "packagesPath": "C:\\Users\\goldm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\OnlineLibrary\\OnlineLibrary\\OnlineLibraryBack\\BusinessLayer\\obj\\",
+      "outputPath": "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\ct\\OnlineLibrary\\OnlineLibraryBack\\BusinessLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\goldm\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6012,8 +6012,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\OnlineLibrary\\OnlineLibrary\\OnlineLibraryBack\\DataAccessLayer\\DataAccessLayer.csproj": {
-              "projectPath": "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\OnlineLibrary\\OnlineLibrary\\OnlineLibraryBack\\DataAccessLayer\\DataAccessLayer.csproj"
+            "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\ct\\OnlineLibrary\\OnlineLibraryBack\\DataAccessLayer\\DataAccessLayer.csproj": {
+              "projectPath": "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\ct\\OnlineLibrary\\OnlineLibraryBack\\DataAccessLayer\\DataAccessLayer.csproj"
             }
           }
         }

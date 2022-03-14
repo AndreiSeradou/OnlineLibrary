@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KsdB3d6zcFHnfYMXThKRg+6BeZvK1EKG30I2LVC7xt5Mbm+k3z7+XeKNeyULaBlEjpBKMaQ2K2hn75dEMj/c3Q==",
+  "dgSpecHash": "Gz4+ADYN2qh0Ivr2AmzmxFMX8W705D03OTlu8BzOvT2jQ2D1fmTrnF3bHpH3Hdp5HN0jXoTek/3axosdehl3Ug==",
   "success": true,
-  "projectFilePath": "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\OnlineLibrary\\OnlineLibrary\\OnlineLibraryBack\\DataAccessLayer\\DataAccessLayer.csproj",
+  "projectFilePath": "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\ct\\OnlineLibrary\\OnlineLibraryBack\\DataAccessLayer\\DataAccessLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\goldm\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.14\\microsoft.aspnetcore.cryptography.internal.5.0.14.nupkg.sha512",
     "C:\\Users\\goldm\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.14\\microsoft.aspnetcore.cryptography.keyderivation.5.0.14.nupkg.sha512",
