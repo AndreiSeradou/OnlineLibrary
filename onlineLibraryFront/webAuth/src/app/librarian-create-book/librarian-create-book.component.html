@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <div class="card">
+                <form [formGroup]="createBookForm" (ngSubmit)="onSubmit()">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Create Book</h5>
+                    <div class="mb-3 row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Name</label>
+                        <div class="col-sm-10">
+                          <input type="text" formControlName="name" class="form-control" id="number" value="">
+                        </div>
+                      </div>
+                      <div class="mb-3 row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Text</label>
+                        <div class="col-sm-10">
+                          <input type="text" formControlName="text" class="form-control" id="number" value="">
+                        </div>
+                      </div>
+                      <div class="mb-3 row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Count</label>
+                        <div class="col-sm-10">
+                          <input type="text" formControlName="count" class="form-control" id="number" value="">
+                        </div>
+                      </div>
+                </div>
+                <button type="submit" class="btn btn-primary" [disabled]="!createBookForm.valid">Create</button>
+                </form>
+              </div>
+        </div>
+    </div>
+</div>
+

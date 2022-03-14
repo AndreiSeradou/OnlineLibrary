@@ -3,16 +3,16 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" *ngIf="!isUserLogin" routerLink="/register">Register</a>
+            <a class="nav-link active" aria-current="page" *ngIf="!isUserLogin && !isLibrarianLogin"  routerLink="/register">Register</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" *ngIf="!isUserLogin" routerLink="/login">Login</a>
+            <a class="nav-link active" aria-current="page" *ngIf="!isUserLogin && !isLibrarianLogin" routerLink="/login">Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="/login" *ngIf="isUserLogin" (click)="onLogout()">Logout</a>
+            <a class="nav-link active" aria-current="page" routerLink="/login" *ngIf="isUserLogin || isLibrarianLogin" (click)="onLogout()">Logout</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" *ngIf="isUserLogin" routerLink="/user-management">Cheack All Books</a>
+            <a class="nav-link active" aria-current="page" *ngIf="isUserLogin" routerLink="/user-get-all-books">Cheack All Books</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" *ngIf="isUserLogin" routerLink="/user-books">User Books</a>
@@ -22,6 +22,15 @@
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" *ngIf="isUserLogin" routerLink="/user-create-order">Create Order</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" *ngIf="isLibrarianLogin" routerLink="/librarian-get-all-orders">Get All Orders</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" *ngIf="isLibrarianLogin" routerLink="/librarian-update-order">Update Order</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" *ngIf="isLibrarianLogin" routerLink="/librarian-create-book">Create Book</a>
           </li>
         </ul>
       </div>

@@ -13,11 +13,21 @@ export class AppComponent {
   onLogout()
   {
     localStorage.removeItem(Constants.USER_KEY);
+    localStorage.removeItem("role");
+    localStorage.removeItem("name");
   }
 
  get isUserLogin()
   {
     const user = localStorage.getItem(Constants.USER_KEY);
-    return user && user.length>0;
+    const role = localStorage.getItem("role");
+    return user && user.length>0 && role == "AppUser";
+  }
+
+  get isLibrarianLogin()
+  {
+    const user = localStorage.getItem(Constants.USER_KEY);
+    const role = localStorage.getItem("role");
+    return user && user.length>0 && role == "AppLibrarian";
   }
 }

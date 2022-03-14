@@ -4,12 +4,14 @@ using DataAccessLayer.Entities;
 using BusinessLayer.Interfaces.Services;
 using System.Linq;
 using BusinessLayer.Models.DTOs.Requests;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace OnlineLibraryBack.Controllers
 {
     [Route("api/[controller]")] // api/todo
     [ApiController]
-    //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "AppLibrarian")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "AppLibrarian")]
     public class LibrarianController : ControllerBase
     {
         private readonly ILibrarianService  _librarianService;
@@ -21,7 +23,7 @@ namespace OnlineLibraryBack.Controllers
 
         [HttpPost]
         [Route("CreateBook")]
-        public async Task<IActionResult> CreateBook(BookRequest model)
+        public async Task<IActionResult> CreateBook([FromBody] BookRequest model)
         {
             if (ModelState.IsValid)
             {
@@ -37,11 +39,11 @@ namespace OnlineLibraryBack.Controllers
 
         [HttpPut]
         [Route("UpdateOrderAsync")]
-        public async Task<IActionResult> UpdateOrderAsync(int id)
+        public async Task<IActionResult> UpdateOrderAsync([FromBody] UpdateOrderRequest model)
         {
             if (ModelState.IsValid)
             {
-                var order = await _librarianService.UpdateOrderAsync(id).ConfigureAwait(false);
+                var order = await _librarianService.UpdateOrderAsync(model.Id).ConfigureAwait(false);
 
                 if (order == null)
                     return NotFound();

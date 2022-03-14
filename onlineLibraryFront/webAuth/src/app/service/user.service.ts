@@ -81,4 +81,47 @@ export class UserService {
 
     return this.httpClient.post<boolean>(this.baseURL+"User/CreateOrderAsync/",body,{headers:headers});
   }
+
+  public createBook(name:string, text:string, count:number)
+  {
+    let token = localStorage.getItem("token");
+    const headers=new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    });
+    
+    const body={
+      name:name,
+      text:text,
+      count:count
+    }
+
+    return this.httpClient.post<boolean>(this.baseURL+"Librarian/CreateBook/",body,{headers:headers});
+  }
+
+  public getAllOrders()
+  {
+    let token = localStorage.getItem("token");
+
+    const headers=new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    });
+    return  this.httpClient.get<responceOrderModel[]>(this.baseURL+"Librarian/GetAllOrdersAsync",{headers:headers});
+  }
+
+  public updateOrder(id:number)
+  {
+    let token = localStorage.getItem("token");
+    const headers=new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    });
+    
+    const body={
+      id:id
+    }
+
+    return this.httpClient.put<boolean>(this.baseURL+"Librarian/UpdateOrderAsync/", body,{headers:headers});
+  }
 }
