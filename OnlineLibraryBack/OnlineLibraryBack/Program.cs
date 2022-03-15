@@ -20,7 +20,7 @@ namespace OnlineLibraryBack
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseUrls("http://*:8090");
+                    webBuilder.UseUrls("http://localhost:8090");
                     webBuilder.UseStartup<Startup>();
                 });
     }
