@@ -39,6 +39,7 @@ namespace OnlineLibraryBack.Controllers
         {
             if (ModelState.IsValid)
             {
+                //var res = await _roleManager.CreateAsync(new IdentityRole("AppLibrarian"));
                 // We can utilise the model
                 var existingUser = await _userManager.FindByNameAsync(user.Username).ConfigureAwait(false);
                
@@ -57,6 +58,7 @@ namespace OnlineLibraryBack.Controllers
                 var isCreated = await _userManager.CreateAsync(newUser, user.Password).ConfigureAwait(false);
                 if(isCreated.Succeeded)
                 {
+                    
                     // We need to add the user to a role
 
                     await _userManager.AddToRoleAsync(newUser, "AppUser").ConfigureAwait(false);
@@ -68,7 +70,9 @@ namespace OnlineLibraryBack.Controllers
                 } else {
                     return BadRequest(new AuthResult(){
                             Errors = isCreated.Errors.Select(x => x.Description).ToList(),
-                            Success = false
+                            Success = false,
+                            Name = "nono"
+
                     });
                 }
             }

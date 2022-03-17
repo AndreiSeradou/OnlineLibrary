@@ -28,10 +28,12 @@ namespace BusinessLayer.Services
             var user = await _userRepository.GetByNameIncludeOrdersAsync(userName, ct).ConfigureAwait(false);
             var book = await _bookRepository.GetByIdAsync(BookId, ct).ConfigureAwait(false);
 
-            if (user is null || book is null)
+            if (user is null || book is null || book.Count <= 0)
             {
                 return false;
             }
+
+            book.Count--;
 
             user.Orders.Add(new Order { Condition = false, Book = book });
 

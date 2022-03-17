@@ -558,6 +558,29 @@
           }
         }
       },
+      "MySqlConnector/1.3.13": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/MySqlConnector.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/MySqlConnector.dll": {}
+        }
+      },
+      "Pomelo.EntityFrameworkCore.MySql/5.0.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "[5.0.10, 6.0.0)",
+          "Microsoft.Extensions.DependencyInjection": "5.0.2",
+          "MySqlConnector": "1.3.13"
+        },
+        "compile": {
+          "lib/netstandard2.1/Pomelo.EntityFrameworkCore.MySql.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Pomelo.EntityFrameworkCore.MySql.dll": {}
+        }
+      },
       "runtime.native.System/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1614,7 +1637,8 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.14",
-          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.14"
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.14",
+          "Pomelo.EntityFrameworkCore.MySql": "5.0.4"
         },
         "compile": {
           "bin/placeholder/DataAccessLayer.dll": {}
@@ -2510,6 +2534,51 @@
         "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.xml",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "MySqlConnector/1.3.13": {
+      "sha512": "o1qsijkFGvTslpuQdcJwG6IvdNOiVL7fRqvFZ0LTg04kfz+IzzwSWj4YwgTe0q0C3p0WqgaDXui5OEx6qgwebg==",
+      "type": "package",
+      "path": "mysqlconnector/1.3.13",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net45/MySqlConnector.dll",
+        "lib/net45/MySqlConnector.xml",
+        "lib/net461/MySqlConnector.dll",
+        "lib/net461/MySqlConnector.xml",
+        "lib/net471/MySqlConnector.dll",
+        "lib/net471/MySqlConnector.xml",
+        "lib/net5.0/MySqlConnector.dll",
+        "lib/net5.0/MySqlConnector.xml",
+        "lib/netcoreapp2.1/MySqlConnector.dll",
+        "lib/netcoreapp2.1/MySqlConnector.xml",
+        "lib/netcoreapp3.1/MySqlConnector.dll",
+        "lib/netcoreapp3.1/MySqlConnector.xml",
+        "lib/netstandard1.3/MySqlConnector.dll",
+        "lib/netstandard1.3/MySqlConnector.xml",
+        "lib/netstandard2.0/MySqlConnector.dll",
+        "lib/netstandard2.0/MySqlConnector.xml",
+        "lib/netstandard2.1/MySqlConnector.dll",
+        "lib/netstandard2.1/MySqlConnector.xml",
+        "logo.png",
+        "mysqlconnector.1.3.13.nupkg.sha512",
+        "mysqlconnector.nuspec"
+      ]
+    },
+    "Pomelo.EntityFrameworkCore.MySql/5.0.4": {
+      "sha512": "R5LDFDaCO/Si09tEWbgQoYwLsCYPG3Qm6Q7zICFDF8zZ7gr64fgyBLBtOxhGtJBmbpImFVI6GfcYf2JAROGaZA==",
+      "type": "package",
+      "path": "pomelo.entityframeworkcore.mysql/5.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/netstandard2.1/Pomelo.EntityFrameworkCore.MySql.dll",
+        "lib/netstandard2.1/Pomelo.EntityFrameworkCore.MySql.xml",
+        "pomelo.entityframeworkcore.mysql.5.0.4.nupkg.sha512",
+        "pomelo.entityframeworkcore.mysql.nuspec"
       ]
     },
     "runtime.native.System/4.3.0": {
@@ -5858,37 +5927,35 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\goldm\\.nuget\\packages\\": {}
+    "/Users/kamron/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\ct\\OnlineLibrary\\OnlineLibraryBack\\OnlineLibraryBack\\OnlineLibraryPresentationLayer.csproj",
+      "projectUniqueName": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/OnlineLibraryBack/OnlineLibraryPresentationLayer.csproj",
       "projectName": "OnlineLibraryPresentationLayer",
-      "projectPath": "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\ct\\OnlineLibrary\\OnlineLibraryBack\\OnlineLibraryBack\\OnlineLibraryPresentationLayer.csproj",
-      "packagesPath": "C:\\Users\\goldm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\ct\\OnlineLibrary\\OnlineLibraryBack\\OnlineLibraryBack\\obj\\",
+      "projectPath": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/OnlineLibraryBack/OnlineLibraryPresentationLayer.csproj",
+      "packagesPath": "/Users/kamron/.nuget/packages/",
+      "outputPath": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/OnlineLibraryBack/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\goldm\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/kamron/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\ct\\OnlineLibrary\\OnlineLibraryBack\\BusinessLayer\\BusinessLayer.csproj": {
-              "projectPath": "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\ct\\OnlineLibrary\\OnlineLibraryBack\\BusinessLayer\\BusinessLayer.csproj"
+            "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/BusinessLayer.csproj": {
+              "projectPath": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/BusinessLayer.csproj"
             },
-            "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\ct\\OnlineLibrary\\OnlineLibraryBack\\DataAccessLayer\\DataAccessLayer.csproj": {
-              "projectPath": "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\ct\\OnlineLibrary\\OnlineLibraryBack\\DataAccessLayer\\DataAccessLayer.csproj"
+            "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/DataAccessLayer.csproj": {
+              "projectPath": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/DataAccessLayer.csproj"
             }
           }
         }
@@ -5948,7 +6015,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.201/RuntimeIdentifierGraph.json"
       }
     }
   }

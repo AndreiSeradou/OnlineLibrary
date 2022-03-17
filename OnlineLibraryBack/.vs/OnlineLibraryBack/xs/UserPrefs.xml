@@ -1,0 +1,56 @@
+﻿<Properties StartupConfiguration="{E5A4BDFE-FC49-43B1-82F8-D2C5ADFD6685}|TodoApp">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BusinessLayer/Models/DTOs/Responses/BookResponse.cs">
+    <Files>
+      <File FileName="OnlineLibraryBack/Startup.cs" Line="111" Column="30" />
+      <File FileName="DataAccessLayer/Data/ApiDbContext.cs" />
+      <File FileName="DataAccessLayer/Configuration/DependenciesConfiguration.cs" />
+      <File FileName="OnlineLibraryBack/appsettings.json" />
+      <File FileName="DataAccessLayer/DataAccessLayer.csproj" />
+      <File FileName="OnlineLibraryBack/Controllers/UserController.cs" Line="24" Column="10" />
+      <File FileName="OnlineLibraryBack/Controllers/AuthManagementController.cs" Line="64" Column="72" />
+      <File FileName="OnlineLibraryBack/Controllers/SetupController.cs" />
+      <File FileName="OnlineLibraryBack/Program.cs" />
+      <File FileName="OnlineLibraryBack/OnlineLibraryPresentationLayer.csproj" />
+      <File FileName="BusinessLayer/Models/DTOs/Responses/AuthResult.cs" />
+      <File FileName="OnlineLibraryBack/Controllers/LibrarianController.cs" />
+      <File FileName="BusinessLayer/Models/DTOs/Responses/BookResponse.cs" Line="11" Column="1" />
+      <File FileName="BusinessLayer/Mapping/MappingConfiguration.cs" Line="16" Column="1" />
+      <File FileName="DataAccessLayer/Entities/Book.cs" Line="11" Column="39" />
+      <File FileName="BusinessLayer/Services/UserService.cs" Line="36" Column="26" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="OnlineLibraryBack" expanded="True">
+            <Node name="BusinessLayer" expanded="True">
+              <Node name="Models" expanded="True">
+                <Node name="DTOs" expanded="True">
+                  <Node name="Responses" expanded="True">
+                    <Node name="BookResponse.cs" selected="True" />
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="Services" expanded="True" />
+            </Node>
+            <Node name="DataAccessLayer" expanded="True">
+              <Node name="Entities" expanded="True" />
+            </Node>
+            <Node name="OnlineLibraryPresentationLayer" expanded="True">
+              <Node name="Controllers" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.OnlineLibraryPresentationLayer PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

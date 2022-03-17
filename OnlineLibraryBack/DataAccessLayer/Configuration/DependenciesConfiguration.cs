@@ -1,4 +1,5 @@
-﻿using DataAccessLayer.Data;
+﻿using System;
+using DataAccessLayer.Data;
 using DataAccessLayer.Interfaces.Repositories;
 using DataAccessLayer.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -20,7 +21,7 @@ namespace DataAccessLayer.Configuration
         public static IServiceCollection RegisterDbContext(this IServiceCollection serviceProvider, string connectionString)
         {
             serviceProvider.AddDbContext<ApiDbContext>(
-                options => options.UseSqlServer(connectionString, b => b.MigrationsAssembly("OnlineLibraryPresentationLayer")));
+                options => options.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 17))));
 
             return serviceProvider;
         }

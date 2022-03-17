@@ -4,5 +4,4 @@ export class responceBookModel
     name: string;
     text: string;
     count: number;
-    users:any;
 }

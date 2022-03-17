@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\ct\\OnlineLibrary\\OnlineLibraryBack\\DataAccessLayer\\DataAccessLayer.csproj": {}
+    "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/DataAccessLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\ct\\OnlineLibrary\\OnlineLibraryBack\\DataAccessLayer\\DataAccessLayer.csproj": {
+    "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\ct\\OnlineLibrary\\OnlineLibraryBack\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectUniqueName": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\ct\\OnlineLibrary\\OnlineLibraryBack\\DataAccessLayer\\DataAccessLayer.csproj",
-        "packagesPath": "C:\\Users\\goldm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\goldm\\OneDrive\\Рабочий стол\\ct\\OnlineLibrary\\OnlineLibraryBack\\DataAccessLayer\\obj\\",
+        "projectPath": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/DataAccessLayer.csproj",
+        "packagesPath": "/Users/kamron/.nuget/packages/",
+        "outputPath": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\goldm\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/kamron/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -47,6 +45,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[5.0.14, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[5.0.4, )"
             }
           },
           "imports": [
@@ -64,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.201/RuntimeIdentifierGraph.json"
         }
       }
     }
