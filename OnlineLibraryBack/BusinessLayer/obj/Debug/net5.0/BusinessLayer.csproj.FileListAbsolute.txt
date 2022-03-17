@@ -1,45 +1,60 @@
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibraryBack\BusinessLayer\bin\Debug\net5.0\BusinessLayer.deps.json
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibraryBack\BusinessLayer\bin\Debug\net5.0\BusinessLayer.dll
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibraryBack\BusinessLayer\bin\Debug\net5.0\ref\BusinessLayer.dll
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibraryBack\BusinessLayer\bin\Debug\net5.0\BusinessLayer.pdb
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibraryBack\BusinessLayer\obj\Debug\net5.0\BusinessLayer.csproj.AssemblyReference.cache
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibraryBack\BusinessLayer\obj\Debug\net5.0\BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibraryBack\BusinessLayer\obj\Debug\net5.0\BusinessLayer.AssemblyInfoInputs.cache
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibraryBack\BusinessLayer\obj\Debug\net5.0\BusinessLayer.AssemblyInfo.cs
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibraryBack\BusinessLayer\obj\Debug\net5.0\BusinessLayer.csproj.CoreCompileInputs.cache
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibraryBack\BusinessLayer\obj\Debug\net5.0\BusinessLayer.dll
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibraryBack\BusinessLayer\obj\Debug\net5.0\ref\BusinessLayer.dll
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibraryBack\BusinessLayer\obj\Debug\net5.0\BusinessLayer.pdb
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibraryBack\BusinessLayer\bin\Debug\net5.0\DataAccessLayer.dll
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibraryBack\BusinessLayer\bin\Debug\net5.0\DataAccessLayer.pdb
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibraryBack\BusinessLayer\obj\Debug\net5.0\BusinessLayer.csproj.CopyComplete
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibrary\OnlineLibraryBack\BusinessLayer\bin\Debug\net5.0\BusinessLayer.deps.json
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibrary\OnlineLibraryBack\BusinessLayer\bin\Debug\net5.0\BusinessLayer.dll
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibrary\OnlineLibraryBack\BusinessLayer\bin\Debug\net5.0\ref\BusinessLayer.dll
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibrary\OnlineLibraryBack\BusinessLayer\bin\Debug\net5.0\BusinessLayer.pdb
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibrary\OnlineLibraryBack\BusinessLayer\bin\Debug\net5.0\DataAccessLayer.dll
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibrary\OnlineLibraryBack\BusinessLayer\bin\Debug\net5.0\DataAccessLayer.pdb
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibrary\OnlineLibraryBack\BusinessLayer\obj\Debug\net5.0\BusinessLayer.csproj.AssemblyReference.cache
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibrary\OnlineLibraryBack\BusinessLayer\obj\Debug\net5.0\BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibrary\OnlineLibraryBack\BusinessLayer\obj\Debug\net5.0\BusinessLayer.AssemblyInfoInputs.cache
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibrary\OnlineLibraryBack\BusinessLayer\obj\Debug\net5.0\BusinessLayer.AssemblyInfo.cs
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibrary\OnlineLibraryBack\BusinessLayer\obj\Debug\net5.0\BusinessLayer.csproj.CoreCompileInputs.cache
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibrary\OnlineLibraryBack\BusinessLayer\obj\Debug\net5.0\BusinessLayer.csproj.CopyComplete
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibrary\OnlineLibraryBack\BusinessLayer\obj\Debug\net5.0\BusinessLayer.dll
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibrary\OnlineLibraryBack\BusinessLayer\obj\Debug\net5.0\ref\BusinessLayer.dll
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibrary\OnlineLibraryBack\BusinessLayer\obj\Debug\net5.0\BusinessLayer.pdb
-C:\Users\goldm\OneDrive\Рабочий стол\ct\OnlineLibrary\OnlineLibraryBack\BusinessLayer\bin\Debug\net5.0\BusinessLayer.deps.json
-C:\Users\goldm\OneDrive\Рабочий стол\ct\OnlineLibrary\OnlineLibraryBack\BusinessLayer\bin\Debug\net5.0\BusinessLayer.dll
-C:\Users\goldm\OneDrive\Рабочий стол\ct\OnlineLibrary\OnlineLibraryBack\BusinessLayer\bin\Debug\net5.0\ref\BusinessLayer.dll
-C:\Users\goldm\OneDrive\Рабочий стол\ct\OnlineLibrary\OnlineLibraryBack\BusinessLayer\bin\Debug\net5.0\BusinessLayer.pdb
-C:\Users\goldm\OneDrive\Рабочий стол\ct\OnlineLibrary\OnlineLibraryBack\BusinessLayer\bin\Debug\net5.0\DataAccessLayer.dll
-C:\Users\goldm\OneDrive\Рабочий стол\ct\OnlineLibrary\OnlineLibraryBack\BusinessLayer\bin\Debug\net5.0\DataAccessLayer.pdb
-C:\Users\goldm\OneDrive\Рабочий стол\ct\OnlineLibrary\OnlineLibraryBack\BusinessLayer\obj\Debug\net5.0\BusinessLayer.csproj.AssemblyReference.cache
-C:\Users\goldm\OneDrive\Рабочий стол\ct\OnlineLibrary\OnlineLibraryBack\BusinessLayer\obj\Debug\net5.0\BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\goldm\OneDrive\Рабочий стол\ct\OnlineLibrary\OnlineLibraryBack\BusinessLayer\obj\Debug\net5.0\BusinessLayer.AssemblyInfoInputs.cache
-C:\Users\goldm\OneDrive\Рабочий стол\ct\OnlineLibrary\OnlineLibraryBack\BusinessLayer\obj\Debug\net5.0\BusinessLayer.AssemblyInfo.cs
-C:\Users\goldm\OneDrive\Рабочий стол\ct\OnlineLibrary\OnlineLibraryBack\BusinessLayer\obj\Debug\net5.0\BusinessLayer.csproj.CoreCompileInputs.cache
-C:\Users\goldm\OneDrive\Рабочий стол\ct\OnlineLibrary\OnlineLibraryBack\BusinessLayer\obj\Debug\net5.0\BusinessLayer.csproj.CopyComplete
-C:\Users\goldm\OneDrive\Рабочий стол\ct\OnlineLibrary\OnlineLibraryBack\BusinessLayer\obj\Debug\net5.0\BusinessLayer.dll
-C:\Users\goldm\OneDrive\Рабочий стол\ct\OnlineLibrary\OnlineLibraryBack\BusinessLayer\obj\Debug\net5.0\ref\BusinessLayer.dll
-C:\Users\goldm\OneDrive\Рабочий стол\ct\OnlineLibrary\OnlineLibraryBack\BusinessLayer\obj\Debug\net5.0\BusinessLayer.pdb
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/BusinessLayer.deps.json
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/BusinessLayer.dll
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/ref/BusinessLayer.dll
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/BusinessLayer.pdb
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/BusinessLayer.csproj.AssemblyReference.cache
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/BusinessLayer.AssemblyInfoInputs.cache
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/BusinessLayer.AssemblyInfo.cs
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/BusinessLayer.csproj.CoreCompileInputs.cache
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/BusinessLayer.dll
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/ref/BusinessLayer.dll
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/BusinessLayer.pdb
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/DataAccessLayer.dll
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/DataAccessLayer.pdb
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/BusinessLayer.csproj.CopyComplete
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/BusinessLayer.deps.json
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/BusinessLayer.dll
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/ref/BusinessLayer.dll
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/BusinessLayer.pdb
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/DataAccessLayer.dll
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/DataAccessLayer.pdb
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/BusinessLayer.csproj.AssemblyReference.cache
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/BusinessLayer.AssemblyInfoInputs.cache
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/BusinessLayer.AssemblyInfo.cs
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/BusinessLayer.csproj.CoreCompileInputs.cache
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/BusinessLayer.csproj.CopyComplete
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/BusinessLayer.dll
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/ref/BusinessLayer.dll
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/BusinessLayer.pdb
+C:/Users/goldm/OneDrive/Рабочий стол/ct/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/BusinessLayer.deps.json
+C:/Users/goldm/OneDrive/Рабочий стол/ct/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/BusinessLayer.dll
+C:/Users/goldm/OneDrive/Рабочий стол/ct/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/ref/BusinessLayer.dll
+C:/Users/goldm/OneDrive/Рабочий стол/ct/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/BusinessLayer.pdb
+C:/Users/goldm/OneDrive/Рабочий стол/ct/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/DataAccessLayer.dll
+C:/Users/goldm/OneDrive/Рабочий стол/ct/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/DataAccessLayer.pdb
+C:/Users/goldm/OneDrive/Рабочий стол/ct/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/BusinessLayer.csproj.AssemblyReference.cache
+C:/Users/goldm/OneDrive/Рабочий стол/ct/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/goldm/OneDrive/Рабочий стол/ct/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/BusinessLayer.AssemblyInfoInputs.cache
+C:/Users/goldm/OneDrive/Рабочий стол/ct/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/BusinessLayer.AssemblyInfo.cs
+C:/Users/goldm/OneDrive/Рабочий стол/ct/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/BusinessLayer.csproj.CoreCompileInputs.cache
+C:/Users/goldm/OneDrive/Рабочий стол/ct/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/BusinessLayer.csproj.CopyComplete
+C:/Users/goldm/OneDrive/Рабочий стол/ct/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/BusinessLayer.dll
+C:/Users/goldm/OneDrive/Рабочий стол/ct/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/ref/BusinessLayer.dll
+C:/Users/goldm/OneDrive/Рабочий стол/ct/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/BusinessLayer.pdb
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/BusinessLayer.deps.json
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/BusinessLayer.dll
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/ref/BusinessLayer.dll
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/BusinessLayer.pdb
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/DataAccessLayer.dll
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/DataAccessLayer.pdb
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/BusinessLayer.csproj.AssemblyReference.cache
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/BusinessLayer.AssemblyInfoInputs.cache
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/BusinessLayer.AssemblyInfo.cs
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/BusinessLayer.csproj.CoreCompileInputs.cache
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/BusinessLayer.csproj.CopyComplete
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/BusinessLayer.dll
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/ref/BusinessLayer.dll
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/BusinessLayer.pdb

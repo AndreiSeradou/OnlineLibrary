@@ -1,0 +1,38 @@
+﻿<Properties StartupConfiguration="{E5A4BDFE-FC49-43B1-82F8-D2C5ADFD6685}|TodoApp">
+  <MonoDevelop.Ide.Workbench ActiveDocument="DataAccessLayer/Configuration/DependenciesConfiguration.cs">
+    <Files>
+      <File FileName="BusinessLayer/Configuration/DependenciesConfiguration.cs" Line="1" Column="1" />
+      <File FileName="BusinessLayer/Interfaces/Services/ILibrarianService.cs" />
+      <File FileName="BusinessLayer/Interfaces/Services/IUserService.cs" />
+      <File FileName="BusinessLayer/Mapping/MappingConfiguration.cs" />
+      <File FileName="BusinessLayer/Models/DTOs/Requests/BookRequest.cs" />
+      <File FileName="BusinessLayer/Models/DTOs/Requests/OrderRequest.cs" />
+      <File FileName="BusinessLayer/Models/DTOs/Requests/UpdateOrderRequest.cs" />
+      <File FileName="BusinessLayer/Models/DTOs/Requests/UserLoginRequest.cs" />
+      <File FileName="BusinessLayer/Models/DTOs/Requests/UserRegistrationRequest.cs" />
+      <File FileName="BusinessLayer/Models/DTOs/Responses/AuthResult.cs" />
+      <File FileName="BusinessLayer/Models/DTOs/Responses/OrderResponse.cs" />
+      <File FileName="BusinessLayer/Services/LibrarianService.cs" />
+      <File FileName="DataAccessLayer/Configuration/DependenciesConfiguration.cs" Line="1" Column="1" />
+      <File FileName="DataAccessLayer/Data/ApiDbContext.cs" />
+      <File FileName="DataAccessLayer/Entities/Book.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node />
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.OnlineLibraryPresentationLayer PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

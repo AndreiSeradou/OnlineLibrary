@@ -1,36 +1,48 @@
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibraryBack\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.deps.json
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibraryBack\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.dll
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibraryBack\DataAccessLayer\bin\Debug\net5.0\ref\DataAccessLayer.dll
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibraryBack\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.pdb
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibraryBack\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csproj.AssemblyReference.cache
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibraryBack\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibraryBack\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.AssemblyInfoInputs.cache
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibraryBack\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.AssemblyInfo.cs
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibraryBack\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csproj.CoreCompileInputs.cache
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibraryBack\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.dll
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibraryBack\DataAccessLayer\obj\Debug\net5.0\ref\DataAccessLayer.dll
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibraryBack\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.pdb
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibrary\OnlineLibraryBack\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.deps.json
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibrary\OnlineLibraryBack\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.dll
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibrary\OnlineLibraryBack\DataAccessLayer\bin\Debug\net5.0\ref\DataAccessLayer.dll
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibrary\OnlineLibraryBack\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.pdb
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibrary\OnlineLibraryBack\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csproj.AssemblyReference.cache
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibrary\OnlineLibraryBack\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibrary\OnlineLibraryBack\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.AssemblyInfoInputs.cache
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibrary\OnlineLibraryBack\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.AssemblyInfo.cs
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibrary\OnlineLibraryBack\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csproj.CoreCompileInputs.cache
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibrary\OnlineLibraryBack\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.dll
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibrary\OnlineLibraryBack\DataAccessLayer\obj\Debug\net5.0\ref\DataAccessLayer.dll
-C:\Users\goldm\OneDrive\Рабочий стол\OnlineLibrary\OnlineLibrary\OnlineLibraryBack\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.pdb
-C:\Users\goldm\OneDrive\Рабочий стол\ct\OnlineLibrary\OnlineLibraryBack\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.deps.json
-C:\Users\goldm\OneDrive\Рабочий стол\ct\OnlineLibrary\OnlineLibraryBack\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.dll
-C:\Users\goldm\OneDrive\Рабочий стол\ct\OnlineLibrary\OnlineLibraryBack\DataAccessLayer\bin\Debug\net5.0\ref\DataAccessLayer.dll
-C:\Users\goldm\OneDrive\Рабочий стол\ct\OnlineLibrary\OnlineLibraryBack\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.pdb
-C:\Users\goldm\OneDrive\Рабочий стол\ct\OnlineLibrary\OnlineLibraryBack\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csproj.AssemblyReference.cache
-C:\Users\goldm\OneDrive\Рабочий стол\ct\OnlineLibrary\OnlineLibraryBack\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\goldm\OneDrive\Рабочий стол\ct\OnlineLibrary\OnlineLibraryBack\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.AssemblyInfoInputs.cache
-C:\Users\goldm\OneDrive\Рабочий стол\ct\OnlineLibrary\OnlineLibraryBack\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.AssemblyInfo.cs
-C:\Users\goldm\OneDrive\Рабочий стол\ct\OnlineLibrary\OnlineLibraryBack\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csproj.CoreCompileInputs.cache
-C:\Users\goldm\OneDrive\Рабочий стол\ct\OnlineLibrary\OnlineLibraryBack\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.dll
-C:\Users\goldm\OneDrive\Рабочий стол\ct\OnlineLibrary\OnlineLibraryBack\DataAccessLayer\obj\Debug\net5.0\ref\DataAccessLayer.dll
-C:\Users\goldm\OneDrive\Рабочий стол\ct\OnlineLibrary\OnlineLibraryBack\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.pdb
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/bin/Debug/net5.0/DataAccessLayer.deps.json
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/bin/Debug/net5.0/DataAccessLayer.dll
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/bin/Debug/net5.0/ref/DataAccessLayer.dll
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/bin/Debug/net5.0/DataAccessLayer.pdb
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/DataAccessLayer.csproj.AssemblyReference.cache
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/DataAccessLayer.AssemblyInfoInputs.cache
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/DataAccessLayer.AssemblyInfo.cs
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/DataAccessLayer.csproj.CoreCompileInputs.cache
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/DataAccessLayer.dll
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/ref/DataAccessLayer.dll
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/DataAccessLayer.pdb
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/bin/Debug/net5.0/DataAccessLayer.deps.json
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/bin/Debug/net5.0/DataAccessLayer.dll
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/bin/Debug/net5.0/ref/DataAccessLayer.dll
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/bin/Debug/net5.0/DataAccessLayer.pdb
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/DataAccessLayer.csproj.AssemblyReference.cache
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/DataAccessLayer.AssemblyInfoInputs.cache
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/DataAccessLayer.AssemblyInfo.cs
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/DataAccessLayer.csproj.CoreCompileInputs.cache
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/DataAccessLayer.dll
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/ref/DataAccessLayer.dll
+C:/Users/goldm/OneDrive/Рабочий стол/OnlineLibrary/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/DataAccessLayer.pdb
+C:/Users/goldm/OneDrive/Рабочий стол/ct/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/bin/Debug/net5.0/DataAccessLayer.deps.json
+C:/Users/goldm/OneDrive/Рабочий стол/ct/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/bin/Debug/net5.0/DataAccessLayer.dll
+C:/Users/goldm/OneDrive/Рабочий стол/ct/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/bin/Debug/net5.0/ref/DataAccessLayer.dll
+C:/Users/goldm/OneDrive/Рабочий стол/ct/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/bin/Debug/net5.0/DataAccessLayer.pdb
+C:/Users/goldm/OneDrive/Рабочий стол/ct/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/DataAccessLayer.csproj.AssemblyReference.cache
+C:/Users/goldm/OneDrive/Рабочий стол/ct/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/goldm/OneDrive/Рабочий стол/ct/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/DataAccessLayer.AssemblyInfoInputs.cache
+C:/Users/goldm/OneDrive/Рабочий стол/ct/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/DataAccessLayer.AssemblyInfo.cs
+C:/Users/goldm/OneDrive/Рабочий стол/ct/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/DataAccessLayer.csproj.CoreCompileInputs.cache
+C:/Users/goldm/OneDrive/Рабочий стол/ct/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/DataAccessLayer.dll
+C:/Users/goldm/OneDrive/Рабочий стол/ct/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/ref/DataAccessLayer.dll
+C:/Users/goldm/OneDrive/Рабочий стол/ct/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/DataAccessLayer.pdb
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/bin/Debug/net5.0/DataAccessLayer.deps.json
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/bin/Debug/net5.0/DataAccessLayer.dll
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/bin/Debug/net5.0/ref/DataAccessLayer.dll
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/bin/Debug/net5.0/DataAccessLayer.pdb
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/DataAccessLayer.csproj.AssemblyReference.cache
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/DataAccessLayer.AssemblyInfoInputs.cache
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/DataAccessLayer.AssemblyInfo.cs
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/DataAccessLayer.csproj.CoreCompileInputs.cache
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/DataAccessLayer.dll
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/ref/DataAccessLayer.dll
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/DataAccessLayer.pdb
