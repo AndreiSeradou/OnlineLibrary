@@ -6,17 +6,17 @@
       <File FileName="DataAccessLayer/Configuration/DependenciesConfiguration.cs" />
       <File FileName="OnlineLibraryBack/appsettings.json" />
       <File FileName="DataAccessLayer/DataAccessLayer.csproj" />
-      <File FileName="OnlineLibraryBack/Controllers/UserController.cs" Line="24" Column="10" />
-      <File FileName="OnlineLibraryBack/Controllers/AuthManagementController.cs" Line="64" Column="72" />
+      <File FileName="OnlineLibraryBack/Controllers/UserController.cs" />
+      <File FileName="OnlineLibraryBack/Controllers/AuthManagementController.cs" />
       <File FileName="OnlineLibraryBack/Controllers/SetupController.cs" />
       <File FileName="OnlineLibraryBack/Program.cs" />
       <File FileName="OnlineLibraryBack/OnlineLibraryPresentationLayer.csproj" />
       <File FileName="BusinessLayer/Models/DTOs/Responses/AuthResult.cs" />
       <File FileName="OnlineLibraryBack/Controllers/LibrarianController.cs" />
       <File FileName="BusinessLayer/Models/DTOs/Responses/BookResponse.cs" Line="11" Column="1" />
-      <File FileName="BusinessLayer/Mapping/MappingConfiguration.cs" Line="16" Column="1" />
-      <File FileName="DataAccessLayer/Entities/Book.cs" Line="11" Column="39" />
-      <File FileName="BusinessLayer/Services/UserService.cs" Line="36" Column="26" />
+      <File FileName="BusinessLayer/Mapping/MappingConfiguration.cs" />
+      <File FileName="DataAccessLayer/Entities/Book.cs" />
+      <File FileName="BusinessLayer/Services/UserService.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

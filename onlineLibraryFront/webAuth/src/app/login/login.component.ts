@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
     let email=this.loginForm.controls["email"].value;
     let password=this.loginForm.controls["password"].value;
     this.userService.login(email,password).subscribe(data => {
-      console.log(data.token)
+      console.log(data.name)
       if (data.success) {
         localStorage.setItem("token", data.token);
         localStorage.setItem("name", data.name);

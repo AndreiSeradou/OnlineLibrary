@@ -292,5 +292,4 @@ C:/Users/goldm/OneDrive/Рабочий стол/ct/OnlineLibrary/OnlineLibraryBa
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/OnlineLibraryBack/obj/Debug/net5.0/ref/OnlineLibraryPresentationLayer.dll
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/OnlineLibraryBack/obj/Debug/net5.0/OnlineLibraryPresentationLayer.pdb
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/OnlineLibraryBack/obj/Debug/net5.0/OnlineLibraryPresentationLayer.genruntimeconfig.cache
-/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/OnlineLibraryBack/bin/Debug/net5.0/OnlineLibraryPresentationLayer.StaticWebAssets.xml
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/OnlineLibraryBack/obj/Debug/net5.0/OnlineLibraryPresentationLayer.csproj.AssemblyReference.cache
