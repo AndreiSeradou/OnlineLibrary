@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using BusinessLayer.Interfaces.Services;
-using BusinessLayer.Models.DTOs.Responses;
+using BusinessLayer.Models.DTOs;
 using DataAccessLayer.Entities;
 using DataAccessLayer.Interfaces.Repositories;
 using System.Collections.Generic;
@@ -42,27 +42,29 @@ namespace BusinessLayer.Services
             if (!result.Succeeded)
                 return false;
 
+            await _bookRepository.SaveAsync();
+
             return true;
         }
 
-        public async  Task<IReadOnlyCollection<BookResponse>> GetAllBooksAsync(CancellationToken ct = default)
+        public async  Task<IReadOnlyCollection<BookBLModel>> GetAllBooksAsync(CancellationToken ct = default)
         {
             var books = await _bookRepository.GetAllAsync(ct).ConfigureAwait(false);
-            return _mapper.Map<IReadOnlyCollection<BookResponse>>(books);
+            return _mapper.Map<IReadOnlyCollection<BookBLModel>>(books);
         }
 
-        public async Task<IReadOnlyCollection<BookResponse>> GetAllUserBooksAsync(string userName, CancellationToken ct = default)
+        public async Task<IReadOnlyCollection<BookBLModel>> GetAllUserBooksAsync(string userName, CancellationToken ct = default)
         {
             var user = await _userRepository.GetByNameIncludeAllAsync(userName, ct).ConfigureAwait(false);
 
-            return _mapper.Map<IReadOnlyCollection<BookResponse>>(user.Books);
+            return _mapper.Map<IReadOnlyCollection<BookBLModel>>(user.Books);
         }
 
-        public async Task<IReadOnlyCollection<OrderResponse>> GetAllUserOrdersAsync(string userName, CancellationToken ct = default)
+        public async Task<IReadOnlyCollection<OrderBLModel>> GetAllUserOrdersAsync(string userName, CancellationToken ct = default)
         {
             var user = await _userRepository.GetByNameIncludeAllAsync(userName, ct).ConfigureAwait(false);
 
-            return _mapper.Map<IReadOnlyCollection<OrderResponse>>(user.Orders);
+            return _mapper.Map<IReadOnlyCollection<OrderBLModel>>(user.Orders);
         }
     }
 }

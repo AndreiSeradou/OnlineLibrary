@@ -1,4 +1,5 @@
 ﻿using DataAccessLayer.Entities;
+using DataAccessLayer.Models.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,9 +12,10 @@ namespace DataAccessLayer.Interfaces.Repositories
     public interface IOrderRepository
     {
         Task<IReadOnlyCollection<Order>> GetAllAsync(CancellationToken ct = default);
-        Task<Order?> GetByIdAsync(int id, CancellationToken ct = default);
+        Task<Order> GetByIdAsync(int id, CancellationToken ct = default);
         Task<Order> CreateAsync(Order model, CancellationToken ct = default);
         Task<Order> UpdateAsync(Order model, CancellationToken ct = default);
         Task<bool> DeleteAsync(int id, CancellationToken ct = default);
+        Task SaveAsync();
     }
 }

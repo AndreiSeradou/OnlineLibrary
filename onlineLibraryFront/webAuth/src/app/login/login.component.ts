@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Constants } from '../Helper/constants';
-import { ResponceModel } from '../Models/responceModel';
 import { UserService } from '../service/user.service';
 
 @Component({

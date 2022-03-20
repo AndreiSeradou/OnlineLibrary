@@ -33,6 +33,8 @@
     ".NETCoreApp,Version=v5.0": {
       "OnlineLibraryPresentationLayer/1.0.0": {
         "dependencies": {
+          "AutoMapper": "11.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
           "BusinessLayer": "1.0.0",
           "DataAccessLayer": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.14",
@@ -1472,6 +1474,8 @@
       },
       "DataAccessLayer/1.0.0": {
         "dependencies": {
+          "AutoMapper": "11.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.14",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.14",
           "Pomelo.EntityFrameworkCore.MySql": "5.0.4"

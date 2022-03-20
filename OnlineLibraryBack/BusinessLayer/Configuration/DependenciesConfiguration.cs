@@ -14,11 +14,11 @@ namespace BusinessLayer.Configuration
             return serviceCollection;
         }
 
-        public static IServiceCollection RegisterMappingConfig(this IServiceCollection serviceCollection)
+        public static IServiceCollection RegisterBLMappingConfig(this IServiceCollection serviceCollection)
         {
             serviceCollection.AddAutoMapper(
-                c => c.AddProfile<MappingConfiguration>(),
-                typeof(MappingConfiguration));
+                c => c.AddProfile<MappingBLConfiguration>(),
+                typeof(MappingBLConfiguration));
 
             return serviceCollection;
         }

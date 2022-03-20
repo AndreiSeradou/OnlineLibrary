@@ -1,8 +1,9 @@
 ﻿using AutoMapper;
 using BusinessLayer.Interfaces.Services;
-using BusinessLayer.Models.DTOs.Responses;
+using BusinessLayer.Models.DTOs;
 using DataAccessLayer.Entities;
 using DataAccessLayer.Interfaces.Repositories;
+using DataAccessLayer.Models.DTOs;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -22,16 +23,18 @@ namespace BusinessLayer.Services
             _mapper = mapper;
         }
 
-        public  async Task<BookResponse> CreateBookAsync(Book model, CancellationToken ct = default)
+        public  async Task<BookBLModel> CreateBookAsync(BookBLModel model, CancellationToken ct = default)
         {
-            var book = await _bookRepository.CreateAsync(model, ct).ConfigureAwait(false);
-            return _mapper.Map<BookResponse>(book);
+            var bookModel = _mapper.Map<Book>(model);
+            var book = await _bookRepository.CreateAsync(bookModel, ct).ConfigureAwait(false);
+            await _bookRepository.SaveAsync();
+            return _mapper.Map<BookBLModel>(book);
         }
 
-        public async Task<IReadOnlyCollection<OrderResponse>> GetAllOrdersAsync(CancellationToken ct = default)
+        public async Task<IReadOnlyCollection<OrderBLModel>> GetAllOrdersAsync(CancellationToken ct = default)
         {
             var orders = await _orderRepository.GetAllAsync(ct).ConfigureAwait(false);
-            return _mapper.Map<IReadOnlyCollection<OrderResponse>>(orders);
+            return _mapper.Map<IReadOnlyCollection<OrderBLModel>>(orders);
         }
 
         public async Task<bool?> UpdateOrderAsync(int id, CancellationToken ct = default)
@@ -43,9 +46,11 @@ namespace BusinessLayer.Services
             order.User.Books.Add(order.Book);
 
             var updateOrder = await _orderRepository.UpdateAsync(order, ct).ConfigureAwait(false);
-
+            
             if (updateOrder is null)
                 return false;
+
+            await _orderRepository.SaveAsync();
 
             return true; 
         }

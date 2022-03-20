@@ -1,4 +1,4 @@
-﻿namespace BusinessLayer.Models.DTOs.Responses
+﻿namespace OnlineLibraryBack.Models.DTOs.Responses
 {
     public class BookResponse
     {

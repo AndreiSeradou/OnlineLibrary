@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace BusinessLayer.Models.DTOs.Requests
+namespace OnlineLibraryBack.Models.DTOs.Requests
 {
     public class UserLoginRequest
     {

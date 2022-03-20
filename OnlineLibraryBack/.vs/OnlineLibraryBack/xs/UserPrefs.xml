@@ -1,42 +1,34 @@
 ﻿<Properties StartupConfiguration="{E5A4BDFE-FC49-43B1-82F8-D2C5ADFD6685}|TodoApp">
-  <MonoDevelop.Ide.Workbench ActiveDocument="BusinessLayer/Models/DTOs/Responses/BookResponse.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="OnlineLibraryBack/Startup.cs">
     <Files>
-      <File FileName="OnlineLibraryBack/Startup.cs" Line="111" Column="30" />
-      <File FileName="DataAccessLayer/Data/ApiDbContext.cs" />
-      <File FileName="DataAccessLayer/Configuration/DependenciesConfiguration.cs" />
-      <File FileName="OnlineLibraryBack/appsettings.json" />
-      <File FileName="DataAccessLayer/DataAccessLayer.csproj" />
-      <File FileName="OnlineLibraryBack/Controllers/UserController.cs" />
-      <File FileName="OnlineLibraryBack/Controllers/AuthManagementController.cs" />
-      <File FileName="OnlineLibraryBack/Controllers/SetupController.cs" />
-      <File FileName="OnlineLibraryBack/Program.cs" />
-      <File FileName="OnlineLibraryBack/OnlineLibraryPresentationLayer.csproj" />
-      <File FileName="BusinessLayer/Models/DTOs/Responses/AuthResult.cs" />
-      <File FileName="OnlineLibraryBack/Controllers/LibrarianController.cs" />
-      <File FileName="BusinessLayer/Models/DTOs/Responses/BookResponse.cs" Line="11" Column="1" />
-      <File FileName="BusinessLayer/Mapping/MappingConfiguration.cs" />
-      <File FileName="DataAccessLayer/Entities/Book.cs" />
-      <File FileName="BusinessLayer/Services/UserService.cs" />
+      <File FileName="DataAccessLayer/Mapping/MappingConfiguration.cs" Line="1" Column="1" />
+      <File FileName="OnlineLibraryBack/Startup.cs" Line="103" Column="9" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="OnlineLibraryBack" expanded="True">
-            <Node name="BusinessLayer" expanded="True">
-              <Node name="Models" expanded="True">
-                <Node name="DTOs" expanded="True">
-                  <Node name="Responses" expanded="True">
-                    <Node name="BookResponse.cs" selected="True" />
-                  </Node>
-                </Node>
-              </Node>
-              <Node name="Services" expanded="True" />
-            </Node>
             <Node name="DataAccessLayer" expanded="True">
+              <Node name="Configuration" expanded="True" />
+              <Node name="Data" expanded="True" />
               <Node name="Entities" expanded="True" />
+              <Node name="Interfaces" expanded="True">
+                <Node name="Repositories" expanded="True" />
+              </Node>
+              <Node name="Mapping" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="DTOs" expanded="True" />
+              </Node>
+              <Node name="Repositories" expanded="True" />
             </Node>
             <Node name="OnlineLibraryPresentationLayer" expanded="True">
               <Node name="Controllers" expanded="True" />
+              <Node name="DTOs" expanded="True">
+                <Node name="Requests" expanded="True" />
+                <Node name="Responses" expanded="True" />
+              </Node>
+              <Node name="Mapping" expanded="True" />
+              <Node name="Startup.cs" selected="True" />
             </Node>
           </Node>
         </State>

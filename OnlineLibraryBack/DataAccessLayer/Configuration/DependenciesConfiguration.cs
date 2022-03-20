@@ -1,6 +1,7 @@
 ﻿using System;
 using DataAccessLayer.Data;
 using DataAccessLayer.Interfaces.Repositories;
+using DataAccessLayer.Mapping;
 using DataAccessLayer.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -24,6 +25,15 @@ namespace DataAccessLayer.Configuration
                 options => options.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 17))));
 
             return serviceProvider;
+        }
+
+        public static IServiceCollection RegisterDLMappingConfig(this IServiceCollection serviceCollection)
+        {
+            serviceCollection.AddAutoMapper(
+                c => c.AddProfile<MappingDLConfiguration>(),
+                typeof(MappingDLConfiguration));
+
+            return serviceCollection;
         }
     }
 }

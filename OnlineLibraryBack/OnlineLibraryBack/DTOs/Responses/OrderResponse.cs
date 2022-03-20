@@ -1,6 +1,4 @@
-﻿using DataAccessLayer.Entities;
-
-namespace BusinessLayer.Models.DTOs.Responses
+﻿namespace OnlineLibraryBack.Models.DTOs.Responses
 {
     public class OrderResponse
     {

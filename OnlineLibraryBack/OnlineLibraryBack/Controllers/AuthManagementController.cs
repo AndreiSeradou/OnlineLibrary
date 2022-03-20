@@ -11,7 +11,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using OnlineLibraryBack.Configuration;
 using DataAccessLayer.Entities;
-using BusinessLayer.Models.DTOs.Requests;
+using OnlineLibraryBack.Models.DTOs.Requests;
 
 namespace OnlineLibraryBack.Controllers
 {

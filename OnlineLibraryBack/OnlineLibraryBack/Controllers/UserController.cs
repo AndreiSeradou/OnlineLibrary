@@ -4,9 +4,10 @@ using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using BusinessLayer.Interfaces.Services;
 using System.Linq;
-using BusinessLayer.Models.DTOs.Requests;
-using BusinessLayer.Models.DTOs.Responses;
-using System;
+using OnlineLibraryBack.Models.DTOs.Requests;
+using AutoMapper;
+using System.Collections.Generic;
+using OnlineLibraryBack.Models.DTOs.Responses;
 
 namespace OnlineLibraryBack.Controllers
 {
@@ -17,10 +18,12 @@ namespace OnlineLibraryBack.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserService  _userService;
+        private readonly IMapper _mapper;
 
-        public UserController(IUserService userService)
+        public UserController(IUserService userService, IMapper mapper)
         {
             _userService = userService;
+            _mapper = mapper;
         }
         
         [HttpPost]
@@ -34,7 +37,7 @@ namespace OnlineLibraryBack.Controllers
 
                 if (order == false)
                     return NotFound();
-
+        
                 return Ok(order);
             }
 
@@ -53,7 +56,9 @@ namespace OnlineLibraryBack.Controllers
                 if (orders == null)
                     return NotFound();
 
-                return Ok(orders);
+                var orderResponse = _mapper.Map<IReadOnlyCollection<OrderResponse>>(orders);
+
+                return Ok(orderResponse);
             }
 
             return BadRequest("Something went wrong");
@@ -72,7 +77,9 @@ namespace OnlineLibraryBack.Controllers
                 if (books == null)
                     return NotFound();
 
-                return Ok(books);
+                var booksResponse = _mapper.Map<IReadOnlyCollection<BookResponse>>(books);
+
+                return Ok(booksResponse);
             }
             return BadRequest("Something went wrong");
         }
@@ -88,7 +95,9 @@ namespace OnlineLibraryBack.Controllers
                 if (books == null)
                     return NotFound();
 
-                return Ok(books.ToArray());
+                var booksResponse = _mapper.Map<IReadOnlyCollection<BookResponse>>(books);
+
+                return Ok(booksResponse);
             }
 
             return BadRequest("Something went wrong");

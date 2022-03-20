@@ -19,6 +19,7 @@ using Microsoft.AspNetCore.Authorization;
 using DataAccessLayer.Entities;
 using DataAccessLayer.Configuration;
 using BusinessLayer.Configuration;
+using OnlineLibraryPresentationLayer.Configuration;
 
 namespace OnlineLibraryBack
 {
@@ -32,11 +33,12 @@ namespace OnlineLibraryBack
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.RegisterRepositories().RegisterService().RegisterDbContext(Configuration.GetConnectionString("DefaultConnection"));
-            services.RegisterMappingConfig();
+            services.RegisterBLMappingConfig();
+            services.RegisterDLMappingConfig();
+            services.RegisterPLMappingConfig();
             services.Configure<JwtConfig>(Configuration.GetSection("JwtConfig"));
 
             services.AddHttpContextAccessor();
@@ -98,7 +100,7 @@ namespace OnlineLibraryBack
             });
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())

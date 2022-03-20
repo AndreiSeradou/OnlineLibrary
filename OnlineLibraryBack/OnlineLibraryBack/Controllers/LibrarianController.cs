@@ -3,22 +3,28 @@ using Microsoft.AspNetCore.Mvc;
 using DataAccessLayer.Entities;
 using BusinessLayer.Interfaces.Services;
 using System.Linq;
-using BusinessLayer.Models.DTOs.Requests;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using OnlineLibraryBack.Models.DTOs.Requests;
+using AutoMapper;
+using BusinessLayer.Models.DTOs;
+using OnlineLibraryBack.Models.DTOs.Responses;
+using System.Collections.Generic;
 
 namespace OnlineLibraryBack.Controllers
 {
-    [Route("api/[controller]")] // api/todo
+    [Route("api/[controller]")] 
     [ApiController]
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "AppLibrarian")]
     public class LibrarianController : ControllerBase
     {
         private readonly ILibrarianService  _librarianService;
+        private readonly IMapper _mapper;
 
-        public LibrarianController(ILibrarianService librarianService)
+        public LibrarianController(ILibrarianService librarianService, IMapper mapper)
         {   
             _librarianService = librarianService;
+            _mapper = mapper;
         }
 
         [HttpPost]
@@ -27,7 +33,8 @@ namespace OnlineLibraryBack.Controllers
         {
             if (ModelState.IsValid)
             {
-                var book = await _librarianService.CreateBookAsync(new Book { Count = model.Count, Name = model.Name, Text = model.Text}).ConfigureAwait(false);
+                var newBook = _mapper.Map<BookBLModel>(model);
+                var book = await _librarianService.CreateBookAsync(newBook).ConfigureAwait(false);
                 if (book == null)
                     return NotFound();
 
@@ -63,7 +70,9 @@ namespace OnlineLibraryBack.Controllers
             if (orders == null)
                 return NotFound();
 
-            return Ok(orders.Where(o => o.Condition == false));
+            var ordersResponse = _mapper.Map<IReadOnlyCollection<OrderResponse>>(orders);
+
+            return Ok(ordersResponse.Where(o => o.Condition == false));
         }
     }
 }
