@@ -45,7 +45,6 @@ C:/Users/goldm/OneDrive/Рабочий стол/ct/OnlineLibrary/OnlineLibraryBa
 C:/Users/goldm/OneDrive/Рабочий стол/ct/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/BusinessLayer.pdb
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/BusinessLayer.deps.json
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/BusinessLayer.dll
-/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/ref/BusinessLayer.dll
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/BusinessLayer.pdb
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/DataAccessLayer.dll
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/DataAccessLayer.pdb
@@ -58,3 +57,4 @@ C:/Users/goldm/OneDrive/Рабочий стол/ct/OnlineLibrary/OnlineLibraryBa
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/BusinessLayer.dll
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/ref/BusinessLayer.dll
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/BusinessLayer.pdb
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/ref/BusinessLayer.dll

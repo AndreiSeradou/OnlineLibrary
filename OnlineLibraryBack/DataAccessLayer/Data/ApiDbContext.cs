@@ -12,7 +12,8 @@ namespace DataAccessLayer.Data
         public ApiDbContext(DbContextOptions<ApiDbContext> options)
             : base(options)
         {
-            Database.EnsureCreated();
+            //Database.EnsureDeleted();
+            //Database.EnsureCreated();
         }
     }
 }

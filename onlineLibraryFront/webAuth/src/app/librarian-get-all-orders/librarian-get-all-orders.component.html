@@ -8,15 +8,55 @@
               <tr>
   
                 <th scope="col">Id</th>
-                <th scope="col">Condition</th>
-                <th scope="col">Book Id</th>
+                <th scope="col">Condition false</th>
+                <th scope="col">Book Name</th>
+                <th scope="col">The Confirmation </th>
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let order of orderList">
+              <tr *ngFor="let order of orderListConditionFalse">
                 <td>{{order.id}}</td>
                 <td>{{order.condition}}</td>
-                <td>{{order.book.id}}</td>
+                <td>{{order.book.name}}</td>
+                <td>
+                  <form  (ngSubmit)="onSubmit(order.id)"> 
+                    <button type="submit" class="btn btn-primary" >Confirm</button>
+                  </form>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+
+  <div class="container" >
+    <div class="row justify-content-center">
+      <div class="col-10">
+        <div class="card">
+  
+          <table class="table">
+            <thead>
+              <tr>
+  
+                <th scope="col">Id</th>
+                <th scope="col">Condition true</th>
+                <th scope="col">Book Name</th>
+                <th scope="col">Return</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let order of orderListConditionTrue">
+                <td>{{order.id}}</td>
+                <td>{{order.condition}}</td>
+                <td>{{order.book.name}}</td>
+                <td>
+                  <form  (ngSubmit)="onSubmitDelete(order.id)"> 
+                    <button type="submit" class="btn btn-primary" >Successfully</button>
+                  </form>
+                </td>
               </tr>
             </tbody>
           </table>

@@ -10,11 +10,10 @@ import { RegisterComponent } from './register/register.component';
 import { AddInformationComponent } from './add-information/add-information.component';
 import { UserBooksComponent } from './user-books/user-books.component';
 import { UserOrdersComponent } from './user-orders/user-orders.component';
-import { UserCreateOrderComponent } from './user-create-order/user-create-order.component'
 import { UserGetAllBooksComponent } from './user-get-all-books/user-get-all-books.component';
 import { LibrarianCreateBookComponent } from './librarian-create-book/librarian-create-book.component';
 import { LibrarianGetAllOrdersComponent } from './librarian-get-all-orders/librarian-get-all-orders.component';
-import { LibrarianUpdateOrderComponent } from './librarian-update-order/librarian-update-order.component';
+import { UserMessageComponent } from './user-message/user-message.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +23,10 @@ import { LibrarianUpdateOrderComponent } from './librarian-update-order/libraria
     AddInformationComponent,
     UserBooksComponent,
     UserOrdersComponent,
-    UserCreateOrderComponent,
     UserGetAllBooksComponent,
     LibrarianCreateBookComponent,
     LibrarianGetAllOrdersComponent,
-    LibrarianUpdateOrderComponent
+    UserMessageComponent
   ],
   imports: [
     BrowserModule,

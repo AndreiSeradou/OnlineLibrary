@@ -10,6 +10,7 @@ import { UserService } from '../service/user.service';
 export class UserOrdersComponent implements OnInit {
 
   public orderList: responceOrderModel[] = [];
+  
   constructor(private userService:UserService) { }
 
   ngOnInit(): void {

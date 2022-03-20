@@ -11,7 +11,7 @@ using OnlineLibraryBack.Models.DTOs.Responses;
 
 namespace OnlineLibraryBack.Controllers
 {
-    [Route("api/[controller]")] // api/todo
+    [Route("api/[controller]")] 
     [ApiController]
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "AppUser")]
 
@@ -96,6 +96,26 @@ namespace OnlineLibraryBack.Controllers
                     return NotFound();
 
                 var booksResponse = _mapper.Map<IReadOnlyCollection<BookResponse>>(books);
+
+                return Ok(booksResponse);
+            }
+
+            return BadRequest("Something went wrong");
+        }
+
+        [HttpGet]
+        [Route("GetOverdueOrdersAsync")]
+        public async Task<IActionResult> GetOverdueOrdersAsync()
+        {
+            if (ModelState.IsValid)
+            {
+                var name = User.FindFirst("Name").Value;
+                var orders = await _userService.GetOverdueOrdersAsync(name).ConfigureAwait(false);
+
+                if (orders == null)
+                    return NotFound();
+
+                var booksResponse = _mapper.Map<IReadOnlyCollection<OrderResponse>>(orders);
 
                 return Ok(booksResponse);
             }

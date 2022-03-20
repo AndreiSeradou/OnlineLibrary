@@ -9,17 +9,41 @@ import { UserService } from '../service/user.service';
 })
 export class LibrarianGetAllOrdersComponent implements OnInit {
 
-  public orderList: responceOrderModel[] = [];
+  public orderListConditionFalse: responceOrderModel[] = [];
+  public orderListConditionTrue: responceOrderModel[] = [];
   constructor(private userService:UserService) { }
 
   ngOnInit(): void {
-    this.getAllBooks();
+    this.getAllOrdersConditionFalse();
+    this.getAllOrdersConditionTrue();
   }
 
-  getAllBooks()
+  onSubmit(num:number){
+    this.userService.updateOrder(num).subscribe(data => {
+      if (data) {
+        console.log(data)
+      }
+    })
+   }
+
+   onSubmitDelete(num:number){
+    this.userService.deleteOrder(num).subscribe(data => {
+      if (data) {
+        console.log(data)
+      }
+    })
+   }
+
+  getAllOrdersConditionFalse()
   {
-    this.userService.getAllOrders().subscribe((data:any)=>{
-      this.orderList = data;
+    this.userService.getAllOrdersConditionFalse().subscribe((data:any)=>{
+      this.orderListConditionFalse = data;
+    })
+  } 
+  getAllOrdersConditionTrue()
+  {
+    this.userService.getAllOrdersConditionTrue().subscribe((data:any)=>{
+      this.orderListConditionTrue = data;
     })
   } 
 

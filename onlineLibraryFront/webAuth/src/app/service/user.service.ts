@@ -56,6 +56,17 @@ export class UserService {
     return  this.httpClient.get<responceBookModel[]>(this.baseURL+"User/GetUserBooksAsync",{headers:headers});
   }
 
+  public GetOverdueOrders()
+  {
+    let token = localStorage.getItem("token");
+
+    const headers=new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    });
+    return  this.httpClient.get<responceOrderModel[]>(this.baseURL+"User/GetOverdueOrdersAsync",{headers:headers});
+  }
+
   public getUserOrders()
   {
     let token = localStorage.getItem("token");
@@ -99,7 +110,7 @@ export class UserService {
     return this.httpClient.post<boolean>(this.baseURL+"Librarian/CreateBook/",body,{headers:headers});
   }
 
-  public getAllOrders()
+  public getAllOrdersConditionFalse()
   {
     let token = localStorage.getItem("token");
 
@@ -107,7 +118,18 @@ export class UserService {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${token}`
     });
-    return  this.httpClient.get<responceOrderModel[]>(this.baseURL+"Librarian/GetAllOrdersAsync",{headers:headers});
+    return  this.httpClient.get<responceOrderModel[]>(this.baseURL+"Librarian/GetAllOrdersConditionFalseAsync",{headers:headers});
+  }
+
+  public getAllOrdersConditionTrue()
+  {
+    let token = localStorage.getItem("token");
+
+    const headers=new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    });
+    return  this.httpClient.get<responceOrderModel[]>(this.baseURL+"Librarian/GetAllOrdersConditionTrueAsync",{headers:headers});
   }
 
   public updateOrder(id:number)
@@ -123,5 +145,20 @@ export class UserService {
     }
 
     return this.httpClient.put<boolean>(this.baseURL+"Librarian/UpdateOrderAsync/", body,{headers:headers});
+  }
+
+  public deleteOrder(id:number)
+  {
+    let token = localStorage.getItem("token");
+    const headers=new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    });
+    
+    const body={
+      id:id
+    }
+
+    return this.httpClient.put<boolean>(this.baseURL+"Librarian/DeleteOrderAsync/", body,{headers:headers});
   }
 }

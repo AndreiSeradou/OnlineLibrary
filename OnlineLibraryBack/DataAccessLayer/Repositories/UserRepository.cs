@@ -36,13 +36,6 @@ namespace DataAccessLayer.Repositories
             return user;
         }
 
-        public async Task<User> GetByNameIncludeOrdersAsync(string name, CancellationToken ct = default)
-        {
-            var user = await _dbContext.Users.Include(x => x.Orders)
-                 .FirstOrDefaultAsync(user => user.UserName == name, ct).ConfigureAwait(false);
-            return user;
-        }
-
         public async Task<IdentityResult> UpdateAsync(User model, CancellationToken ct = default)
         {
             return await _userManager.UpdateAsync(model).ConfigureAwait(false);

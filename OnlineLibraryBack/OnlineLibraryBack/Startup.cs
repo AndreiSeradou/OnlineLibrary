@@ -39,6 +39,7 @@ namespace OnlineLibraryBack
             services.RegisterBLMappingConfig();
             services.RegisterDLMappingConfig();
             services.RegisterPLMappingConfig();
+
             services.Configure<JwtConfig>(Configuration.GetSection("JwtConfig"));
 
             services.AddHttpContextAccessor();

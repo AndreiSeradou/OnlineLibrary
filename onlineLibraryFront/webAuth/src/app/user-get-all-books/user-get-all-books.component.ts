@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 import { responceBookModel } from '../Models/responceBookModel';
 import { UserService } from '../service/user.service';
 
@@ -8,13 +9,21 @@ import { UserService } from '../service/user.service';
   styleUrls: ['./user-get-all-books.component.scss']
 })
 export class UserGetAllBooksComponent implements OnInit {
-
+  
   public bookList: responceBookModel[] = [];
   constructor(private userService:UserService) { }
 
   ngOnInit(): void {
     this.getAllBooks();
   }
+
+  onSubmit(num:number){
+    this.userService.createOrder(num).subscribe(data => {
+      if (data) {
+        console.log(data)
+      }
+    })
+   }
 
   getAllBooks()
   {

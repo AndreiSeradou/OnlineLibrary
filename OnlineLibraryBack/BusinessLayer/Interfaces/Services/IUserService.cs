@@ -11,5 +11,6 @@ namespace BusinessLayer.Interfaces.Services
         Task<IReadOnlyCollection<OrderBLModel>> GetAllUserOrdersAsync(string userName, CancellationToken ct = default);
         Task<IReadOnlyCollection<BookBLModel>> GetAllUserBooksAsync(string userName, CancellationToken ct = default);
         Task<IReadOnlyCollection<BookBLModel>> GetAllBooksAsync(CancellationToken ct = default);
+        Task<IReadOnlyCollection<OrderBLModel>> GetOverdueOrdersAsync(string userName, CancellationToken ct = default);
     }
 }

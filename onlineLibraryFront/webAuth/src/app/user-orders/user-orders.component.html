@@ -7,16 +7,16 @@
             <thead>
               <tr>
   
-                <th scope="col">Id</th>
-                <th scope="col">Condition</th>
-                <th scope="col">Book Id</th>
+                <th scope="col">Order Id</th>
+                <th scope="col">Status</th>
+                <th scope="col">Book Name</th>
               </tr>
             </thead>
             <tbody>
               <tr *ngFor="let order of orderList">
                 <td>{{order.id}}</td>
                 <td>{{order.condition}}</td>
-                <td>{{order.book.id}}</td>
+                <td>{{order.book.name}}</td>
               </tr>
             </tbody>
           </table>

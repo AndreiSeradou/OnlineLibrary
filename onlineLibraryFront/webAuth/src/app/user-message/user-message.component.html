@@ -7,16 +7,16 @@
             <thead>
               <tr>
   
-                <th scope="col">Id</th>
-                <th scope="col">Name</th>
-                <th scope="col">Text</th>
+                <th scope="col">Order Number</th>
+                <th scope="col">Book Name</th>
+                <th scope="col">Message</th>
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let book of bookList">
-                <td>{{book.id}}</td>
-                <td>{{book.name}}</td>
-                <td>{{book.text}}</td>
+              <tr *ngFor="let order of overdueList">
+                <td>{{order.id}}</td>
+                <td>{{order.book.name}}</td>
+                <td>Book expired, please back book.</td>
               </tr>
             </tbody>
           </table>

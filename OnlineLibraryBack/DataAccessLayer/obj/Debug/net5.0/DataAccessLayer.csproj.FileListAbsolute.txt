@@ -36,7 +36,6 @@ C:/Users/goldm/OneDrive/Рабочий стол/ct/OnlineLibrary/OnlineLibraryBa
 C:/Users/goldm/OneDrive/Рабочий стол/ct/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/DataAccessLayer.pdb
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/bin/Debug/net5.0/DataAccessLayer.deps.json
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/bin/Debug/net5.0/DataAccessLayer.dll
-/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/bin/Debug/net5.0/ref/DataAccessLayer.dll
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/bin/Debug/net5.0/DataAccessLayer.pdb
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/DataAccessLayer.csproj.AssemblyReference.cache
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
@@ -46,3 +45,4 @@ C:/Users/goldm/OneDrive/Рабочий стол/ct/OnlineLibrary/OnlineLibraryBa
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/DataAccessLayer.dll
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/ref/DataAccessLayer.dll
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/DataAccessLayer.pdb
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/bin/Debug/net5.0/ref/DataAccessLayer.dll

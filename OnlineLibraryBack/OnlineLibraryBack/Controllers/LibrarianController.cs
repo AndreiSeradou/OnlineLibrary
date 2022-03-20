@@ -52,7 +52,7 @@ namespace OnlineLibraryBack.Controllers
             {
                 var order = await _librarianService.UpdateOrderAsync(model.Id).ConfigureAwait(false);
 
-                if (order == null)
+                if (order == false)
                     return NotFound();
 
                 return Ok(order);
@@ -62,8 +62,8 @@ namespace OnlineLibraryBack.Controllers
         }
 
         [HttpGet]
-        [Route("GetAllOrdersAsync")]
-        public async Task<IActionResult> GetAllOrdersAsync()
+        [Route("GetAllOrdersConditionFalseAsync")]
+        public async Task<IActionResult> GetAllOrdersConditionFalseAsync()
         {
             var orders = await _librarianService.GetAllOrdersAsync().ConfigureAwait(false);
 
@@ -73,6 +73,32 @@ namespace OnlineLibraryBack.Controllers
             var ordersResponse = _mapper.Map<IReadOnlyCollection<OrderResponse>>(orders);
 
             return Ok(ordersResponse.Where(o => o.Condition == false));
+        }
+
+        [HttpGet]
+        [Route("GetAllOrdersConditionTrueAsync")]
+        public async Task<IActionResult> GetAllOrdersConditionTrueAsync()
+        {
+            var orders = await _librarianService.GetAllOrdersAsync().ConfigureAwait(false);
+
+            if (orders == null)
+                return NotFound();
+
+            var ordersResponse = _mapper.Map<IReadOnlyCollection<OrderResponse>>(orders);
+
+            return Ok(ordersResponse.Where(o => o.Condition == true));
+        }
+
+        [HttpPut]
+        [Route("DeleteOrderAsync")]
+        public async Task<IActionResult> DeleteOrderAsync([FromBody] UpdateOrderRequest model)
+        {
+            var orders = await _librarianService.DeleteOrderAsync(model.Id).ConfigureAwait(false);
+
+            if (orders == false)
+                return NotFound();
+
+            return Ok(orders);
         }
     }
 }

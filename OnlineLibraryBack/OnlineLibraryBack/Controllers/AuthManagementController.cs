@@ -39,7 +39,8 @@ namespace OnlineLibraryBack.Controllers
         {
             if (ModelState.IsValid)
             {
-                //var res = await _roleManager.CreateAsync(new IdentityRole("AppLibrarian"));
+                await _roleManager.CreateAsync(new IdentityRole("AppLibrarian"));
+                await _roleManager.CreateAsync(new IdentityRole("AppUser"));
                 // We can utilise the model
                 var existingUser = await _userManager.FindByNameAsync(user.Username).ConfigureAwait(false);
                
