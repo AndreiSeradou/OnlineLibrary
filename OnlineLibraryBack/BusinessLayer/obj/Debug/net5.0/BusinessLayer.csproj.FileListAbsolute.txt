@@ -58,3 +58,5 @@ C:/Users/goldm/OneDrive/Рабочий стол/ct/OnlineLibrary/OnlineLibraryBa
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/ref/BusinessLayer.dll
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/BusinessLayer.pdb
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/ref/BusinessLayer.dll
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/Configuration.dll
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/Configuration.pdb

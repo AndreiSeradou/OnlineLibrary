@@ -12,10 +12,11 @@ using Microsoft.IdentityModel.Tokens;
 using OnlineLibraryBack.Configuration;
 using DataAccessLayer.Entities;
 using OnlineLibraryBack.Models.DTOs.Requests;
+using Configuration.GeneralConfiguration;
 
 namespace OnlineLibraryBack.Controllers
 {
-    [Route("api/[controller]")] // api/authManagement
+    [Route("api/[controller]")]
     [ApiController]
     public class AuthManagementController : ControllerBase
     {
@@ -39,19 +40,31 @@ namespace OnlineLibraryBack.Controllers
         {
             if (ModelState.IsValid)
             {
-                await _roleManager.CreateAsync(new IdentityRole("AppLibrarian"));
-                await _roleManager.CreateAsync(new IdentityRole("AppUser"));
-                // We can utilise the model
-                var existingUser = await _userManager.FindByNameAsync(user.Username).ConfigureAwait(false);
+                await _roleManager.CreateAsync(new IdentityRole(GeneralConfiguration.LibrarianRole));
+                await _roleManager.CreateAsync(new IdentityRole(GeneralConfiguration.UserRole));
                
+                var existingUserByName = await _userManager.FindByNameAsync(user.Username).ConfigureAwait(false);
+                var existingUserByEmail = await _userManager.FindByEmailAsync(user.Email).ConfigureAwait(false);
 
-                if (existingUser != null)
+
+                if (existingUserByName != null)
                 {
                     return BadRequest(new AuthResult(){
                             Errors = new List<string>() {
-                                "Name already in use"
+                                GeneralConfiguration.ErrorName
                             },
                             Success = false
+                    });
+                }
+
+                if (existingUserByEmail != null)
+                {
+                    return BadRequest(new AuthResult()
+                    {
+                        Errors = new List<string>() {
+                              GeneralConfiguration.ErrorEmail
+                            },
+                        Success = false
                     });
                 }
 
@@ -59,10 +72,7 @@ namespace OnlineLibraryBack.Controllers
                 var isCreated = await _userManager.CreateAsync(newUser, user.Password).ConfigureAwait(false);
                 if(isCreated.Succeeded)
                 {
-                    
-                    // We need to add the user to a role
-
-                    await _userManager.AddToRoleAsync(newUser, "AppUser").ConfigureAwait(false);
+                    await _userManager.AddToRoleAsync(newUser, GeneralConfiguration.UserRole).ConfigureAwait(false);
                     var role = await _userManager.GetRolesAsync(newUser).ConfigureAwait(false);
 
                     var jwtToken = await GenerateJwtToken( newUser).ConfigureAwait(false);
@@ -72,15 +82,13 @@ namespace OnlineLibraryBack.Controllers
                     return BadRequest(new AuthResult(){
                             Errors = isCreated.Errors.Select(x => x.Description).ToList(),
                             Success = false,
-                            Name = "nono"
-
                     });
                 }
             }
 
             return BadRequest(new AuthResult(){
                     Errors = new List<string>() {
-                        "Invalid payload"
+                        GeneralConfiguration.ErrorPayload
                     },
                     Success = false
             });
@@ -97,7 +105,7 @@ namespace OnlineLibraryBack.Controllers
                 if(existingUser == null) {
                         return BadRequest(new AuthResult(){
                             Errors = new List<string>() {
-                                "Invalid login request"
+                                GeneralConfiguration.ErrorLogin
                             },
                             Success = false
                     });
@@ -108,7 +116,7 @@ namespace OnlineLibraryBack.Controllers
                 if(!isCorrect) {
                       return BadRequest(new AuthResult(){
                             Errors = new List<string>() {
-                                "Invalid login request"
+                                GeneralConfiguration.ErrorLogin
                             },
                             Success = false
                     });
@@ -121,7 +129,7 @@ namespace OnlineLibraryBack.Controllers
 
             return BadRequest(new AuthResult(){
                     Errors = new List<string>() {
-                        "Invalid payload"
+                        GeneralConfiguration.ErrorPayload
                     },
                     Success = false
             });
@@ -161,7 +169,7 @@ namespace OnlineLibraryBack.Controllers
         {
             var claims = new List<Claim>
             {
-                new Claim("Name", user.UserName),
+                new Claim(GeneralConfiguration.CustomClaim, user.UserName),
                 new Claim(JwtRegisteredClaimNames.Email, user.Email),
                 new Claim(JwtRegisteredClaimNames.Sub, user.Email),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())

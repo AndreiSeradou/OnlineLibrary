@@ -46,3 +46,6 @@ C:/Users/goldm/OneDrive/Рабочий стол/ct/OnlineLibrary/OnlineLibraryBa
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/ref/DataAccessLayer.dll
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/DataAccessLayer.pdb
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/bin/Debug/net5.0/ref/DataAccessLayer.dll
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/bin/Debug/net5.0/Configuration.dll
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/bin/Debug/net5.0/Configuration.pdb
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/Debug/net5.0/DataAccessLayer.csproj.CopyComplete

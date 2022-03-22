@@ -1622,6 +1622,7 @@
         "dependencies": {
           "AutoMapper": "11.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
+          "Configuration": "1.0.0",
           "DataAccessLayer": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.14"
         },
@@ -1632,12 +1633,23 @@
           "bin/placeholder/BusinessLayer.dll": {}
         }
       },
+      "Configuration/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Configuration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Configuration.dll": {}
+        }
+      },
       "DataAccessLayer/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "AutoMapper": "11.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
+          "Configuration": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.14",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.14",
           "Pomelo.EntityFrameworkCore.MySql": "5.0.4"
@@ -5910,6 +5922,11 @@
       "path": "../BusinessLayer/BusinessLayer.csproj",
       "msbuildProject": "../BusinessLayer/BusinessLayer.csproj"
     },
+    "Configuration/1.0.0": {
+      "type": "project",
+      "path": "../Configuration/Configuration.csproj",
+      "msbuildProject": "../Configuration/Configuration.csproj"
+    },
     "DataAccessLayer/1.0.0": {
       "type": "project",
       "path": "../DataAccessLayer/DataAccessLayer.csproj",
@@ -5921,7 +5938,7 @@
       "AutoMapper >= 11.0.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 11.0.0",
       "BusinessLayer >= 1.0.0",
-      "DataAccessLayer >= 1.0.0",
+      "Configuration >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 5.0.14",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 5.0.14",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.14",
@@ -5958,8 +5975,8 @@
             "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/BusinessLayer.csproj": {
               "projectPath": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/BusinessLayer.csproj"
             },
-            "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/DataAccessLayer.csproj": {
-              "projectPath": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/DataAccessLayer.csproj"
+            "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/Configuration.csproj": {
+              "projectPath": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/Configuration.csproj"
             }
           }
         }

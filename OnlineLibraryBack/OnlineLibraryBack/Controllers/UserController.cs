@@ -8,12 +8,13 @@ using OnlineLibraryBack.Models.DTOs.Requests;
 using AutoMapper;
 using System.Collections.Generic;
 using OnlineLibraryBack.Models.DTOs.Responses;
+using Configuration.GeneralConfiguration;
 
 namespace OnlineLibraryBack.Controllers
 {
     [Route("api/[controller]")] 
     [ApiController]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "AppUser")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = GeneralConfiguration.UserRole)]
 
     public class UserController : ControllerBase
     {
@@ -32,7 +33,7 @@ namespace OnlineLibraryBack.Controllers
         {
             if (ModelState.IsValid)
             {
-                var name = User.FindFirst("Name").Value;
+                var name = User.FindFirst(GeneralConfiguration.CustomClaim).Value;
                 var order =  await _userService.CreateOrderAsync(name, model.BookId).ConfigureAwait(false);
 
                 if (order == false)
@@ -41,7 +42,7 @@ namespace OnlineLibraryBack.Controllers
                 return Ok(order);
             }
 
-            return BadRequest("Something went wrong");
+            return BadRequest(GeneralConfiguration.InvalidModel);
         }
 
         [HttpGet]
@@ -50,7 +51,7 @@ namespace OnlineLibraryBack.Controllers
         {
             if (ModelState.IsValid)
             {
-                var name = User.FindFirst("Name").Value;
+                var name = User.FindFirst(GeneralConfiguration.CustomClaim).Value;
                 var orders = await _userService.GetAllUserOrdersAsync(name).ConfigureAwait(false);
 
                 if (orders == null)
@@ -61,7 +62,7 @@ namespace OnlineLibraryBack.Controllers
                 return Ok(orderResponse);
             }
 
-            return BadRequest("Something went wrong");
+            return BadRequest(GeneralConfiguration.InvalidModel);
         }
 
         [HttpGet]
@@ -71,7 +72,7 @@ namespace OnlineLibraryBack.Controllers
         {
             if (ModelState.IsValid)
             {
-                var name = User.FindFirst("Name").Value;
+                var name = User.FindFirst(GeneralConfiguration.CustomClaim).Value;
                 var books = await _userService.GetAllUserBooksAsync(name).ConfigureAwait(false);
 
                 if (books == null)
@@ -81,7 +82,7 @@ namespace OnlineLibraryBack.Controllers
 
                 return Ok(booksResponse);
             }
-            return BadRequest("Something went wrong");
+            return BadRequest(GeneralConfiguration.InvalidModel);
         }
 
         [HttpGet]
@@ -100,7 +101,7 @@ namespace OnlineLibraryBack.Controllers
                 return Ok(booksResponse);
             }
 
-            return BadRequest("Something went wrong");
+            return BadRequest(GeneralConfiguration.InvalidModel);
         }
 
         [HttpGet]
@@ -109,7 +110,7 @@ namespace OnlineLibraryBack.Controllers
         {
             if (ModelState.IsValid)
             {
-                var name = User.FindFirst("Name").Value;
+                var name = User.FindFirst(GeneralConfiguration.CustomClaim).Value;
                 var orders = await _userService.GetOverdueOrdersAsync(name).ConfigureAwait(false);
 
                 if (orders == null)
@@ -120,7 +121,7 @@ namespace OnlineLibraryBack.Controllers
                 return Ok(booksResponse);
             }
 
-            return BadRequest("Something went wrong");
+            return BadRequest(GeneralConfiguration.InvalidModel);
         }
     }
     

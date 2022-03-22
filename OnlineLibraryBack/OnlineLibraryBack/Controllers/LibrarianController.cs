@@ -10,12 +10,13 @@ using AutoMapper;
 using BusinessLayer.Models.DTOs;
 using OnlineLibraryBack.Models.DTOs.Responses;
 using System.Collections.Generic;
+using Configuration.GeneralConfiguration;
 
 namespace OnlineLibraryBack.Controllers
 {
     [Route("api/[controller]")] 
     [ApiController]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "AppLibrarian")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = GeneralConfiguration.LibrarianRole)]
     public class LibrarianController : ControllerBase
     {
         private readonly ILibrarianService  _librarianService;
@@ -41,7 +42,7 @@ namespace OnlineLibraryBack.Controllers
                 return Ok(book); 
             }
 
-            return BadRequest("Something went wrong");
+            return BadRequest(GeneralConfiguration.InvalidModel);
         }
 
         [HttpPut]
@@ -58,7 +59,7 @@ namespace OnlineLibraryBack.Controllers
                 return Ok(order);
             }
 
-            return BadRequest("Something went wrong");
+            return BadRequest(GeneralConfiguration.InvalidModel);
         }
 
         [HttpGet]

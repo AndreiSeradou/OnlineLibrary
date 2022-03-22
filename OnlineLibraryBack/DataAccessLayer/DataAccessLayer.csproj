@@ -25,4 +25,7 @@
     <Folder Include="Models\DTOs\" />
     <Folder Include="Mapping\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Configuration\Configuration.csproj" />
+  </ItemGroup>
 </Project>
