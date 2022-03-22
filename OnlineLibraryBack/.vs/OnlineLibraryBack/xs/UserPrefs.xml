@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{E5A4BDFE-FC49-43B1-82F8-D2C5ADFD6685}|TodoApp">
-  <MonoDevelop.Ide.Workbench ActiveDocument="OnlineLibraryBack/Controllers/UserController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Configuration/GeneralConfiguration/GeneralConfiguration.cs">
     <Files>
       <File FileName="OnlineLibraryBack/Startup.cs" Line="1" Column="1" IsPinned="True" />
       <File FileName="OnlineLibraryBack/Controllers/UserController.cs" Line="14" Column="33" />
@@ -13,7 +13,7 @@
       <File FileName="DataAccessLayer/Interfaces/Repositories/IUserRepository.cs" />
       <File FileName="DataAccessLayer/Repositories/UserRepository.cs" />
       <File FileName="BusinessLayer/Interfaces/Services/ILibrarianService.cs" />
-      <File FileName="OnlineLibraryBack/Controllers/LibrarianController.cs" />
+      <File FileName="OnlineLibraryBack/Controllers/LibrarianController.cs" Line="1" Column="1" />
       <File FileName="OnlineLibraryBack/Program.cs" />
       <File FileName="DataAccessLayer/Entities/Book.cs" />
       <File FileName="DataAccessLayer/Entities/Order.cs" />
@@ -21,28 +21,16 @@
       <File FileName="DataAccessLayer/Interfaces/Repositories/IBookRepository.cs" />
       <File FileName="DataAccessLayer/Interfaces/Repositories/IOrderRepository.cs" />
       <File FileName="DataAccessLayer/Mapping/MappingConfiguration.cs" />
+      <File FileName="OnlineLibraryBack/appsettings.json" Line="1" Column="1" />
+      <File FileName="Configuration/GeneralConfiguration/GeneralConfiguration.cs" Line="4" Column="18" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="OnlineLibraryBack" expanded="True">
-            <Node name="BusinessLayer" expanded="True">
-              <Node name="Interfaces" expanded="True">
-                <Node name="Services" expanded="True" />
-              </Node>
-            </Node>
-            <Node name="DataAccessLayer" expanded="True">
-              <Node name="Configuration" expanded="True" />
-              <Node name="Data" expanded="True" />
-              <Node name="Entities" expanded="True" />
-              <Node name="Interfaces" expanded="True">
-                <Node name="Repositories" expanded="True" />
-              </Node>
-              <Node name="Mapping" expanded="True" />
-            </Node>
-            <Node name="OnlineLibraryPresentationLayer" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="UserController.cs" selected="True" />
+            <Node name="Configuration" expanded="True">
+              <Node name="GeneralConfiguration" expanded="True">
+                <Node name="GeneralConfiguration.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -53,6 +41,7 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Configuration FirstBuild="True" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.OnlineLibraryPresentationLayer PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
