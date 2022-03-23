@@ -30,7 +30,7 @@ namespace DataAccessLayer.Repositories
         public async Task<Order> GetByIdAsync(int id)
         {
             var order = await _dbContext.Orders.Include(x => x.User).ThenInclude(x => x.Books).Include(x => x.Book)
-                .FirstOrDefaultAsync(user => user.Id == id).co;
+                .FirstOrDefaultAsync(user => user.Id == id);
             return order;
         }
 
