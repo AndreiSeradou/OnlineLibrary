@@ -3,6 +3,7 @@ using BusinessLayer.Interfaces.Services;
 using BusinessLayer.Models.DTOs;
 using DataAccessLayer.Entities;
 using DataAccessLayer.Interfaces.Repositories;
+using DataAccessLayer.Models.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,11 +39,13 @@ namespace BusinessLayer.Services
 
             book.Count--;
 
-            user.Orders.Add(new Order { Condition = false, Book = book });
+            var mapBook = _mapper.Map<Book>(book);
 
-            var result = await _userRepository.UpdateAsync(user, ct).ConfigureAwait(false);
+            user.Orders.Add(new Order { Condition = false, Book = mapBook });
 
-            if (!result.Succeeded)
+            var result =  _userRepository.Update(user, ct);
+
+            if (result is null)
                 return false;
 
             await _bookRepository.SaveAsync();

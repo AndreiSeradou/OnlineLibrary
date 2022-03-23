@@ -21,34 +21,34 @@ namespace DataAccessLayer.Repositories
             _mapper = mapper;
         }
 
-        public async Task<IReadOnlyCollection<Order>> GetAllAsync(CancellationToken ct = default)
+        public async Task<IReadOnlyCollection<OrderEntityModel>> GetAllAsync(CancellationToken ct = default)
         {
             var orders = await _dbContext.Orders.Include(x => x.Book)
                 .AsNoTracking()
                 .ToListAsync(ct)
                 .ConfigureAwait(false);
-            return orders;
+            return _mapper.Map<IReadOnlyCollection<OrderEntityModel>>(orders);
         }
 
-        public async Task<Order> GetByIdAsync(int id, CancellationToken ct = default)
+        public async Task<OrderEntityModel> GetByIdAsync(int id, CancellationToken ct = default)
         {
             var order = await _dbContext.Orders.Include(x => x.User).ThenInclude(x => x.Books).Include(x => x.Book)
                 .FirstOrDefaultAsync(user => user.Id == id, ct);
-            return order;
+            return _mapper.Map<OrderEntityModel>(order);
         }
 
-        public async Task<Order> CreateAsync(Order entity, CancellationToken ct = default)
+        public async Task<OrderEntityModel> CreateAsync(OrderEntityModel entity, CancellationToken ct = default)
         {
-            var entityEntry = await _dbContext.Orders.AddAsync(entity, ct).ConfigureAwait(false);
-           
-            return entityEntry.Entity;
+            var order = _mapper.Map<Order>(entity);
+            var entityEntry = await _dbContext.Orders.AddAsync(order, ct).ConfigureAwait(false);
+            return _mapper.Map<OrderEntityModel>(entityEntry.Entity);
         }
 
-        public async Task<Order> UpdateAsync(Order entity, CancellationToken ct = default)
+        public OrderEntityModel Update(OrderEntityModel entity, CancellationToken ct = default)
         {
-            var entityEntry = _dbContext.Orders.Update(entity);
-            
-            return entityEntry.Entity;
+            var order = _mapper.Map<Order>(entity);
+            var entityEntry = _dbContext.Orders.Update(order);
+            return _mapper.Map<OrderEntityModel>(entityEntry.Entity);
         }
 
         public async Task<bool> DeleteAsync(int id, CancellationToken ct = default)

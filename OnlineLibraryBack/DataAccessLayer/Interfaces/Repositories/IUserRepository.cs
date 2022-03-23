@@ -8,8 +8,8 @@ namespace DataAccessLayer.Interfaces.Repositories
 {
     public interface IUserRepository
     {
-        Task<User> GetByNameIncludeAllAsync(string name, CancellationToken ct = default);
-        Task<IdentityResult> UpdateAsync(User model, CancellationToken ct = default);
+        Task<UserEntityModel> GetByNameIncludeAllAsync(string name, CancellationToken ct = default);
+        UserEntityModel Update(UserEntityModel model, CancellationToken ct = default);
         Task SaveAsync();
     }
 }

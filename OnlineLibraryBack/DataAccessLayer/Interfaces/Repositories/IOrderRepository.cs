@@ -11,10 +11,10 @@ namespace DataAccessLayer.Interfaces.Repositories
 {
     public interface IOrderRepository
     {
-        Task<IReadOnlyCollection<Order>> GetAllAsync(CancellationToken ct = default);
-        Task<Order> GetByIdAsync(int id, CancellationToken ct = default);
-        Task<Order> CreateAsync(Order model, CancellationToken ct = default);
-        Task<Order> UpdateAsync(Order model, CancellationToken ct = default);
+        Task<IReadOnlyCollection<OrderEntityModel>> GetAllAsync(CancellationToken ct = default);
+        Task<OrderEntityModel> GetByIdAsync(int id, CancellationToken ct = default);
+        Task<OrderEntityModel> CreateAsync(OrderEntityModel model, CancellationToken ct = default);
+        OrderEntityModel Update(OrderEntityModel model, CancellationToken ct = default);
         Task<bool> DeleteAsync(int id, CancellationToken ct = default);
         Task SaveAsync();
     }

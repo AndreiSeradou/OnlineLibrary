@@ -21,33 +21,36 @@ namespace DataAccessLayer.Repositories
             _mapper = mapper;
         }
 
-        public async Task<IReadOnlyCollection<Book>> GetAllAsync(CancellationToken ct = default)
+        public async Task<IReadOnlyCollection<BookEntityModel>> GetAllAsync(CancellationToken ct = default)
         {
             var books = await _dbContext.Books
                 .AsNoTracking()
                 .ToListAsync(ct)
                 .ConfigureAwait(false);
 
-            return books;
+            return _mapper.Map<IReadOnlyCollection<BookEntityModel>>(books);
         }
 
-        public async Task<Book> GetByIdAsync(int id, CancellationToken ct = default)
+        public async Task<BookEntityModel> GetByIdAsync(int id, CancellationToken ct = default)
         {
             var book = await _dbContext.Books.FirstOrDefaultAsync(user => user.Id == id, ct);
-            return book;
+            _dbContext.Entry(book).State = EntityState.Modified;
+            return _mapper.Map<BookEntityModel>(book);
         }
 
-        public async Task<Book> CreateAsync(Book entity, CancellationToken ct = default)
+        public async Task<BookEntityModel> CreateAsync(BookEntityModel entity, CancellationToken ct = default)
         {
-            var entityEntry = await _dbContext.Books.AddAsync(entity, ct).ConfigureAwait(false);
+            var book = _mapper.Map<Book>(entity);
+            var entityEntry = await _dbContext.Books.AddAsync(book, ct).ConfigureAwait(false);
 
-            return entityEntry.Entity;
+            return _mapper.Map<BookEntityModel>(entityEntry.Entity);
         }
 
-        public async Task<Book> UpdateAsync(Book entity, CancellationToken ct = default)
+        public BookEntityModel Update(BookEntityModel entity, CancellationToken ct = default)
         {
-            var entityEntry = _dbContext.Books.Update(entity);
-            return entityEntry.Entity;
+            var book = _mapper.Map<Book>(entity);
+            var entityEntry = _dbContext.Books.Update(book);
+            return _mapper.Map<BookEntityModel>(entityEntry.Entity);
         }
 
         public async Task<bool> DeleteAsync(int id, CancellationToken ct = default)

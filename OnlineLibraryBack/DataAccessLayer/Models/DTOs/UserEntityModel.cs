@@ -4,10 +4,8 @@ using Microsoft.AspNetCore.Identity;
 
 namespace DataAccessLayer.Models.DTOs
 {
-    public class UserEntityModel: IdentityUser
+    public class UserEntityModel: User
     {
-        public int Id { get; set; }
-        public ICollection<Order> Orders { get; set; }
-        public ICollection<Book> Books { get; set; }
+       
     }
 }

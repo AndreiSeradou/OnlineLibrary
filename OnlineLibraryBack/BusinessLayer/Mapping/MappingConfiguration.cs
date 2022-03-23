@@ -12,6 +12,9 @@ namespace BusinessLayer.Mapping
             CreateMap<BookEntityModel, BookBLModel>().ReverseMap();
             CreateMap<OrderEntityModel, OrderBLModel>().ReverseMap();
             CreateMap<UserEntityModel, UserBLModel>().ReverseMap();
+            CreateMap<BookEntityModel, Book>().ReverseMap();
+            CreateMap<OrderEntityModel, Order>().ReverseMap();
+            CreateMap<UserEntityModel, User>().ReverseMap();
             CreateMap<Book, BookBLModel>().ReverseMap();
             CreateMap<Order, OrderBLModel>().ReverseMap();
             CreateMap<User, UserBLModel>().ReverseMap();

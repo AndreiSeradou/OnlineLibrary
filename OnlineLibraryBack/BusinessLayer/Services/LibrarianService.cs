@@ -3,6 +3,7 @@ using BusinessLayer.Interfaces.Services;
 using BusinessLayer.Models.DTOs;
 using DataAccessLayer.Entities;
 using DataAccessLayer.Interfaces.Repositories;
+using DataAccessLayer.Models.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Threading;
@@ -25,7 +26,7 @@ namespace BusinessLayer.Services
 
         public  async Task<BookBLModel> CreateBookAsync(BookBLModel model, CancellationToken ct = default)
         {
-            var bookModel = _mapper.Map<Book>(model);
+            var bookModel = _mapper.Map<BookEntityModel>(model);
             var book = await _bookRepository.CreateAsync(bookModel, ct).ConfigureAwait(false);
             await _bookRepository.SaveAsync();
             return _mapper.Map<BookBLModel>(book);
@@ -36,7 +37,7 @@ namespace BusinessLayer.Services
             var order = await _orderRepository.GetByIdAsync(id, ct);
             order.User.Books.Remove(order.Book);
             order.Book.Count++;
-            var updateOrder = await _orderRepository.UpdateAsync(order);
+            var updateOrder = _orderRepository.Update(order);
             await _orderRepository.DeleteAsync(id);
             await _orderRepository.SaveAsync();
 
@@ -63,7 +64,7 @@ namespace BusinessLayer.Services
 
             order.User.Books.Add(order.Book);
 
-            var updateOrder = await _orderRepository.UpdateAsync(order, ct).ConfigureAwait(false);
+            var updateOrder = _orderRepository.Update(order, ct);
             
             if (updateOrder is null)
                 return false;
@@ -72,7 +73,5 @@ namespace BusinessLayer.Services
 
             return true; 
         }
-
-      
     }
 }

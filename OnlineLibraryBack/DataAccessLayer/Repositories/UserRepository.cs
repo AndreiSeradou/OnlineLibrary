@@ -29,16 +29,18 @@ namespace DataAccessLayer.Repositories
             _mapper = mapper;
         }
 
-        public async Task<User> GetByNameIncludeAllAsync(string name, CancellationToken ct = default)
+        public async Task<UserEntityModel> GetByNameIncludeAllAsync(string name, CancellationToken ct = default)
         {
             var user = await _dbContext.Users.Include(x => x.Orders).ThenInclude(x => x.Book).Include(x => x.Books)
                 .FirstOrDefaultAsync(user => user.UserName == name, ct).ConfigureAwait(false);
-            return user;
+            return _mapper.Map<UserEntityModel>(user);
         }
 
-        public async Task<IdentityResult> UpdateAsync(User model, CancellationToken ct = default)
+        public UserEntityModel Update(UserEntityModel model, CancellationToken ct = default)
         {
-            return await _userManager.UpdateAsync(model).ConfigureAwait(false);
+            var user = _mapper.Map<User>(model);
+            var entityEntry =  _dbContext.Users.Update(user);
+            return _mapper.Map<UserEntityModel>(entityEntry.Entity);
         }
 
         public async Task SaveAsync()
