@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using BusinessLayer.Interfaces.Services;
-using System.Linq;
 using OnlineLibraryBack.Models.DTOs.Requests;
 using AutoMapper;
 using System.Collections.Generic;
@@ -34,7 +33,7 @@ namespace OnlineLibraryBack.Controllers
             if (ModelState.IsValid)
             {
                 var name = User.FindFirst(GeneralConfiguration.CustomClaim).Value;
-                var order =  await _userService.CreateOrderAsync(name, model.BookId).ConfigureAwait(false);
+                var order =  await _userService.CreateOrderAsync(name, model.BookId);
 
                 if (order == false)
                     return NotFound();
@@ -52,7 +51,7 @@ namespace OnlineLibraryBack.Controllers
             if (ModelState.IsValid)
             {
                 var name = User.FindFirst(GeneralConfiguration.CustomClaim).Value;
-                var orders = await _userService.GetAllUserOrdersAsync(name).ConfigureAwait(false);
+                var orders = await _userService.GetAllUserOrdersAsync(name);
 
                 if (orders == null)
                     return NotFound();
@@ -73,7 +72,7 @@ namespace OnlineLibraryBack.Controllers
             if (ModelState.IsValid)
             {
                 var name = User.FindFirst(GeneralConfiguration.CustomClaim).Value;
-                var books = await _userService.GetAllUserBooksAsync(name).ConfigureAwait(false);
+                var books = await _userService.GetAllUserBooksAsync(name);
 
                 if (books == null)
                     return NotFound();
@@ -91,7 +90,7 @@ namespace OnlineLibraryBack.Controllers
         {
             if (ModelState.IsValid)
             {
-                var books = await _userService.GetAllBooksAsync().ConfigureAwait(false);
+                var books = await _userService.GetAllBooksAsync();
 
                 if (books == null)
                     return NotFound();
@@ -111,7 +110,7 @@ namespace OnlineLibraryBack.Controllers
             if (ModelState.IsValid)
             {
                 var name = User.FindFirst(GeneralConfiguration.CustomClaim).Value;
-                var orders = await _userService.GetOverdueOrdersAsync(name).ConfigureAwait(false);
+                var orders = await _userService.GetOverdueOrdersAsync(name);
 
                 if (orders == null)
                     return NotFound();

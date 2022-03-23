@@ -2,10 +2,8 @@
 using DataAccessLayer.Data;
 using DataAccessLayer.Entities;
 using DataAccessLayer.Interfaces.Repositories;
-using DataAccessLayer.Models.DTOs;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace DataAccessLayer.Repositories
@@ -21,38 +19,37 @@ namespace DataAccessLayer.Repositories
             _mapper = mapper;
         }
 
-        public async Task<IReadOnlyCollection<Book>> GetAllAsync(CancellationToken ct = default)
+        public async Task<IReadOnlyCollection<Book>> GetAllAsync()
         {
             var books = await _dbContext.Books
                 .AsNoTracking()
-                .ToListAsync(ct)
-                .ConfigureAwait(false);
+                .ToListAsync();
 
             return books;
         }
 
-        public async Task<Book> GetByIdAsync(int id, CancellationToken ct = default)
+        public async Task<Book> GetByIdAsync(int id)
         {
-            var book = await _dbContext.Books.FirstOrDefaultAsync(user => user.Id == id, ct);
+            var book = await _dbContext.Books.FirstOrDefaultAsync(user => user.Id == id);
             return book;
         }
 
-        public async Task<Book> CreateAsync(Book entity, CancellationToken ct = default)
+        public async Task<Book> CreateAsync(Book entity)
         {
-            var entityEntry = await _dbContext.Books.AddAsync(entity, ct).ConfigureAwait(false);
+            var entityEntry = await _dbContext.Books.AddAsync(entity);
 
             return entityEntry.Entity;
         }
 
-        public async Task<Book> UpdateAsync(Book entity, CancellationToken ct = default)
+        public Book Update(Book entity)
         {
             var entityEntry = _dbContext.Books.Update(entity);
             return entityEntry.Entity;
         }
 
-        public async Task<bool> DeleteAsync(int id, CancellationToken ct = default)
+        public async Task<bool> DeleteAsync(int id)
         {
-            var entity = await GetByIdAsync(id, ct).ConfigureAwait(false);
+            var entity = await GetByIdAsync(id);
             var book = _mapper.Map<Book>(entity);
             if (entity != null)
             {
@@ -66,7 +63,7 @@ namespace DataAccessLayer.Repositories
 
         public async Task SaveAsync()
         {
-            await _dbContext.SaveChangesAsync().ConfigureAwait(false);
+            await _dbContext.SaveChangesAsync();
         }
     }
 }

@@ -43,8 +43,8 @@ namespace OnlineLibraryBack.Controllers
                 await _roleManager.CreateAsync(new IdentityRole(GeneralConfiguration.LibrarianRole));
                 await _roleManager.CreateAsync(new IdentityRole(GeneralConfiguration.UserRole));
                
-                var existingUserByName = await _userManager.FindByNameAsync(user.Username).ConfigureAwait(false);
-                var existingUserByEmail = await _userManager.FindByEmailAsync(user.Email).ConfigureAwait(false);
+                var existingUserByName = await _userManager.FindByNameAsync(user.Username);
+                var existingUserByEmail = await _userManager.FindByEmailAsync(user.Email);
 
 
                 if (existingUserByName != null)
@@ -69,13 +69,13 @@ namespace OnlineLibraryBack.Controllers
                 }
 
                 var newUser = new User() { Email = user.Email, UserName = user.Username, Id = user.Id};
-                var isCreated = await _userManager.CreateAsync(newUser, user.Password).ConfigureAwait(false);
+                var isCreated = await _userManager.CreateAsync(newUser, user.Password);
                 if(isCreated.Succeeded)
                 {
-                    await _userManager.AddToRoleAsync(newUser, GeneralConfiguration.UserRole).ConfigureAwait(false);
-                    var role = await _userManager.GetRolesAsync(newUser).ConfigureAwait(false);
+                    await _userManager.AddToRoleAsync(newUser, GeneralConfiguration.UserRole);
+                    var role = await _userManager.GetRolesAsync(newUser);
 
-                    var jwtToken = await GenerateJwtToken( newUser).ConfigureAwait(false);
+                    var jwtToken = await GenerateJwtToken( newUser);
 
                     return Ok(jwtToken);
                 } else {
@@ -100,7 +100,7 @@ namespace OnlineLibraryBack.Controllers
         {
             if(ModelState.IsValid)
             {
-                var existingUser = await _userManager.FindByEmailAsync(user.Email).ConfigureAwait(false);
+                var existingUser = await _userManager.FindByEmailAsync(user.Email);
 
                 if(existingUser == null) {
                         return BadRequest(new AuthResult(){
@@ -111,7 +111,7 @@ namespace OnlineLibraryBack.Controllers
                     });
                 }
 
-                var isCorrect = await _userManager.CheckPasswordAsync(existingUser, user.Password).ConfigureAwait(false);
+                var isCorrect = await _userManager.CheckPasswordAsync(existingUser, user.Password);
 
                 if(!isCorrect) {
                       return BadRequest(new AuthResult(){
@@ -122,7 +122,7 @@ namespace OnlineLibraryBack.Controllers
                     });
                 }
 
-                var jwtToken  = await GenerateJwtToken(existingUser).ConfigureAwait(false);
+                var jwtToken  = await GenerateJwtToken(existingUser);
 
                 return Ok(jwtToken);
             }
@@ -141,7 +141,7 @@ namespace OnlineLibraryBack.Controllers
 
             var key = Encoding.ASCII.GetBytes(_jwtConfig.Secret);
 
-            var claims = await GetAllValidClaims(user).ConfigureAwait(false);
+            var claims = await GetAllValidClaims(user);
 
             var tokenDescriptor = new SecurityTokenDescriptor
             {
@@ -152,7 +152,7 @@ namespace OnlineLibraryBack.Controllers
 
             var token = jwtTokenHandler.CreateToken(tokenDescriptor);
             var jwtToken = jwtTokenHandler.WriteToken(token);
-            var role = await _userManager.GetRolesAsync(user).ConfigureAwait(false);
+            var role = await _userManager.GetRolesAsync(user);
 
 
 
@@ -175,21 +175,20 @@ namespace OnlineLibraryBack.Controllers
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };
 
-            var userClaims = await _userManager.GetClaimsAsync(user).ConfigureAwait(false);
+            var userClaims = await _userManager.GetClaimsAsync(user);
             claims.AddRange(userClaims);
 
-
-            var userRoles = await _userManager.GetRolesAsync(user).ConfigureAwait(false);
+            var userRoles = await _userManager.GetRolesAsync(user);
 
             foreach(var userRole in userRoles)
             {
-                var role = await _roleManager.FindByNameAsync(userRole).ConfigureAwait(false);
+                var role = await _roleManager.FindByNameAsync(userRole);
 
                 if(role != null)
                 {
                     claims.Add(new Claim(ClaimTypes.Role, userRole));
 
-                    var roleClaims = await _roleManager.GetClaimsAsync(role).ConfigureAwait(false);
+                    var roleClaims = await _roleManager.GetClaimsAsync(role);
                     foreach(var roleClaim in roleClaims)
                     {
                         claims.Add(roleClaim);

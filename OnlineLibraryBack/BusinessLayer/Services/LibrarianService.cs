@@ -5,7 +5,6 @@ using DataAccessLayer.Entities;
 using DataAccessLayer.Interfaces.Repositories;
 using System;
 using System.Collections.Generic;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace BusinessLayer.Services
@@ -23,20 +22,20 @@ namespace BusinessLayer.Services
             _mapper = mapper;
         }
 
-        public  async Task<BookBLModel> CreateBookAsync(BookBLModel model, CancellationToken ct = default)
+        public  async Task<BookBLModel> CreateBookAsync(BookBLModel model)
         {
             var bookModel = _mapper.Map<Book>(model);
-            var book = await _bookRepository.CreateAsync(bookModel, ct).ConfigureAwait(false);
+            var book = await _bookRepository.CreateAsync(bookModel);
             await _bookRepository.SaveAsync();
             return _mapper.Map<BookBLModel>(book);
         }
 
-        public async Task<bool> DeleteOrderAsync(int id, CancellationToken ct = default)
+        public async Task<bool> DeleteOrderAsync(int id)
         {
-            var order = await _orderRepository.GetByIdAsync(id, ct);
+            var order = await _orderRepository.GetByIdAsync(id);
             order.User.Books.Remove(order.Book);
             order.Book.Count++;
-            var updateOrder = await _orderRepository.UpdateAsync(order);
+            var updateOrder = _orderRepository.Update(order);
             await _orderRepository.DeleteAsync(id);
             await _orderRepository.SaveAsync();
 
@@ -48,22 +47,22 @@ namespace BusinessLayer.Services
             return true;
         }
 
-        public async Task<IReadOnlyCollection<OrderBLModel>> GetAllOrdersAsync(CancellationToken ct = default)
+        public async Task<IReadOnlyCollection<OrderBLModel>> GetAllOrdersAsync()
         {
-            var orders = await _orderRepository.GetAllAsync(ct).ConfigureAwait(false);
+            var orders = await _orderRepository.GetAllAsync();
             return _mapper.Map<IReadOnlyCollection<OrderBLModel>>(orders);
         }
 
-        public async Task<bool> UpdateOrderAsync(int id, CancellationToken ct = default)
+        public async Task<bool> UpdateOrderAsync(int id)
         {
-            var order = await _orderRepository.GetByIdAsync(id, ct).ConfigureAwait(false);
+            var order = await _orderRepository.GetByIdAsync(id);
 
             order.Condition = true;
             order.DateTimeCreated = DateTime.UtcNow;
 
             order.User.Books.Add(order.Book);
 
-            var updateOrder = await _orderRepository.UpdateAsync(order, ct).ConfigureAwait(false);
+            var updateOrder = _orderRepository.Update(order);
             
             if (updateOrder is null)
                 return false;

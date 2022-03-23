@@ -2,10 +2,8 @@
 using DataAccessLayer.Data;
 using DataAccessLayer.Entities;
 using DataAccessLayer.Interfaces.Repositories;
-using DataAccessLayer.Models.DTOs;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace DataAccessLayer.Repositories
@@ -21,39 +19,38 @@ namespace DataAccessLayer.Repositories
             _mapper = mapper;
         }
 
-        public async Task<IReadOnlyCollection<Order>> GetAllAsync(CancellationToken ct = default)
+        public async Task<IReadOnlyCollection<Order>> GetAllAsync()
         {
             var orders = await _dbContext.Orders.Include(x => x.Book)
                 .AsNoTracking()
-                .ToListAsync(ct)
-                .ConfigureAwait(false);
+                .ToListAsync();
             return orders;
         }
 
-        public async Task<Order> GetByIdAsync(int id, CancellationToken ct = default)
+        public async Task<Order> GetByIdAsync(int id)
         {
             var order = await _dbContext.Orders.Include(x => x.User).ThenInclude(x => x.Books).Include(x => x.Book)
-                .FirstOrDefaultAsync(user => user.Id == id, ct);
+                .FirstOrDefaultAsync(user => user.Id == id).co;
             return order;
         }
 
-        public async Task<Order> CreateAsync(Order entity, CancellationToken ct = default)
+        public async Task<Order> CreateAsync(Order entity)
         {
-            var entityEntry = await _dbContext.Orders.AddAsync(entity, ct).ConfigureAwait(false);
+            var entityEntry = await _dbContext.Orders.AddAsync(entity);
            
             return entityEntry.Entity;
         }
 
-        public async Task<Order> UpdateAsync(Order entity, CancellationToken ct = default)
+        public Order Update(Order entity)
         {
             var entityEntry = _dbContext.Orders.Update(entity);
-            
+
             return entityEntry.Entity;
         }
 
-        public async Task<bool> DeleteAsync(int id, CancellationToken ct = default)
+        public async Task<bool> DeleteAsync(int id)
         {
-            var entity = await GetByIdAsync(id, ct).ConfigureAwait(false);
+            var entity = await GetByIdAsync(id);
             var order = _mapper.Map<Order>(entity);
             if (entity != null)
             {
@@ -66,7 +63,7 @@ namespace DataAccessLayer.Repositories
 
         public async Task SaveAsync()
         {
-            await _dbContext.SaveChangesAsync().ConfigureAwait(false);
+            await _dbContext.SaveChangesAsync();
         }
     }
 }

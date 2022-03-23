@@ -1,6 +1,5 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using DataAccessLayer.Entities;
 using BusinessLayer.Interfaces.Services;
 using System.Linq;
 using Microsoft.AspNetCore.Authorization;
@@ -35,7 +34,7 @@ namespace OnlineLibraryBack.Controllers
             if (ModelState.IsValid)
             {
                 var newBook = _mapper.Map<BookBLModel>(model);
-                var book = await _librarianService.CreateBookAsync(newBook).ConfigureAwait(false);
+                var book = await _librarianService.CreateBookAsync(newBook);
                 if (book == null)
                     return NotFound();
 
@@ -51,7 +50,7 @@ namespace OnlineLibraryBack.Controllers
         {
             if (ModelState.IsValid)
             {
-                var order = await _librarianService.UpdateOrderAsync(model.Id).ConfigureAwait(false);
+                var order = await _librarianService.UpdateOrderAsync(model.Id);
 
                 if (order == false)
                     return NotFound();
@@ -66,7 +65,7 @@ namespace OnlineLibraryBack.Controllers
         [Route("GetAllOrdersConditionFalseAsync")]
         public async Task<IActionResult> GetAllOrdersConditionFalseAsync()
         {
-            var orders = await _librarianService.GetAllOrdersAsync().ConfigureAwait(false);
+            var orders = await _librarianService.GetAllOrdersAsync();
 
             if (orders == null)
                 return NotFound();
@@ -80,7 +79,7 @@ namespace OnlineLibraryBack.Controllers
         [Route("GetAllOrdersConditionTrueAsync")]
         public async Task<IActionResult> GetAllOrdersConditionTrueAsync()
         {
-            var orders = await _librarianService.GetAllOrdersAsync().ConfigureAwait(false);
+            var orders = await _librarianService.GetAllOrdersAsync();
 
             if (orders == null)
                 return NotFound();
@@ -94,7 +93,7 @@ namespace OnlineLibraryBack.Controllers
         [Route("DeleteOrderAsync")]
         public async Task<IActionResult> DeleteOrderAsync([FromBody] UpdateOrderRequest model)
         {
-            var orders = await _librarianService.DeleteOrderAsync(model.Id).ConfigureAwait(false);
+            var orders = await _librarianService.DeleteOrderAsync(model.Id);
 
             if (orders == false)
                 return NotFound();
