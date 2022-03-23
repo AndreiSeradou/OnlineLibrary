@@ -34,9 +34,6 @@ namespace OnlineLibraryBack.Controllers
             {
                 var name = User.FindFirst(GeneralConfiguration.CustomClaim).Value;
                 var order =  await _userService.CreateOrderAsync(name, model.BookId);
-
-                if (order == false)
-                    return NotFound();
         
                 return Ok(order);
             }

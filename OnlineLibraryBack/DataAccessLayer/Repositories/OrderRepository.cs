@@ -21,7 +21,7 @@ namespace DataAccessLayer.Repositories
 
         public async Task<IReadOnlyCollection<Order>> GetAllAsync()
         {
-            var orders = await _dbContext.Orders.Include(x => x.Book)
+            var orders = await _dbContext.Orders.Include(x => x.Book).Include(u => u.User)
                 .AsNoTracking()
                 .ToListAsync();
             return orders;

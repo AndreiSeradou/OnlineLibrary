@@ -18,18 +18,30 @@ export class LibrarianGetAllOrdersComponent implements OnInit {
     this.getAllOrdersConditionTrue();
   }
 
-  onSubmit(num:number){
+  onSubmitUpdate(num:number){
     this.userService.updateOrder(num).subscribe(data => {
       if (data) {
+        alert("Successfully confirm");  
         console.log(data)
+        location.reload();
       }
-    })
+      else
+      {
+        alert("Error return");
+      }
+    })  
    }
 
    onSubmitDelete(num:number){
     this.userService.deleteOrder(num).subscribe(data => {
       if (data) {
+        alert("Successfully return");
         console.log(data)
+        location.reload();
+      }
+      else
+      {
+        alert("Error return");
       }
     })
    }

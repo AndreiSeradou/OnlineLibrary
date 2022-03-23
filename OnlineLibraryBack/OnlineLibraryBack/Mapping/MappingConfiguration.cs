@@ -15,6 +15,7 @@ namespace OnlineLibraryPresentationLayer.Mapping
             CreateMap<BookBLModel, BookResponse>().ReverseMap();
             CreateMap<BookBLModel, BookRequest>().ReverseMap();
             CreateMap<Book, BookResponse>().ReverseMap();
+            CreateMap<UserResponse, User>().ReverseMap();
         }
     }
 }

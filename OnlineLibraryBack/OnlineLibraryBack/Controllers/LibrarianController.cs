@@ -70,7 +70,7 @@ namespace OnlineLibraryBack.Controllers
             if (orders == null)
                 return NotFound();
 
-            var ordersResponse = _mapper.Map<IReadOnlyCollection<OrderResponse>>(orders);
+            var ordersResponse = _mapper.Map<IReadOnlyCollection<OrderResponse>>(orders);   
 
             return Ok(ordersResponse.Where(o => o.Condition == false));
         }
