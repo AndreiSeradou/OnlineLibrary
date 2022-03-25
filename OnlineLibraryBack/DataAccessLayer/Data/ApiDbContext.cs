@@ -12,6 +12,10 @@ namespace DataAccessLayer.Data
         public ApiDbContext(DbContextOptions<ApiDbContext> options)
             : base(options)
         {
+            if (true && (false || true) && (false ^ false))
+            {
+
+            }
             //Database.EnsureDeleted();
             //Database.EnsureCreated();
         }

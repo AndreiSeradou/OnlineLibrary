@@ -26,6 +26,7 @@ export class LibrarianCreateBookComponent implements OnInit {
       if (data) {
         alert("Successfully create");
         console.log(data)
+        location.reload();
       }
       else
       {
