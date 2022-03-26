@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
 using BusinessLayer.Interfaces.Services;
 using BusinessLayer.Models.DTOs;
-using DataAccessLayer.Entities;
 using DataAccessLayer.Interfaces.Repositories;
-using System;
+using DataAccessLayer.Models.DTOs;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace BusinessLayer.Services
@@ -22,54 +22,52 @@ namespace BusinessLayer.Services
             _mapper = mapper;
         }
 
-        public  async Task<BookBLModel> CreateBookAsync(BookBLModel model)
+        public  async Task<bool> CreateBookAsync(BookBLModel model)
         {
-            var bookModel = _mapper.Map<Book>(model);
-            var book = await _bookRepository.CreateAsync(bookModel);
-            await _bookRepository.SaveAsync();
-            return _mapper.Map<BookBLModel>(book);
-        }
+            var bookModel = _mapper.Map<BookEntityModel>(model);
+            var result = await _bookRepository.CreateAsync(bookModel);
 
-        public async Task<bool> DeleteOrderAsync(int id)
-        {
-            var order = await _orderRepository.GetByIdAsync(id);
-            order.User.Books.Remove(order.Book);
-            order.Book.Count++;
-            var updateOrder = _orderRepository.Update(order);
-            await _orderRepository.DeleteAsync(id);
-            await _orderRepository.SaveAsync();
-
-            if (updateOrder is null)
+            if (result != false)
             {
-                return false;
+                await _bookRepository.SaveAsync();
             }
 
-            return true;
+            return result;
         }
 
-        public async Task<IReadOnlyCollection<OrderBLModel>> GetAllOrdersAsync()
+        public async Task<bool> DeleteOrderAsync(int orderId)
+        {
+            var result = await _orderRepository.DeleteAsync(orderId);
+            
+            if (result != false)
+            {
+                await _bookRepository.SaveAsync();
+            }
+            return result;
+        }
+
+        public async Task<IReadOnlyCollection<OrderBLModel>> GetAllOrdersConditionFalseAsync()
         {
             var orders = await _orderRepository.GetAllAsync();
-            return _mapper.Map<IReadOnlyCollection<OrderBLModel>>(orders);
+            return _mapper.Map<IReadOnlyCollection<OrderBLModel>>(orders.Where(o => o.Condition == false));
         }
 
-        public async Task<bool> UpdateOrderAsync(int id)
+        public async Task<IReadOnlyCollection<OrderBLModel>> GetAllOrdersConditionTrueAsync()
         {
-            var order = await _orderRepository.GetByIdAsync(id);
+            var orders = await _orderRepository.GetAllAsync();
+            return _mapper.Map<IReadOnlyCollection<OrderBLModel>>(orders.Where(o => o.Condition == true));
+        }
 
-            order.Condition = true;
-            order.DateTimeCreated = DateTime.UtcNow;
+        public async Task<bool> UpdateOrderAsync(int orderId)
+        {
+            var result = await _orderRepository.UpdateAsync(orderId);
 
-            order.User.Books.Add(order.Book);
+            if (result != false)
+            {
+                await _orderRepository.SaveAsync();
+            }
 
-            var updateOrder = _orderRepository.Update(order);
-            
-            if (updateOrder is null)
-                return false;
-
-            await _orderRepository.SaveAsync();
-
-            return true; 
+            return result; 
         }
 
       

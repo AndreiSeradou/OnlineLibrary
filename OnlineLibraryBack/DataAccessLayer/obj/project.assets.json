@@ -6064,7 +6064,7 @@
       "outputPath": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/kamron/.config/NuGet/NuGet.Config"
+        "/Users/kamron/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"

@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using BusinessLayer.Interfaces.Services;
 using BusinessLayer.Models.DTOs;
-using DataAccessLayer.Entities;
 using DataAccessLayer.Interfaces.Repositories;
 using System;
 using System.Collections.Generic;
@@ -14,37 +13,26 @@ namespace BusinessLayer.Services
     {
         private readonly IBookRepository _bookRepository;
         private readonly IUserRepository  _userRepository;
+        private readonly IOrderRepository _orderRepository;
         private readonly IMapper _mapper;
-        public UserService(IBookRepository bookRepository, IUserRepository userRepository, IMapper mapper)
+        public UserService(IBookRepository bookRepository, IUserRepository userRepository, IMapper mapper, IOrderRepository orderRepository)
         {
             _bookRepository = bookRepository;
             _userRepository = userRepository;
             _mapper = mapper;
+            _orderRepository = orderRepository;
         }
 
-        public async Task<bool> CreateOrderAsync(string userName, int BookId)
+        public async Task<bool> CreateOrderAsync(string userId, int bookId)
         {
-            var user = await _userRepository.GetByNameIncludeAllAsync(userName);
-            var book = await _bookRepository.GetByIdAsync(BookId);
-            var findBook = user.Orders.FirstOrDefault(o => o.Book.Name == book.Name);
+            var result = await _orderRepository.CreateAsync(userId, bookId);
 
-            if (user is null || book is null || book.Count <= 0|| findBook != null)
+            if (result != false)
             {
-                return false;
+                await _orderRepository.SaveAsync();
             }
 
-            book.Count--;
-
-            user.Orders.Add(new Order { Condition = false, Book = book });
-
-            var result = _userRepository.Update(user);
-
-            if (result is null)
-                return false;
-
-            await _bookRepository.SaveAsync();
-
-            return true;
+            return result;
         }
 
         public async  Task<IReadOnlyCollection<BookBLModel>> GetAllBooksAsync()
@@ -53,23 +41,23 @@ namespace BusinessLayer.Services
             return _mapper.Map<IReadOnlyCollection<BookBLModel>>(books);
         }
 
-        public async Task<IReadOnlyCollection<BookBLModel>> GetAllUserBooksAsync(string userName)
+        public async Task<IReadOnlyCollection<BookBLModel>> GetAllUserBooksAsync(string userId)
         {
-            var user = await _userRepository.GetByNameIncludeAllAsync(userName);
+            var user = await _userRepository.GetByIdIncludeAllAsync(userId);
 
             return _mapper.Map<IReadOnlyCollection<BookBLModel>>(user.Books);
         }
 
-        public async Task<IReadOnlyCollection<OrderBLModel>> GetAllUserOrdersAsync(string userName)
+        public async Task<IReadOnlyCollection<OrderBLModel>> GetAllUserOrdersAsync(string userId)
         {
-            var user = await _userRepository.GetByNameIncludeAllAsync(userName);
+            var user = await _userRepository.GetByIdIncludeAllAsync(userId);
 
             return _mapper.Map<IReadOnlyCollection<OrderBLModel>>(user.Orders);
         }
 
-        public async Task<IReadOnlyCollection<OrderBLModel>> GetOverdueOrdersAsync(string userName)
+        public async Task<IReadOnlyCollection<OrderBLModel>> GetOverdueOrdersAsync(string userId)
         {
-            var user = await _userRepository.GetByNameIncludeAllAsync(userName);
+            var user = await _userRepository.GetByIdIncludeAllAsync(userId);
             var overdueOrders = user.Orders.Where(o => o.DateTimeCreated.Month != DateTime.UtcNow.Month && o.Condition == true);
 
             return _mapper.Map<IReadOnlyCollection<OrderBLModel>>(overdueOrders);

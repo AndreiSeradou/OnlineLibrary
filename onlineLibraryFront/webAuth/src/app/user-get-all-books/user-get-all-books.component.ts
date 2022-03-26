@@ -21,12 +21,13 @@ export class UserGetAllBooksComponent implements OnInit {
     this.userService.createOrder(num).subscribe(data => {
       if (data) {
         alert("Successfully added");  
-        console.log(data)
+        console.log(data);
+        location.reload();
       }
       else
       {
         alert("Order exists");
-        console.log("Order exists")
+        console.log("Order exists");
       }
     })
    }

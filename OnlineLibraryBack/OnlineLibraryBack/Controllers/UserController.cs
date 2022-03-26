@@ -33,9 +33,9 @@ namespace OnlineLibraryBack.Controllers
             if (ModelState.IsValid)
             {
                 var name = User.FindFirst(GeneralConfiguration.CustomClaim).Value;
-                var order =  await _userService.CreateOrderAsync(name, model.BookId);
+                var result =  await _userService.CreateOrderAsync(name, model.BookId);
         
-                return Ok(order);
+                return Ok(result);
             }
 
             return BadRequest(GeneralConfiguration.InvalidModel);

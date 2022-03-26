@@ -2,6 +2,7 @@
 using DataAccessLayer.Data;
 using DataAccessLayer.Entities;
 using DataAccessLayer.Interfaces.Repositories;
+using DataAccessLayer.Models.DTOs;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -19,46 +20,26 @@ namespace DataAccessLayer.Repositories
             _mapper = mapper;
         }
 
-        public async Task<IReadOnlyCollection<Book>> GetAllAsync()
+        public async Task<IReadOnlyCollection<BookEntityModel>> GetAllAsync()
         {
             var books = await _dbContext.Books
                 .AsNoTracking()
                 .ToListAsync();
 
-            return books;
+            return _mapper.Map<IReadOnlyCollection<BookEntityModel>>(books);
         }
 
-        public async Task<Book> GetByIdAsync(int id)
+        public async Task<bool> CreateAsync(BookEntityModel model)
         {
-            var book = await _dbContext.Books.FirstOrDefaultAsync(user => user.Id == id);
-            return book;
-        }
-
-        public async Task<Book> CreateAsync(Book entity)
-        {
+            var entity = _mapper.Map<Book>(model);
             var entityEntry = await _dbContext.Books.AddAsync(entity);
 
-            return entityEntry.Entity;
-        }
-
-        public Book Update(Book entity)
-        {
-            var entityEntry = _dbContext.Books.Update(entity);
-            return entityEntry.Entity;
-        }
-
-        public async Task<bool> DeleteAsync(int id)
-        {
-            var entity = await GetByIdAsync(id);
-            var book = _mapper.Map<Book>(entity);
-            if (entity != null)
+            if (entityEntry.Entity is null)
             {
-                var entityEntry = _dbContext.Books.Remove(book);
-
-                return entityEntry != null;
+                return false;
             }
 
-            return false;
+            return true;
         }
 
         public async Task SaveAsync()

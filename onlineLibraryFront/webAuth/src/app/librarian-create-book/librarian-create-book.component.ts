@@ -25,7 +25,7 @@ export class LibrarianCreateBookComponent implements OnInit {
     this.userService.createBook(name, text, count).subscribe(data => {
       if (data) {
         alert("Successfully create");
-        console.log(data)
+        console.log(data);
         location.reload();
       }
       else

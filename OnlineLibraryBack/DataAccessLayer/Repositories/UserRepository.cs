@@ -2,6 +2,7 @@
 using DataAccessLayer.Data;
 using DataAccessLayer.Entities;
 using DataAccessLayer.Interfaces.Repositories;
+using DataAccessLayer.Models.DTOs;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
@@ -19,17 +20,11 @@ namespace DataAccessLayer.Repositories
             _mapper = mapper;
         }
 
-        public async Task<User> GetByNameIncludeAllAsync(string name)
+        public async Task<UserEntityModel> GetByIdIncludeAllAsync(string userId)
         {
             var user = await _dbContext.Users.Include(x => x.Orders).ThenInclude(x => x.Book).Include(x => x.Books)
-                .FirstOrDefaultAsync(user => user.UserName == name);
-            return user;
-        }
-
-        public User Update(User model)
-        {
-            var entityEntry = _dbContext.Users.Update(model);
-            return entityEntry.Entity;
+                .FirstOrDefaultAsync(user => user.Id == userId);
+            return _mapper.Map<UserEntityModel>(user);
         }
 
         public async Task SaveAsync()

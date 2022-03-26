@@ -68,7 +68,7 @@ namespace OnlineLibraryBack.Controllers
                     });
                 }
 
-                var newUser = new User() { Email = user.Email, UserName = user.Username, Id = user.Id};
+                var newUser = new User() { Email = user.Email, UserName = user.Username};
                 var isCreated = await _userManager.CreateAsync(newUser, user.Password);
                 if(isCreated.Succeeded)
                 {
@@ -169,7 +169,7 @@ namespace OnlineLibraryBack.Controllers
         {
             var claims = new List<Claim>
             {
-                new Claim(GeneralConfiguration.CustomClaim, user.UserName),
+                new Claim(GeneralConfiguration.CustomClaim, user.Id),
                 new Claim(JwtRegisteredClaimNames.Email, user.Email),
                 new Claim(JwtRegisteredClaimNames.Sub, user.Email),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())

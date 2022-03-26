@@ -9,7 +9,7 @@ namespace Configuration.GeneralConfiguration
         public const string ErrorEmail = "Email already in use";
         public const string ErrorLogin = "Invalid login request";
         public const string ErrorPayload = "Invalid payload";
-        public const string CustomClaim = "Name";
+        public const string CustomClaim = "Id";
         public const string InvalidModel = "Something went wrong";
         public const string BaseUrl = "http://localhost:8090";
         public const string JwtConfig = "JwtConfig";

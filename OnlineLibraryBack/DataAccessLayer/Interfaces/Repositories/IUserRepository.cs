@@ -1,12 +1,11 @@
-﻿using DataAccessLayer.Entities;
+﻿using DataAccessLayer.Models.DTOs;
 using System.Threading.Tasks;
 
 namespace DataAccessLayer.Interfaces.Repositories
 {
     public interface IUserRepository
     {
-        Task<User> GetByNameIncludeAllAsync(string name);
-        User Update(User model);
+        Task<UserEntityModel> GetByIdIncludeAllAsync(string userId);
         Task SaveAsync();
     }
 }

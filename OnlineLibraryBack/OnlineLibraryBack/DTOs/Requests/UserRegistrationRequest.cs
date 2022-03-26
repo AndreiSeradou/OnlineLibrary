@@ -5,8 +5,6 @@ namespace OnlineLibraryBack.Models.DTOs.Requests
     public class UserRegistrationRequest
     {
         [Required]
-        public int Id { get; set; }
-        [Required]
         public string Username { get; set; }
         [Required]
         [EmailAddress]
