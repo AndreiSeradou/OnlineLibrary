@@ -41,14 +41,18 @@ namespace BusinessLayer.Services
 
             var mapBook = _mapper.Map<Book>(book);
 
-            user.Orders.Add(new Order { Condition = false, Book = mapBook });
+            //user.Orders.Add(new Order { Condition = false, Book = book });
 
-            var result =  _userRepository.Update(user, ct);
+            var newOrder = new OrderEntityModel { Book = book, User = user };
 
-            if (result is null)
-                return false;
+            await _orderRepository.CreateAsync(newOrder);
 
-            await _bookRepository.SaveAsync();
+            //var result =  _userRepository.Update(user, ct);
+
+            //if (result is null)
+            //    return false;
+
+            await _orderRepository.SaveAsync();
 
             return true;
         }
