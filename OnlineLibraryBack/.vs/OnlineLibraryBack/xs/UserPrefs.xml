@@ -1,55 +1,32 @@
 ﻿<Properties StartupConfiguration="{E5A4BDFE-FC49-43B1-82F8-D2C5ADFD6685}|TodoApp">
-  <MonoDevelop.Ide.Workbench ActiveDocument="DataAccessLayer/Entities/User.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BusinessLayer/Services/UserService.cs">
     <Files>
-      <File FileName="OnlineLibraryBack/Startup.cs" Line="86" Column="9" IsPinned="True" />
-      <File FileName="OnlineLibraryBack/Controllers/UserController.cs" Line="37" Column="1" />
-      <File FileName="BusinessLayer/Interfaces/Services/IUserService.cs" />
-      <File FileName="DataAccessLayer/Configuration/DependenciesConfiguration.cs" Line="1" Column="1" />
-      <File FileName="BusinessLayer/Configuration/DependenciesConfiguration.cs" />
-      <File FileName="DataAccessLayer/Data/ApiDbContext.cs" Line="10" Column="24" />
-      <File FileName="OnlineLibraryBack/Controllers/AuthManagementController.cs" />
-      <File FileName="BusinessLayer/Services/UserService.cs" Line="30" Column="1" />
-      <File FileName="BusinessLayer/Services/LibrarianService.cs" />
-      <File FileName="DataAccessLayer/Interfaces/Repositories/IUserRepository.cs" />
-      <File FileName="DataAccessLayer/Repositories/UserRepository.cs" Line="37" Column="1" />
-      <File FileName="BusinessLayer/Interfaces/Services/ILibrarianService.cs" />
-      <File FileName="OnlineLibraryBack/Controllers/LibrarianController.cs" />
-      <File FileName="OnlineLibraryBack/Program.cs" />
-      <File FileName="DataAccessLayer/Entities/Book.cs" Line="10" Column="41" />
-      <File FileName="DataAccessLayer/Entities/Order.cs" Line="17" Column="2" />
-      <File FileName="DataAccessLayer/Entities/User.cs" Line="11" Column="6" />
-      <File FileName="DataAccessLayer/Interfaces/Repositories/IBookRepository.cs" />
-      <File FileName="DataAccessLayer/Interfaces/Repositories/IOrderRepository.cs" />
-      <File FileName="DataAccessLayer/Mapping/MappingConfiguration.cs" />
-      <File FileName="OnlineLibraryBack/appsettings.json" />
-      <File FileName="Configuration/GeneralConfiguration/GeneralConfiguration.cs" />
-      <File FileName="OnlineLibraryBack/DTOs/Responses/AuthResult.cs" />
-      <File FileName="OnlineLibraryBack/DTOs/Responses/BookResponse.cs" />
-      <File FileName="OnlineLibraryBack/DTOs/Responses/OrderResponse.cs" />
-      <File FileName="OnlineLibraryBack/Properties/launchSettings.json" />
-      <File FileName="DataAccessLayer/Models/DTOs/BookEntityModel.cs" />
-      <File FileName="DataAccessLayer/Repositories/BookRepository.cs" Line="71" Column="1" />
-      <File FileName="DataAccessLayer/Models/DTOs/UserEntityModel.cs" />
-      <File FileName="BusinessLayer/Mapping/MappingConfiguration.cs" Line="12" Column="67" />
-      <File FileName="DataAccessLayer/Repositories/OrderRepository.cs" Line="1" Column="1" />
-      <File FileName="DataAccessLayer/Models/DTOs/OrderEntityModel.cs" />
-      <File FileName="BusinessLayer/BusinessLayer.csproj" Line="1" Column="1" />
+      <File FileName="BusinessLayer/Interfaces/Services/IUserService.cs" Line="1" Column="1" />
+      <File FileName="BusinessLayer/Interfaces/Services/ILibrarianService.cs" Line="1" Column="1" />
+      <File FileName="DataAccessLayer/Interfaces/Repositories/IUserRepository.cs" Line="8" Column="69" />
+      <File FileName="DataAccessLayer/Interfaces/Repositories/IOrderRepository.cs" Line="14" Column="45" />
+      <File FileName="DataAccessLayer/Interfaces/Repositories/IBookRepository.cs" Line="12" Column="55" />
+      <File FileName="DataAccessLayer/Repositories/UserRepository.cs" Line="2" Column="28" />
+      <File FileName="DataAccessLayer/Repositories/OrderRepository.cs" Line="70" Column="25" />
+      <File FileName="DataAccessLayer/Repositories/BookRepository.cs" Line="39" Column="44" />
+      <File FileName="DataAccessLayer/Models/DTOs/UserEntityModel.cs" Line="9" Column="35" />
+      <File FileName="DataAccessLayer/Models/DTOs/OrderEntityModel.cs" Line="12" Column="39" />
+      <File FileName="BusinessLayer/Services/LibrarianService.cs" Line="65" Column="70" />
+      <File FileName="BusinessLayer/Services/UserService.cs" Line="57" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="OnlineLibraryBack" expanded="True">
             <Node name="BusinessLayer" expanded="True">
-              <Node name="Configuration" expanded="True" />
-              <Node name="Mapping" expanded="True" />
-              <Node name="Services" expanded="True" />
+              <Node name="Interfaces" expanded="True">
+                <Node name="Services" expanded="True" />
+              </Node>
+              <Node name="Services" expanded="True">
+                <Node name="UserService.cs" selected="True" />
+              </Node>
             </Node>
             <Node name="DataAccessLayer" expanded="True">
-              <Node name="Configuration" expanded="True" />
-              <Node name="Data" expanded="True" />
-              <Node name="Entities" expanded="True">
-                <Node name="User.cs" selected="True" />
-              </Node>
               <Node name="Interfaces" expanded="True">
                 <Node name="Repositories" expanded="True" />
               </Node>
@@ -57,9 +34,6 @@
                 <Node name="DTOs" expanded="True" />
               </Node>
               <Node name="Repositories" expanded="True" />
-            </Node>
-            <Node name="OnlineLibraryPresentationLayer" expanded="True">
-              <Node name="Controllers" expanded="True" />
             </Node>
           </Node>
         </State>

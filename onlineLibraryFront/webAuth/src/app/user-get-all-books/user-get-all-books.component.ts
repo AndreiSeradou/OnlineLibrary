@@ -20,7 +20,14 @@ export class UserGetAllBooksComponent implements OnInit {
   onSubmit(num:number){
     this.userService.createOrder(num).subscribe(data => {
       if (data) {
-        console.log(data)
+        alert("Successfully added");  
+        console.log(data);
+        location.reload();
+      }
+      else
+      {
+        alert("Order exists");
+        console.log("Order exists");
       }
     })
    }

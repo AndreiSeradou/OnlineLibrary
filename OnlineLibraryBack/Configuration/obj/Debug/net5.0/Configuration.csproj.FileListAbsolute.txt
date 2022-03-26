@@ -2,7 +2,6 @@
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/bin/Debug/net5.0/Configuration.dll
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/bin/Debug/net5.0/ref/Configuration.dll
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/bin/Debug/net5.0/Configuration.pdb
-/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/obj/Debug/net5.0/Configuration.csproj.AssemblyReference.cache
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/obj/Debug/net5.0/Configuration.GeneratedMSBuildEditorConfig.editorconfig
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/obj/Debug/net5.0/Configuration.AssemblyInfoInputs.cache
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/obj/Debug/net5.0/Configuration.AssemblyInfo.cs
@@ -10,3 +9,4 @@
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/obj/Debug/net5.0/Configuration.dll
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/obj/Debug/net5.0/ref/Configuration.dll
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/obj/Debug/net5.0/Configuration.pdb
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/obj/Debug/net5.0/Configuration.csproj.AssemblyReference.cache

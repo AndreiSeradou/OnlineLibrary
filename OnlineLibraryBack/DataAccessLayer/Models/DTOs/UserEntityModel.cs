@@ -6,6 +6,7 @@ namespace DataAccessLayer.Models.DTOs
 {
     public class UserEntityModel: User
     {
-       
+        public ICollection<Order> Orders { get; set; }
+        public ICollection<Book> Books { get; set; }
     }
 }

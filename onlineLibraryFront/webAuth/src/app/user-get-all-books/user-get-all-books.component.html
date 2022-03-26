@@ -8,18 +8,18 @@
               <tr>
   
                 <th scope="col">Id</th>
-                <th scope="col">Count</th>
                 <th scope="col">Name</th>
-                <th scope="col">Text</th>
+                <th scope="col">Description</th>
+                <th scope="col">Count</th>
                 <th scope="col">Add to Order</th>
               </tr>
             </thead>
             <tbody>
               <tr *ngFor="let book of bookList">
                 <td>{{book.id}}</td>
-                <td>{{book.count}}</td>
                 <td>{{book.name}}</td>
                 <td>{{book.text}}</td>
+                <td>{{book.count}}</td>
                 <td> 
                   <form  (ngSubmit)="onSubmit(book.id)"> 
                     <button type="submit" class="btn btn-primary" >Add</button>

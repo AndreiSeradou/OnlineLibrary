@@ -1,5 +1,4 @@
-﻿using System;
-using AutoMapper;
+﻿using AutoMapper;
 using BusinessLayer.Models.DTOs;
 using DataAccessLayer.Entities;
 using OnlineLibraryBack.Models.DTOs.Requests;
@@ -15,6 +14,7 @@ namespace OnlineLibraryPresentationLayer.Mapping
             CreateMap<BookBLModel, BookResponse>().ReverseMap();
             CreateMap<BookBLModel, BookRequest>().ReverseMap();
             CreateMap<Book, BookResponse>().ReverseMap();
+            CreateMap<UserResponse, User>().ReverseMap();
         }
     }
 }

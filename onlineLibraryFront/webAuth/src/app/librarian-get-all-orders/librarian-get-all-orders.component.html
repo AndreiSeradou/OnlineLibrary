@@ -1,4 +1,4 @@
-<div class="container" >
+<div class="container" id = "tab">
     <div class="row justify-content-center">
       <div class="col-10">
         <div class="card">
@@ -8,7 +8,7 @@
               <tr>
   
                 <th scope="col">Id</th>
-                <th scope="col">Condition false</th>
+                <th scope="col">User Name</th>
                 <th scope="col">Book Name</th>
                 <th scope="col">The Confirmation </th>
               </tr>
@@ -16,10 +16,10 @@
             <tbody>
               <tr *ngFor="let order of orderListConditionFalse">
                 <td>{{order.id}}</td>
-                <td>{{order.condition}}</td>
+                <td>{{order.user.userName}}</td>
                 <td>{{order.book.name}}</td>
                 <td>
-                  <form  (ngSubmit)="onSubmit(order.id)"> 
+                  <form  (ngSubmit)="onSubmitUpdate(order.id)"> 
                     <button type="submit" class="btn btn-primary" >Confirm</button>
                   </form>
                 </td>
@@ -42,7 +42,7 @@
               <tr>
   
                 <th scope="col">Id</th>
-                <th scope="col">Condition true</th>
+                <th scope="col">User Name</th>
                 <th scope="col">Book Name</th>
                 <th scope="col">Return</th>
               </tr>
@@ -50,7 +50,7 @@
             <tbody>
               <tr *ngFor="let order of orderListConditionTrue">
                 <td>{{order.id}}</td>
-                <td>{{order.condition}}</td>
+                <td>{{order.user.userName}}</td>
                 <td>{{order.book.name}}</td>
                 <td>
                   <form  (ngSubmit)="onSubmitDelete(order.id)"> 

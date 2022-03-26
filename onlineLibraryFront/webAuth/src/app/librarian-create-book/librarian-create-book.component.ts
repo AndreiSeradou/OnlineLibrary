@@ -24,7 +24,13 @@ export class LibrarianCreateBookComponent implements OnInit {
     let count=this.createBookForm.controls["count"].value;
     this.userService.createBook(name, text, count).subscribe(data => {
       if (data) {
-        console.log(data)
+        alert("Successfully create");
+        console.log(data);
+        location.reload();
+      }
+      else
+      {
+        alert("Error create");
       }
     })
    }
