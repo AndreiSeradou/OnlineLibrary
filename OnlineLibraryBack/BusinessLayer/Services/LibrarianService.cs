@@ -3,6 +3,7 @@ using BusinessLayer.Interfaces.Services;
 using BusinessLayer.Models.DTOs;
 using DataAccessLayer.Interfaces.Repositories;
 using DataAccessLayer.Models.DTOs;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -38,11 +39,18 @@ namespace BusinessLayer.Services
 
         public async Task<bool> DeleteOrderAsync(int orderId)
         {
+            var order = await _orderRepository.GetByIdIncludeAllAsync(orderId);
+
+
+            order.Book.Count++;
+            order.User.Books.Remove(order.Book);
+
+            await _orderRepository.UpdateAsync(order);
             var result = await _orderRepository.DeleteAsync(orderId);
             
             if (result != false)
             {
-                await _bookRepository.SaveAsync();
+                await _orderRepository.SaveAsync();
             }
             return result;
         }
@@ -62,7 +70,11 @@ namespace BusinessLayer.Services
 
         public async Task<bool> UpdateOrderAsync(int orderId)
         {
-            var result = await _orderRepository.UpdateAsync(orderId);
+            var order = await _orderRepository.GetByIdIncludeAllAsync(orderId);
+            order.Condition = true;
+            order.DateTimeCreated = DateTime.UtcNow;
+            order.User.Books.Add(order.Book);
+            var result = await _orderRepository.UpdateAsync(order);
 
             if (result != false)
             {

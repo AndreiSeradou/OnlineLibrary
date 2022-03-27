@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using BusinessLayer.Interfaces.Services;
 using BusinessLayer.Models.DTOs;
+using DataAccessLayer.Entities;
 using DataAccessLayer.Interfaces.Repositories;
-using DataAccessLayer.Models.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +16,7 @@ namespace BusinessLayer.Services
         private readonly IUserRepository  _userRepository;
         private readonly IOrderRepository _orderRepository;
         private readonly IMapper _mapper;
+
         public UserService(IBookRepository bookRepository, IUserRepository userRepository, IMapper mapper, IOrderRepository orderRepository)
         {
             _bookRepository = bookRepository;
@@ -26,13 +27,24 @@ namespace BusinessLayer.Services
 
         public async Task<bool> CreateOrderAsync(string userId, int bookId)
         {
+            var book = await _bookRepository.GetByIdIncludeAllAsync(bookId);
+            var orders = await _orderRepository.GetAllAsync();
+            var bookExist = orders.FirstOrDefault(o => o.User.Id == userId && o.Book.Id == bookId);
+
+            if (bookExist != null || book.Count <= 0)
+            {
+                return false;
+            }
+
+            book.Count--;
+            await _bookRepository.UpdateAsync(book);
+
             var result = await _orderRepository.CreateAsync(userId, bookId);
 
             if (result != false)
             {
                 await _orderRepository.SaveAsync();
             }
-
 
             return result;
         }

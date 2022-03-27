@@ -3,7 +3,7 @@ using DataAccessLayer.Entities;
 
 namespace DataAccessLayer.Models.DTOs
 {
-    public class OrderEntityModel : Order
+    public class OrderEntityModel
     {
         public int Id { get; set; }
         public bool Condition { get; set; }

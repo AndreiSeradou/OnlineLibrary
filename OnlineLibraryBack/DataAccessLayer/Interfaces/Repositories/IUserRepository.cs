@@ -6,6 +6,7 @@ namespace DataAccessLayer.Interfaces.Repositories
     public interface IUserRepository
     {
         Task<UserEntityModel> GetByIdIncludeAllAsync(string userId);
+        Task<bool> UpdateAsync(UserEntityModel model);
         Task SaveAsync();
     }
 }

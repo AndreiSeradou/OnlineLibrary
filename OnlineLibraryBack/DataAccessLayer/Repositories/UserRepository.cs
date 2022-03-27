@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using DataAccessLayer.Data;
+using DataAccessLayer.Entities;
 using DataAccessLayer.Interfaces.Repositories;
 using DataAccessLayer.Models.DTOs;
 using Microsoft.EntityFrameworkCore;
@@ -24,6 +25,14 @@ namespace DataAccessLayer.Repositories
             var user = await _dbContext.Users.Include(x => x.Orders).ThenInclude(x => x.Book).Include(x => x.Books)
                 .FirstOrDefaultAsync(user => user.Id == userId);
             return _mapper.Map<UserEntityModel>(user);
+        }
+
+        public async Task<bool> UpdateAsync(UserEntityModel model)
+        {
+            var entity = await _dbContext.Users.FirstOrDefaultAsync(o => o.Id == model.Id);
+            _mapper.Map<UserEntityModel, User>(model, entity);
+
+            return entity != null;
         }
 
         public async Task SaveAsync()

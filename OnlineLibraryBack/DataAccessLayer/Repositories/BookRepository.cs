@@ -30,18 +30,28 @@ namespace DataAccessLayer.Repositories
             return _mapper.Map<IReadOnlyCollection<BookEntityModel>>(books);
         }
 
+        public async Task<BookEntityModel> GetByIdIncludeAllAsync(int bookId)
+        {
+            var entity = await _dbContext.Books.Include(x => x.Users).ThenInclude(x => x.Orders)
+                .FirstOrDefaultAsync(b => b.Id == bookId);
+            return _mapper.Map<BookEntityModel>(entity);
+        }
 
         public async Task<bool> CreateAsync(BookEntityModel model)
         {
             var entity = _mapper.Map<Book>(model);
             var entityEntry = await _dbContext.Books.AddAsync(entity);
 
-            if (entityEntry.Entity is null)
-            {
-                return false;
-            }
+            return entityEntry.Entity != null;
+        }
 
-            return true;
+        public async Task<bool> UpdateAsync(BookEntityModel model)
+        {
+            var entity = await _dbContext.Books.Include(x => x.Users).ThenInclude(x => x.Orders).FirstOrDefaultAsync(o => o.Id == model.Id);
+
+            _mapper.Map<BookEntityModel, Book>(model, entity);
+
+            return entity != null;
         }
 
         public async Task SaveAsync()

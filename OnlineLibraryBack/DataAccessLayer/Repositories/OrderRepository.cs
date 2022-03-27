@@ -31,43 +31,28 @@ namespace DataAccessLayer.Repositories
             return _mapper.Map<IReadOnlyCollection<OrderEntityModel>>(orders);
         }
 
+        public async Task<OrderEntityModel> GetByIdIncludeAllAsync(int orderId)
+        {
+            var entity = await _dbContext.Orders.Include(x => x.User).ThenInclude(x => x.Books).Include(x => x.Book)
+                .FirstOrDefaultAsync(o => o.Id == orderId);
+            return _mapper.Map<OrderEntityModel>(entity);
+        }
+
         public async Task<bool> CreateAsync(string userId, int bookId)
         {
-            var book = await _dbContext.Books.FirstOrDefaultAsync(b => b.Id == bookId);
-            var user = await _dbContext.Users.Include(x => x.Orders).ThenInclude(x => x.Book).FirstOrDefaultAsync(u => u.Id == userId);
-            var userOrder = user.Orders.FirstOrDefault(o => o.Book.Name == book.Name);
-
-            if (userOrder != null || book.Count <= 0)
-            {
-                return false;
-            }
-
-            book.Count--;
             var order = new Order { BookId = bookId, UserId = userId };
             var entityEntry = await _dbContext.Orders.AddAsync(order);
 
-            if (entityEntry is null)
-            {
-                return false;
-            }
-
-            return true;
+            return entityEntry != null;
         }
 
-        public async Task<bool> UpdateAsync(int orderId)
+        public async Task<bool> UpdateAsync(OrderEntityModel model)
         {
-            var entity = await _dbContext.Orders.Include(x => x.User).ThenInclude(x => x.Books).Include(x => x.Book).FirstOrDefaultAsync(o => o.Id == orderId);
+            var entity = await _dbContext.Orders.Include(x => x.User).ThenInclude(x => x.Books).Include(x => x.Book).FirstOrDefaultAsync(o => o.Id == model.Id);
 
-            if (entity is null)
-            {
-                return false;
-            }
+            _mapper.Map<OrderEntityModel, Order>(model, entity);
 
-            entity.Condition = true;
-            entity.DateTimeCreated = DateTime.UtcNow;
-            entity.User.Books.Add(entity.Book);
-
-            return true;
+            return entity != null;
         }
 
         public async Task<bool> DeleteAsync(int orderId)

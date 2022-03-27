@@ -12,6 +12,7 @@ namespace DataAccessLayer.Mapping
             CreateMap<Book, BookEntityModel>().ReverseMap();
             CreateMap<Order, OrderEntityModel>().ReverseMap();
             CreateMap<User, UserEntityModel>().ReverseMap();
+            CreateMap<User, User>().ReverseMap();
         }
     }
 }
