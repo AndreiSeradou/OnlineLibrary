@@ -18,5 +18,10 @@ namespace Configuration.GeneralConfiguration
         public const string Cors = "Open";
         public const string Policy = "DepartmentPolicy";
         public const string PolicyClaim = "department";
+        public const string QuartzEmail = "andrey03072000@gmail.com";
+        public const string QuartzPassword = "7798929aQ";
+        public const string MailSmtp = "smtp.gmail.com";
+        public const string MailSubject = "Library alert";
+        public const string Expression = "0/10 0/1 * 1/1 * ? *";
     }
 }

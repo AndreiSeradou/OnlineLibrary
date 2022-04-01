@@ -295,3 +295,7 @@ C:/Users/goldm/OneDrive/Рабочий стол/ct/OnlineLibrary/OnlineLibraryBa
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/OnlineLibraryBack/obj/Debug/net5.0/ref/OnlineLibraryPresentationLayer.dll
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/OnlineLibraryBack/obj/Debug/net5.0/OnlineLibraryPresentationLayer.pdb
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/OnlineLibraryBack/obj/Debug/net5.0/OnlineLibraryPresentationLayer.genruntimeconfig.cache
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/OnlineLibraryBack/bin/Debug/net5.0/Quartz.dll
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/OnlineLibraryBack/bin/Debug/net5.0/MailKit.dll
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/OnlineLibraryBack/bin/Debug/net5.0/MimeKit.dll
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/OnlineLibraryBack/bin/Debug/net5.0/BouncyCastle.Crypto.dll

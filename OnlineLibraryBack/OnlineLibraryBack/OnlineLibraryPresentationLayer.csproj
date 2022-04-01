@@ -14,6 +14,19 @@
     <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
     <None Remove="AutoMapper" />
     <None Remove="Mapping\" />
+    <None Remove="Quartz" />
+    <None Remove="Quartz\" />
+    <None Remove="Workers\" />
+    <None Remove="Workers\Interface\" />
+    <None Remove="Workers\Work\" />
+    <None Remove="Action\" />
+    <None Remove="Action\Interface\" />
+    <None Remove="Action\Jobs\" />
+    <None Remove="Quartz\Jobs\" />
+    <None Remove="Quartz\JobsFactory\" />
+    <None Remove="MailKit" />
+    <None Remove="Quartz\Service\" />
+    <None Remove="Quartz\Jobs\Interface\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,6 +41,8 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
     <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="Quartz" Version="3.4.0" />
+    <PackageReference Include="MailKit" Version="3.2.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -42,5 +57,10 @@
   <ItemGroup>
     <Folder Include="DTOs\" />
     <Folder Include="Mapping\" />
+    <Folder Include="Quartz\" />
+    <Folder Include="Quartz\Jobs\" />
+    <Folder Include="Quartz\JobsFactory\" />
+    <Folder Include="Quartz\Service\" />
+    <Folder Include="Quartz\Jobs\Interface\" />
   </ItemGroup>
 </Project>

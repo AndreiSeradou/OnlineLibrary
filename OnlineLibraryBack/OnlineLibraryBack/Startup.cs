@@ -16,6 +16,12 @@ using DataAccessLayer.Configuration;
 using BusinessLayer.Configuration;
 using OnlineLibraryPresentationLayer.Configuration;
 using Configuration.GeneralConfiguration;
+using OnlineLibraryPresentationLayer.Quartz.Jobs;
+using Quartz.Spi;
+using OnlineLibraryPresentationLayer.Quartz.Service;
+using Quartz;
+using Quartz.Impl;
+using OnlineLibraryPresentationLayer.Quartz.Jobs.Interface;
 
 namespace OnlineLibraryBack
 {
@@ -90,7 +96,7 @@ namespace OnlineLibraryBack
             {
                 app.UseDeveloperExceptionPage();
             }
-
+           
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();

@@ -32,7 +32,7 @@ namespace DataAccessLayer.Repositories
 
         public async Task<BookEntityModel> GetByIdIncludeAllAsync(int bookId)
         {
-            var entity = await _dbContext.Books.Include(x => x.Users).ThenInclude(x => x.Orders)
+            var entity = await _dbContext.Books
                 .FirstOrDefaultAsync(b => b.Id == bookId);
             return _mapper.Map<BookEntityModel>(entity);
         }
@@ -47,7 +47,7 @@ namespace DataAccessLayer.Repositories
 
         public async Task<bool> UpdateAsync(BookEntityModel model)
         {
-            var entity = await _dbContext.Books.Include(x => x.Users).ThenInclude(x => x.Orders).FirstOrDefaultAsync(o => o.Id == model.Id);
+            var entity = await _dbContext.Books.FirstOrDefaultAsync(o => o.Id == model.Id);
 
             _mapper.Map<BookEntityModel, Book>(model, entity);
 

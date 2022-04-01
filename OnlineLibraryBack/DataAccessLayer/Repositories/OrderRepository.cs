@@ -58,13 +58,11 @@ namespace DataAccessLayer.Repositories
         public async Task<bool> DeleteAsync(int orderId)
         {
             var entity = await _dbContext.Orders.Include(x => x.User).ThenInclude(x => x.Books).Include(x => x.Book).FirstOrDefaultAsync(b => b.Id == orderId);
-            entity.Book.Count++;
-            entity.User.Books.Remove(entity.Book);
 
             if (entity != null)
             {
                 var entityEntry = _dbContext.Orders.Remove(entity);
-                return entityEntry != null;
+                return entityEntry.Entity != null;
             }
 
             return false;

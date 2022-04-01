@@ -24,6 +24,7 @@ namespace DataAccessLayer.Configuration
             serviceProvider.AddDbContext<ApiDbContext>(
                 options => options.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 17)),b => b.MigrationsAssembly("OnlineLibraryPresentationLayer")));
 
+
             return serviceProvider;
         }
 

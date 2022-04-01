@@ -37,6 +37,7 @@ namespace BusinessLayer.Services
             }
 
             book.Count--;
+         
             await _bookRepository.UpdateAsync(book);
 
             var result = await _orderRepository.CreateAsync(userId, bookId);

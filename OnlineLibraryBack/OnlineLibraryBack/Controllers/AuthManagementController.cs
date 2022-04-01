@@ -13,6 +13,8 @@ using OnlineLibraryBack.Configuration;
 using DataAccessLayer.Entities;
 using OnlineLibraryBack.Models.DTOs.Requests;
 using Configuration.GeneralConfiguration;
+using MimeKit;
+using System.Net.Mail;
 
 namespace OnlineLibraryBack.Controllers
 {
@@ -47,24 +49,14 @@ namespace OnlineLibraryBack.Controllers
                 var existingUserByEmail = await _userManager.FindByEmailAsync(user.Email);
 
 
-                if (existingUserByName != null)
+                if (existingUserByName != null || existingUserByEmail != null)
                 {
                     return BadRequest(new AuthResult(){
                             Errors = new List<string>() {
-                                GeneralConfiguration.ErrorName
+                                GeneralConfiguration.ErrorName,
+                                GeneralConfiguration.ErrorEmail
                             },
                             Success = false
-                    });
-                }
-
-                if (existingUserByEmail != null)
-                {
-                    return BadRequest(new AuthResult()
-                    {
-                        Errors = new List<string>() {
-                              GeneralConfiguration.ErrorEmail
-                            },
-                        Success = false
                     });
                 }
 
