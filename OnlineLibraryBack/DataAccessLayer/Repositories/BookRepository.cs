@@ -30,7 +30,7 @@ namespace DataAccessLayer.Repositories
             return _mapper.Map<IReadOnlyCollection<BookEntityModel>>(books);
         }
 
-        public async Task<BookEntityModel> GetByIdIncludeAllAsync(int bookId)
+        public async Task<BookEntityModel> GetByIdAsync(int bookId)
         {
             var entity = await _dbContext.Books
                 .FirstOrDefaultAsync(b => b.Id == bookId);

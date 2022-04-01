@@ -39,7 +39,7 @@ namespace BusinessLayer.Services
 
         public async Task<bool> DeleteOrderAsync(int orderId)
         {
-            var order = await _orderRepository.GetByIdIncludeAllAsync(orderId);
+            var order = await _orderRepository.GetByIdAsync(orderId);
 
 
             order.Book.Count++;
@@ -70,7 +70,7 @@ namespace BusinessLayer.Services
 
         public async Task<bool> UpdateOrderAsync(int orderId)
         {
-            var order = await _orderRepository.GetByIdIncludeAllAsync(orderId);
+            var order = await _orderRepository.GetByIdAsync(orderId);
             order.Condition = true;
             order.DateTimeCreated = DateTime.UtcNow;
             order.User.Books.Add(order.Book);

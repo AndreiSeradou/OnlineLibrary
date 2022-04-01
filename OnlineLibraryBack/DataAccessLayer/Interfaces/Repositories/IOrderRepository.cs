@@ -9,7 +9,7 @@ namespace DataAccessLayer.Interfaces.Repositories
     {
 
         Task<IReadOnlyCollection<OrderEntityModel>> GetAllAsync();
-        Task<OrderEntityModel> GetByIdIncludeAllAsync(int orderId);
+        Task<OrderEntityModel> GetByIdAsync(int orderId);
         Task<bool> CreateAsync(string userId, int bookId);
         Task<bool> UpdateAsync(OrderEntityModel model);
         Task<bool> DeleteAsync(int orderId);

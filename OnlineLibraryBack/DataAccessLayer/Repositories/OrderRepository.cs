@@ -31,7 +31,7 @@ namespace DataAccessLayer.Repositories
             return _mapper.Map<IReadOnlyCollection<OrderEntityModel>>(orders);
         }
 
-        public async Task<OrderEntityModel> GetByIdIncludeAllAsync(int orderId)
+        public async Task<OrderEntityModel> GetByIdAsync(int orderId)
         {
             var entity = await _dbContext.Orders.Include(x => x.User).ThenInclude(x => x.Books).Include(x => x.Book)
                 .FirstOrDefaultAsync(o => o.Id == orderId);

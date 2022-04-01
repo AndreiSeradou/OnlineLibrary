@@ -1,51 +1,26 @@
 ﻿<Properties StartupConfiguration="{E5A4BDFE-FC49-43B1-82F8-D2C5ADFD6685}|TodoApp">
-  <MonoDevelop.Ide.Workbench ActiveDocument="BusinessLayer/Services/UserService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="DataAccessLayer/Interfaces/Repositories/IUserRepository.cs">
     <Files>
-      <File FileName="OnlineLibraryBack/Configuration/DependenciesConfiguration.cs" Line="24" Column="45" />
-      <File FileName="OnlineLibraryBack/Migrations/20220326183812_FKey.cs" />
-      <File FileName="OnlineLibraryBack/Program.cs" />
-      <File FileName="OnlineLibraryBack/Startup.cs" />
-      <File FileName="OnlineLibraryBack/Controllers/AuthManagementController.cs" />
-      <File FileName="OnlineLibraryBack/Controllers/UserController.cs" />
-      <File FileName="OnlineLibraryBack/Controllers/LibrarianController.cs" />
-      <File FileName="OnlineLibraryBack/Quartz/Jobs/EmailSender.cs" />
-      <File FileName="OnlineLibraryBack/Quartz/Jobs/MyJob.cs" />
-      <File FileName="OnlineLibraryBack/Quartz/Service/QuartzHostedService.cs" />
-      <File FileName="BusinessLayer/Services/UserService.cs" Line="40" Column="10" />
-      <File FileName="BusinessLayer/Services/LibrarianService.cs" Line="41" Column="1" />
-      <File FileName="Configuration/GeneralConfiguration/GeneralConfiguration.cs" />
-      <File FileName="OnlineLibraryBack/Quartz/Jobs/Interface/IEmailSender.cs" />
-      <File FileName="OnlineLibraryBack/OnlineLibraryPresentationLayer.csproj" />
-      <File FileName="BusinessLayer/Interfaces/Services/ILibrarianService.cs" />
-      <File FileName="BusinessLayer/Configuration/DependenciesConfiguration.cs" />
-      <File FileName="DataAccessLayer/Repositories/OrderRepository.cs" />
-      <File FileName="DataAccessLayer/Configuration/DependenciesConfiguration.cs" />
-      <File FileName="DataAccessLayer/Data/ApiDbContext.cs" />
-      <File FileName="DataAccessLayer/Repositories/BookRepository.cs" Line="35" Column="48" />
+      <File FileName="DataAccessLayer/Interfaces/Repositories/IUserRepository.cs" Line="8" Column="38" />
+      <File FileName="DataAccessLayer/Repositories/UserRepository.cs" Line="23" Column="51" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="OnlineLibraryBack" expanded="True">
             <Node name="BusinessLayer" expanded="True">
-              <Node name="Services" expanded="True">
-                <Node name="UserService.cs" selected="True" />
-              </Node>
+              <Node name="Services" expanded="True" />
             </Node>
             <Node name="DataAccessLayer" expanded="True">
-              <Node name="Repositories" expanded="True" />
-            </Node>
-            <Node name="OnlineLibraryPresentationLayer" expanded="True">
-              <Node name="Configuration" expanded="True" />
-              <Node name="Quartz" expanded="True">
-                <Node name="Jobs" expanded="True" />
+              <Node name="Interfaces" expanded="True">
+                <Node name="Repositories" expanded="True">
+                  <Node name="IUserRepository.cs" selected="True" />
+                </Node>
               </Node>
             </Node>
+            <Node name="OnlineLibraryPresentationLayer" expanded="True" />
           </Node>
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

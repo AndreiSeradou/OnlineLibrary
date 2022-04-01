@@ -20,7 +20,7 @@ namespace DataAccessLayer.Repositories
         }
 
 
-        public async Task<UserEntityModel> GetByIdIncludeAllAsync(string userId)
+        public async Task<UserEntityModel> GetByIdAsync(string userId)
         {
             var user = await _dbContext.Users.Include(x => x.Orders).ThenInclude(x => x.Book).Include(x => x.Books)
                 .FirstOrDefaultAsync(user => user.Id == userId);

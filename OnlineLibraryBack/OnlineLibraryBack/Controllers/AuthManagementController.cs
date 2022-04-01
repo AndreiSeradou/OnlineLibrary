@@ -13,8 +13,7 @@ using OnlineLibraryBack.Configuration;
 using DataAccessLayer.Entities;
 using OnlineLibraryBack.Models.DTOs.Requests;
 using Configuration.GeneralConfiguration;
-using MimeKit;
-using System.Net.Mail;
+
 
 namespace OnlineLibraryBack.Controllers
 {

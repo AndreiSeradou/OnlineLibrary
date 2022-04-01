@@ -27,7 +27,7 @@ namespace BusinessLayer.Services
 
         public async Task<bool> CreateOrderAsync(string userId, int bookId)
         {
-            var book = await _bookRepository.GetByIdIncludeAllAsync(bookId);
+            var book = await _bookRepository.GetByIdAsync(bookId);
             var orders = await _orderRepository.GetAllAsync();
             var bookExist = orders.FirstOrDefault(o => o.User.Id == userId && o.Book.Id == bookId);
 
@@ -58,21 +58,21 @@ namespace BusinessLayer.Services
 
         public async Task<IReadOnlyCollection<BookBLModel>> GetAllUserBooksAsync(string userId)
         {
-            var user = await _userRepository.GetByIdIncludeAllAsync(userId);
+            var user = await _userRepository.GetByIdAsync(userId);
 
             return _mapper.Map<IReadOnlyCollection<BookBLModel>>(user.Books);
         }
 
         public async Task<IReadOnlyCollection<OrderBLModel>> GetAllUserOrdersAsync(string userId)
         {
-            var user = await _userRepository.GetByIdIncludeAllAsync(userId);
+            var user = await _userRepository.GetByIdAsync(userId);
 
             return _mapper.Map<IReadOnlyCollection<OrderBLModel>>(user.Orders);
         }
 
         public async Task<IReadOnlyCollection<OrderBLModel>> GetOverdueOrdersAsync(string userId)
         {
-            var user = await _userRepository.GetByIdIncludeAllAsync(userId);
+            var user = await _userRepository.GetByIdAsync(userId);
             var overdueOrders = user.Orders.Where(o => o.DateTimeCreated.Month != DateTime.UtcNow.Month && o.Condition == true);
 
             return _mapper.Map<IReadOnlyCollection<OrderBLModel>>(overdueOrders);
