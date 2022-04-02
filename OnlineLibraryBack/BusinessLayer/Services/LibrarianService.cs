@@ -72,7 +72,7 @@ namespace BusinessLayer.Services
         {
             var order = await _orderRepository.GetByIdAsync(orderId);
             order.Condition = true;
-            order.DateTimeCreated = DateTime.UtcNow;
+            //order.DateTimeCreated = DateTime.UtcNow;
             order.User.Books.Add(order.Book);
             var result = await _orderRepository.UpdateAsync(order);
 
