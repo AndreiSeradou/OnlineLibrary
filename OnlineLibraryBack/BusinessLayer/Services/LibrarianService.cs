@@ -70,9 +70,10 @@ namespace BusinessLayer.Services
 
         public async Task<bool> UpdateOrderAsync(int orderId)
         {
-            var order = await _orderRepository.GetByIdAsync(orderId);
+            var order = await _orderRepository.GetByIdAsync(orderId); 
+
             order.Condition = true;
-            //order.DateTimeCreated = DateTime.UtcNow;
+            order.DateTimeCreated = DateTime.UtcNow;
             order.User.Books.Add(order.Book);
             var result = await _orderRepository.UpdateAsync(order);
 
