@@ -1539,7 +1539,8 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
           "Configuration": "1.0.0",
           "DataAccessLayer": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "5.0.14"
+          "Microsoft.EntityFrameworkCore": "5.0.14",
+          "Quartz": "3.4.0"
         },
         "runtime": {
           "BusinessLayer.dll": {}

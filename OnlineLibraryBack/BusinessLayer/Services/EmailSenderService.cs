@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Net.Mail;
 using System.Threading.Tasks;
+using BusinessLayer.Interfaces.Services;
 using Configuration.GeneralConfiguration;
 using DataAccessLayer.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using OnlineLibraryPresentationLayer.Quartz.Jobs.Interface;
 
-namespace OnlineLibraryPresentationLayer.Quartz.Jobs
+namespace BusinessLayer.Services
 {
-    public class EmailSender : IEmailSender
+    public class EmailSenderService : IEmailSenderService
     {
         private readonly IServiceScopeFactory _scopeFactory;
-      
-        public EmailSender(IServiceScopeFactory scopeFactory)
+
+        public EmailSenderService(IServiceScopeFactory scopeFactory)
         {
             _scopeFactory = scopeFactory;
         }
@@ -33,14 +33,18 @@ namespace OnlineLibraryPresentationLayer.Quartz.Jobs
                     if (order.DateTimeCreated.Month != DateTime.UtcNow.Month && order.Condition == true)
                     {
                         SmtpClient client = new SmtpClient(GeneralConfiguration.MailSmtp, 25);
+
                         client.DeliveryMethod = SmtpDeliveryMethod.Network;
                         client.UseDefaultCredentials = false;
                         client.Credentials = new System.Net.NetworkCredential(GeneralConfiguration.QuartzEmail, GeneralConfiguration.QuartzPassword);
                         client.EnableSsl = true;
+
                         var mail = new MailMessage(GeneralConfiguration.QuartzEmail, order.User.Email);
+
                         mail.Subject = GeneralConfiguration.MailSubject;
                         mail.Body = $"Hello, {order.User.UserName}, book {order.Book.Name} expired, please come back the book.";
                         mail.IsBodyHtml = true;
+
                         await client.SendMailAsync(mail);
                     }
                 }

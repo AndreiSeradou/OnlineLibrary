@@ -58,19 +58,24 @@ namespace BusinessLayer.Services
         public async Task<IReadOnlyCollection<OrderBLModel>> GetAllOrdersConditionFalseAsync()
         {
             var orders = await _orderRepository.GetAllAsync();
-            return _mapper.Map<IReadOnlyCollection<OrderBLModel>>(orders.Where(o => o.Condition == false));
+            var result = _mapper.Map<IReadOnlyCollection<OrderBLModel>>(orders.Where(o => o.Condition == false));
+
+            return result;
         }
 
         public async Task<IReadOnlyCollection<OrderBLModel>> GetAllOrdersConditionTrueAsync()
         {
             var orders = await _orderRepository.GetAllAsync();
-            return _mapper.Map<IReadOnlyCollection<OrderBLModel>>(orders.Where(o => o.Condition == true));
+            var result = _mapper.Map<IReadOnlyCollection<OrderBLModel>>(orders.Where(o => o.Condition == true));
+
+            return result;
         }
 
 
         public async Task<bool> UpdateOrderAsync(int orderId)
         {
-            var order = await _orderRepository.GetByIdAsync(orderId);
+            var order = await _orderRepository.GetByIdAsync(orderId); 
+
             order.Condition = true;
             order.DateTimeCreated = DateTime.UtcNow;
             order.User.Books.Add(order.Book);

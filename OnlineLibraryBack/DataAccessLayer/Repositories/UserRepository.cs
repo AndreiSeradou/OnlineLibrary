@@ -24,6 +24,7 @@ namespace DataAccessLayer.Repositories
         {
             var user = await _dbContext.Users.Include(x => x.Orders).ThenInclude(x => x.Book).Include(x => x.Books)
                 .FirstOrDefaultAsync(user => user.Id == userId);
+
             return _mapper.Map<UserEntityModel>(user);
         }
 

@@ -26,7 +26,6 @@
     <None Remove="Quartz\JobsFactory\" />
     <None Remove="MailKit" />
     <None Remove="Quartz\Service\" />
-    <None Remove="Quartz\Jobs\Interface\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -61,6 +60,5 @@
     <Folder Include="Quartz\Jobs\" />
     <Folder Include="Quartz\JobsFactory\" />
     <Folder Include="Quartz\Service\" />
-    <Folder Include="Quartz\Jobs\Interface\" />
   </ItemGroup>
 </Project>

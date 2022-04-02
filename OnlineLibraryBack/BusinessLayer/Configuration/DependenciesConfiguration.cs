@@ -11,6 +11,7 @@ namespace BusinessLayer.Configuration
         {
             serviceCollection.AddScoped<ILibrarianService, LibrarianService>();
             serviceCollection.AddScoped<IUserService, UserService>();
+            serviceCollection.AddSingleton<IEmailSenderService, EmailSenderService>();
             return serviceCollection;
         }
 

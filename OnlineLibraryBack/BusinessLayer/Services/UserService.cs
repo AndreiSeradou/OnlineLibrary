@@ -27,10 +27,9 @@ namespace BusinessLayer.Services
         public async Task<bool> CreateOrderAsync(string userId, int bookId)
         {
             var book = await _bookRepository.GetByIdAsync(bookId);
-            var orders = await _orderRepository.GetAllAsync();
-            var bookExist = orders.FirstOrDefault(o => o.User.Id == userId && o.Book.Id == bookId);
+            var order = await _orderRepository.GetByUserIdBookIdAsync(userId, bookId);
 
-            if (bookExist != null || book.Count <= 0)
+            if (order != null || book.Count <= 0)
             {
                 return false;
             }
@@ -52,29 +51,34 @@ namespace BusinessLayer.Services
         public async  Task<IReadOnlyCollection<BookBLModel>> GetAllBooksAsync()
         {
             var books = await _bookRepository.GetAllAsync();
-            return _mapper.Map<IReadOnlyCollection<BookBLModel>>(books);
+            var result = _mapper.Map<IReadOnlyCollection<BookBLModel>>(books);
+
+            return result;
         }
 
         public async Task<IReadOnlyCollection<BookBLModel>> GetAllUserBooksAsync(string userId)
         {
             var user = await _userRepository.GetByIdAsync(userId);
+            var result = _mapper.Map<IReadOnlyCollection<BookBLModel>>(user.Books);
 
-            return _mapper.Map<IReadOnlyCollection<BookBLModel>>(user.Books);
+            return result;
         }
 
         public async Task<IReadOnlyCollection<OrderBLModel>> GetAllUserOrdersAsync(string userId)
         {
             var user = await _userRepository.GetByIdAsync(userId);
+            var result = _mapper.Map<IReadOnlyCollection<OrderBLModel>>(user.Orders);
 
-            return _mapper.Map<IReadOnlyCollection<OrderBLModel>>(user.Orders);
+            return result;
         }
 
         public async Task<IReadOnlyCollection<OrderBLModel>> GetOverdueOrdersAsync(string userId)
         {
             var user = await _userRepository.GetByIdAsync(userId);
             var overdueOrders = user.Orders.Where(o => o.DateTimeCreated.Month != DateTime.UtcNow.Month && o.Condition == true);
+            var result = _mapper.Map<IReadOnlyCollection<OrderBLModel>>(overdueOrders);
 
-            return _mapper.Map<IReadOnlyCollection<OrderBLModel>>(overdueOrders);
+            return result;
         }
     }
 }

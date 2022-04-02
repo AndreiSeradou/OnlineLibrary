@@ -27,7 +27,8 @@ namespace DataAccessLayer.Repositories
         {
             var orders = await _dbContext.Orders.Include(x => x.Book).Include(u => u.User)
                 .AsNoTracking()
-                .ToListAsync();
+                    .ToListAsync();
+
             return _mapper.Map<IReadOnlyCollection<OrderEntityModel>>(orders);
         }
 
@@ -35,6 +36,15 @@ namespace DataAccessLayer.Repositories
         {
             var entity = await _dbContext.Orders.Include(x => x.User).ThenInclude(x => x.Books).Include(x => x.Book)
                 .FirstOrDefaultAsync(o => o.Id == orderId);
+
+            return _mapper.Map<OrderEntityModel>(entity);
+        }
+
+        public async Task<OrderEntityModel> GetByUserIdBookIdAsync(string userId, int bookId)
+        {
+            var entity = await _dbContext.Orders.Include(x => x.User).Include(x => x.Book)
+                .FirstOrDefaultAsync(o => o.User.Id == userId && o.Book.Id == bookId);
+
             return _mapper.Map<OrderEntityModel>(entity);
         }
 

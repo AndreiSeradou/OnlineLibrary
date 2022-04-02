@@ -24,8 +24,7 @@ namespace DataAccessLayer.Repositories
         public async Task<IReadOnlyCollection<BookEntityModel>> GetAllAsync()
         {
             var books = await _dbContext.Books
-                .AsNoTracking()
-                .ToListAsync();
+                .AsNoTracking().ToListAsync();
 
             return _mapper.Map<IReadOnlyCollection<BookEntityModel>>(books);
         }
@@ -34,6 +33,7 @@ namespace DataAccessLayer.Repositories
         {
             var entity = await _dbContext.Books
                 .FirstOrDefaultAsync(b => b.Id == bookId);
+
             return _mapper.Map<BookEntityModel>(entity);
         }
 
