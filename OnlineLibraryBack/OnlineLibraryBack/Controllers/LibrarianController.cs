@@ -42,7 +42,7 @@ namespace OnlineLibraryBack.Controllers
             return BadRequest(GeneralConfiguration.InvalidModel);
         }
 
-        [HttpPut]
+        [HttpPost]
         [Route("UpdateOrderAsync")]
         public async Task<IActionResult> UpdateOrderAsync([FromBody] UpdateOrderRequest model)
         {
@@ -83,7 +83,7 @@ namespace OnlineLibraryBack.Controllers
             return Ok(_mapper.Map<IReadOnlyCollection<OrderResponse>>(orders));
         }
 
-        [HttpPut]
+        [HttpPost]
         [Route("DeleteOrderAsync")]
         public async Task<IActionResult> DeleteOrderAsync([FromBody] UpdateOrderRequest model)
         {

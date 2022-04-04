@@ -13,7 +13,7 @@ namespace DataAccessLayer.Data
             : base(options)
         {
             //Database.EnsureDeleted();
-            //Database.EnsureCreated();
+            Database.EnsureCreated();
         }
     }
 }

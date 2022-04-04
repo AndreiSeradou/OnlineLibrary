@@ -24,7 +24,7 @@ export class UserService {
 
   public register(fullname:string,email:string,password:string)
   {
-    
+
     const body={
       username:fullname,
       email:email,
@@ -34,15 +34,34 @@ export class UserService {
     return this.httpClient.post<ResponceModel>(this.baseURL+"AuthManagement/Register",body);
   }
 
-  public getAllBooks()
+  public getAllBooks(text : string)
   {
     let token = localStorage.getItem("token");
+
+    const body={
+      Text:text
+    }
 
     const headers=new HttpHeaders({
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${token}`
     });
-    return  this.httpClient.get<responceBookModel[]>(this.baseURL+"User/GetAllBooksAsync",{headers:headers});
+    return  this.httpClient.post<responceBookModel[]>(this.baseURL+"User/GetAllBooksAsync",body,{headers:headers});
+  }
+
+  public getFilteredBooks(text : string)
+  {
+    let token = localStorage.getItem("token");
+
+    const body={
+      Text:text
+    }
+
+    const headers=new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    });
+    return  this.httpClient.post<responceBookModel[]>(this.baseURL+"User/GetFilteredBooksAsync",body,{headers:headers});
   }
 
   public getUserBooks()
@@ -85,7 +104,7 @@ export class UserService {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${token}`
     });
-    
+
     const body={
       BookId:bookId
     }
@@ -100,7 +119,7 @@ export class UserService {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${token}`
     });
-    
+
     const body={
       name:name,
       text:text,
@@ -139,12 +158,12 @@ export class UserService {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${token}`
     });
-    
+
     const body={
       id:id
     }
 
-    return this.httpClient.put<boolean>(this.baseURL+"Librarian/UpdateOrderAsync/", body,{headers:headers});
+    return this.httpClient.post<boolean>(this.baseURL+"Librarian/UpdateOrderAsync/", body,{headers:headers});
   }
 
   public deleteOrder(id:number)
@@ -154,11 +173,11 @@ export class UserService {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${token}`
     });
-    
+
     const body={
       id:id
     }
 
-    return this.httpClient.put<boolean>(this.baseURL+"Librarian/DeleteOrderAsync/", body,{headers:headers});
+    return this.httpClient.post<boolean>(this.baseURL+"Librarian/DeleteOrderAsync/", body,{headers:headers});
   }
 }

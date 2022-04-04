@@ -4,7 +4,9 @@ using BusinessLayer.Models.DTOs;
 using DataAccessLayer.Interfaces.Repositories;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace BusinessLayer.Services
@@ -48,10 +50,29 @@ namespace BusinessLayer.Services
             return result;
         }
 
-        public async  Task<IReadOnlyCollection<BookBLModel>> GetAllBooksAsync()
+        public async  Task<IReadOnlyCollection<BookBLModel>> GetAllBooksAsync(string orderBy)
         {
+            if (orderBy == default)
+            {
+                var books = await _bookRepository.GetAllAsync();
+                var result = _mapper.Map<IReadOnlyCollection<BookBLModel>>(books);
+
+                return result;
+            }
+
+            var sortedBooks = await _bookRepository.GetAsync(orderBy);
+            var sortedResult = _mapper.Map<IReadOnlyCollection<BookBLModel>>(sortedBooks);
+
+            return sortedResult;
+        }
+
+        public async Task<IReadOnlyCollection<BookBLModel>> GetFilteredBooksAsync(string filterBy)
+        {
+            filterBy = filterBy.ToUpper();
+
             var books = await _bookRepository.GetAllAsync();
-            var result = _mapper.Map<IReadOnlyCollection<BookBLModel>>(books);
+            var filteredBooks = books.Where(b => b.Name.ToUpper().Contains(filterBy) || b.Text.ToUpper().Contains(filterBy));
+            var result = _mapper.Map<IReadOnlyCollection<BookBLModel>>(filteredBooks);
 
             return result;
         }

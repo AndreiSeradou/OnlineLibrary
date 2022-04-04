@@ -1,37 +1,46 @@
 ﻿<Properties StartupConfiguration="{E5A4BDFE-FC49-43B1-82F8-D2C5ADFD6685}|TodoApp">
-  <MonoDevelop.Ide.Workbench ActiveDocument="BusinessLayer/Services/EmailSenderService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="OnlineLibraryBack/Controllers/UserController.cs">
     <Files>
-      <File FileName="BusinessLayer/Services/LibrarianService.cs" Line="11" Column="33" />
-      <File FileName="BusinessLayer/Services/UserService.cs" Line="81" Column="26" />
+      <File FileName="BusinessLayer/Services/LibrarianService.cs" Line="74" Column="1" />
+      <File FileName="BusinessLayer/Services/UserService.cs" />
       <File FileName="DataAccessLayer/Entities/Book.cs" />
       <File FileName="DataAccessLayer/Entities/Order.cs" />
-      <File FileName="DataAccessLayer/Repositories/OrderRepository.cs" Line="47" Column="1" />
-      <File FileName="DataAccessLayer/Interfaces/Repositories/IOrderRepository.cs" Line="13" Column="61" />
-      <File FileName="DataAccessLayer/Repositories/BookRepository.cs" Line="36" Column="1" />
-      <File FileName="DataAccessLayer/Repositories/UserRepository.cs" Line="27" Column="1" />
-      <File FileName="OnlineLibraryBack/Quartz/Jobs/JobReminders.cs" Line="3" Column="41" />
-      <File FileName="OnlineLibraryBack/Quartz/Service/QuartzHostedService.cs" Line="7" Column="18" />
-      <File FileName="BusinessLayer/Services/QuartzHostedService.cs" Line="4" Column="28" />
-      <File FileName="BusinessLayer/Services/EmailSenderService.cs" Line="36" Column="1" />
-      <File FileName="BusinessLayer/Interfaces/Services/IEmailSenderService.cs" Line="5" Column="41" />
-      <File FileName="OnlineLibraryBack/Quartz/Jobs/MyJob.cs" Line="1" Column="1" />
-      <File FileName="OnlineLibraryBack/Configuration/DependenciesConfiguration.cs" Line="8" Column="18" />
-      <File FileName="BusinessLayer/Configuration/DependenciesConfiguration.cs" Line="16" Column="10" />
-      <File FileName="OnlineLibraryBack/Configuration/JwtConfig.cs" Line="1" Column="1" />
-      <File FileName="OnlineLibraryBack/Quartz/JobsFactory/SingletonJobFactory.cs" Line="1" Column="1" />
-      <File FileName="OnlineLibraryBack/Startup.cs" Line="19" Column="1" />
+      <File FileName="DataAccessLayer/Repositories/OrderRepository.cs" />
+      <File FileName="DataAccessLayer/Interfaces/Repositories/IOrderRepository.cs" />
+      <File FileName="DataAccessLayer/Repositories/BookRepository.cs" />
+      <File FileName="DataAccessLayer/Repositories/UserRepository.cs" />
+      <File FileName="OnlineLibraryBack/Quartz/Jobs/JobReminders.cs" />
+      <File FileName="BusinessLayer/Services/EmailSenderService.cs" />
+      <File FileName="BusinessLayer/Interfaces/Services/IEmailSenderService.cs" />
+      <File FileName="OnlineLibraryBack/Quartz/Jobs/MyJob.cs" />
+      <File FileName="OnlineLibraryBack/Configuration/DependenciesConfiguration.cs" />
+      <File FileName="BusinessLayer/Configuration/DependenciesConfiguration.cs" />
+      <File FileName="OnlineLibraryBack/Configuration/JwtConfig.cs" />
+      <File FileName="OnlineLibraryBack/Quartz/JobsFactory/SingletonJobFactory.cs" />
+      <File FileName="OnlineLibraryBack/Startup.cs" />
+      <File FileName="DataAccessLayer/Interfaces/Repositories/IBookRepository.cs" />
+      <File FileName="BusinessLayer/Interfaces/Services/IUserService.cs" />
+      <File FileName="OnlineLibraryBack/Controllers/UserController.cs" Line="93" Column="35" />
+      <File FileName="OnlineLibraryBack/DTOs/Requests/OrderByRequest.cs" />
+      <File FileName="OnlineLibraryBack/DTOs/Requests/BookRequest.cs" />
+      <File FileName="OnlineLibraryBack/Controllers/LibrarianController.cs" />
+      <File FileName="OnlineLibraryBack/Controllers/AuthManagementController.cs" />
+      <File FileName="DataAccessLayer/Data/ApiDbContext.cs" />
+      <File FileName="OnlineLibraryBack/DTOs/Requests/FilterByRequest.cs" />
+      <File FileName="OnlineLibraryBack/DTOs/Requests/OrderRequest.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="OnlineLibraryBack" expanded="True">
             <Node name="BusinessLayer" expanded="True">
-              <Node name="Services" expanded="True">
-                <Node name="EmailSenderService.cs" selected="True" />
-              </Node>
+              <Node name="Services" expanded="True" />
             </Node>
-            <Node name="DataAccessLayer" expanded="True">
-              <Node name="Repositories" expanded="True" />
+            <Node name="DataAccessLayer" expanded="True" />
+            <Node name="OnlineLibraryPresentationLayer" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="UserController.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>

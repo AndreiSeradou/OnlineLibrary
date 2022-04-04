@@ -24,7 +24,7 @@ export class RegisterComponent implements OnInit {
    let email=this.registerForm.controls["email"].value;
    let password=this.registerForm.controls["password"].value;
    this.userService.register(fullName,email,password).subscribe((data)=>{
-    console.log("response",data.token);
+    console.log("response",data.name);
     if (data.success) {
       localStorage.setItem("token", data.token);
       localStorage.setItem("name", data.name);

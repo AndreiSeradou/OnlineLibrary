@@ -9,9 +9,13 @@ import { UserService } from '../service/user.service';
   styleUrls: ['./user-get-all-books.component.scss']
 })
 export class UserGetAllBooksComponent implements OnInit {
-  
+
+  public filterForm=this.formBuilder.group({
+    filter:['',[Validators.required]],
+  })
+
   public bookList: responceBookModel[] = [];
-  constructor(private userService:UserService) { }
+  constructor(private formBuilder:FormBuilder,private userService:UserService) { }
 
   ngOnInit(): void {
     this.getAllBooks();
@@ -20,7 +24,7 @@ export class UserGetAllBooksComponent implements OnInit {
   onSubmit(num:number){
     this.userService.createOrder(num).subscribe(data => {
       if (data) {
-        alert("Successfully added");  
+        alert("Successfully added");
         console.log(data);
         location.reload();
       }
@@ -32,10 +36,41 @@ export class UserGetAllBooksComponent implements OnInit {
     })
    }
 
-  getAllBooks()
-  {
-    this.userService.getAllBooks().subscribe((data:any)=>{
+   onSubmitOrderByName(){
+    this.userService.getAllBooks("Name").subscribe((data:any)=>{
       this.bookList = data;
     })
-  } 
+   }
+
+   onSubmitFilter(){
+    let filter=this.filterForm.controls["filter"].value;
+    this.userService.getFilteredBooks(filter).subscribe((data:any)=>{
+      this.bookList = data;
+    })
+  }
+
+   onSubmitOrderByCount(){
+    this.userService.getAllBooks("Count").subscribe((data:any)=>{
+      this.bookList = data;
+    })
+   }
+
+   onSubmitOrderById(){
+    this.userService.getAllBooks("Id").subscribe((data:any)=>{
+      this.bookList = data;
+    })
+   }
+
+   onSubmitOrderByDescription(){
+    this.userService.getAllBooks("Text").subscribe((data:any)=>{
+      this.bookList = data;
+    })
+   }
+
+  getAllBooks()
+  {
+    this.userService.getAllBooks("").subscribe((data:any)=>{
+      this.bookList = data;
+    })
+  }
 }

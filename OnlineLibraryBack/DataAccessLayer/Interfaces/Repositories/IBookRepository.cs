@@ -12,6 +12,7 @@ namespace DataAccessLayer.Interfaces.Repositories
         Task<BookEntityModel> GetByIdAsync(int bookId);
         Task<bool> CreateAsync(BookEntityModel model);
         Task<bool> UpdateAsync(BookEntityModel orderId);
+        Task<IReadOnlyCollection<BookEntityModel>> GetAsync(string orderBy);
         Task SaveAsync();
     }
 }

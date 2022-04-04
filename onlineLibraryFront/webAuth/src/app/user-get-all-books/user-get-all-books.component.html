@@ -1,12 +1,32 @@
+<div class="btn-group">
+  <form [formGroup]="filterForm" (ngSubmit)="onSubmitFilter()">
+    <div class="btn-group">
+              <input type="text" formControlName="filter" class="form-control"  value="">
+              <button type="submit" class="btn btn-primary" [disabled]="!filterForm.valid">Search</button>
+    </div>
+    </form>
+    <form  (ngSubmit)="onSubmitOrderById()">
+      <button type="submit" class="btn btn-primary" >Order by Id</button>
+    </form>
+<form  (ngSubmit)="onSubmitOrderByName()">
+  <button type="submit" class="btn btn-primary" >Order by name</button>
+</form>
+<form  (ngSubmit)="onSubmitOrderByDescription()">
+  <button type="submit" class="btn btn-primary" >Order by description</button>
+</form>
+<form  (ngSubmit)="onSubmitOrderByCount()">
+  <button type="submit" class="btn btn-primary" >Order by count</button>
+</form>
+</div>
 <div class="container" >
     <div class="row justify-content-center">
       <div class="col-10">
         <div class="card">
-  
+
           <table class="table">
             <thead>
               <tr>
-  
+
                 <th scope="col">Id</th>
                 <th scope="col">Name</th>
                 <th scope="col">Description</th>
@@ -20,8 +40,8 @@
                 <td>{{book.name}}</td>
                 <td>{{book.text}}</td>
                 <td>{{book.count}}</td>
-                <td> 
-                  <form  (ngSubmit)="onSubmit(book.id)"> 
+                <td>
+                  <form  (ngSubmit)="onSubmit(book.id)">
                     <button type="submit" class="btn btn-primary" >Add</button>
                   </form>
                 </td>
@@ -29,7 +49,7 @@
             </tbody>
           </table>
         </div>
-  
+
       </div>
     </div>
   </div>

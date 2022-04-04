@@ -8,6 +8,7 @@ using AutoMapper;
 using System.Collections.Generic;
 using OnlineLibraryBack.Models.DTOs.Responses;
 using Configuration.GeneralConfiguration;
+using OnlineLibraryPresentationLayer.DTOs.Requests;
 
 namespace OnlineLibraryBack.Controllers
 {
@@ -81,13 +82,32 @@ namespace OnlineLibraryBack.Controllers
             return BadRequest(GeneralConfiguration.InvalidModel);
         }
 
-        [HttpGet]
-        [Route("GetAllBooksAsync")]  
-        public async Task<IActionResult> GetAllBooksAsync()
+        [HttpPost]
+        [Route("GetAllBooksAsync")]
+        public async Task<IActionResult> GetAllBooksAsync([FromBody] OrderByRequest orderBy)
         {
             if (ModelState.IsValid)
             {
-                var books = await _userService.GetAllBooksAsync();
+                var books = await _userService.GetAllBooksAsync(orderBy.Text);
+
+                if (books == null)
+                    return NotFound();
+
+                var booksResponse = _mapper.Map<IReadOnlyCollection<BookResponse>>(books);
+
+                return Ok(booksResponse);
+            }
+
+            return BadRequest(GeneralConfiguration.InvalidModel);
+        }
+
+        [HttpPost]
+        [Route("GetFilteredBooksAsync")]
+        public async Task<IActionResult> GetFilteredBooksAsync([FromBody] FilterByRequest filterBy)
+        {
+            if (ModelState.IsValid)
+            {
+                var books = await _userService.GetFilteredBooksAsync(filterBy.Text);
 
                 if (books == null)
                     return NotFound();
