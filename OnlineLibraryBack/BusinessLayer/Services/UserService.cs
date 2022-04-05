@@ -50,20 +50,20 @@ namespace BusinessLayer.Services
             return result;
         }
 
-        public async  Task<IReadOnlyCollection<BookBLModel>> GetAllBooksAsync(string orderBy)
+        public async Task<IReadOnlyCollection<BookBLModel>> GetAllBooksAsync(string orderBy)
         {
-            if (orderBy == default)
-            {
-                var books = await _bookRepository.GetAllAsync();
-                var result = _mapper.Map<IReadOnlyCollection<BookBLModel>>(books);
-
-                return result;
-            }
-
             var sortedBooks = await _bookRepository.GetAsync(orderBy);
             var sortedResult = _mapper.Map<IReadOnlyCollection<BookBLModel>>(sortedBooks);
 
             return sortedResult;
+        }
+
+        public async  Task<IReadOnlyCollection<BookBLModel>> GetAllBooksAsync()
+        {
+            var books = await _bookRepository.GetAllAsync();
+            var result = _mapper.Map<IReadOnlyCollection<BookBLModel>>(books);
+
+            return result;
         }
 
         public async Task<IReadOnlyCollection<BookBLModel>> GetFilteredBooksAsync(string filterBy)

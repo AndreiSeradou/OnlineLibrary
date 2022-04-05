@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "cade0f5e-281e-472c-b8ec-67cae16746c4": {
+      "ProjectGuid": "cade0f5e-281e-472c-b8ec-67cae16746c4",
+      "DisplayName": "BusinessLayer",
+      "ColorIndex": 0
+    },
+    "e5a4bdfe-fc49-43b1-82f8-d2c5adfd6685": {
+      "ProjectGuid": "e5a4bdfe-fc49-43b1-82f8-d2c5adfd6685",
+      "DisplayName": "OnlineLibraryPresentationLayer",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

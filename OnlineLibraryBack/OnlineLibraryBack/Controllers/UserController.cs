@@ -8,7 +8,6 @@ using AutoMapper;
 using System.Collections.Generic;
 using OnlineLibraryBack.Models.DTOs.Responses;
 using Configuration.GeneralConfiguration;
-using OnlineLibraryPresentationLayer.DTOs.Requests;
 
 namespace OnlineLibraryBack.Controllers
 {
@@ -82,13 +81,13 @@ namespace OnlineLibraryBack.Controllers
             return BadRequest(GeneralConfiguration.InvalidModel);
         }
 
-        [HttpPost]
-        [Route("GetAllBooksAsync")]
-        public async Task<IActionResult> GetAllBooksAsync([FromBody] OrderByRequest orderBy)
+        [HttpGet]
+        [Route("GetAllSortedBooksAsync")]
+        public async Task<IActionResult> GetAllSortedBooksAsync([FromQuery]string orderBy)
         {
             if (ModelState.IsValid)
             {
-                var books = await _userService.GetAllBooksAsync(orderBy.Text);
+                var books = await _userService.GetAllBooksAsync(orderBy);
 
                 if (books == null)
                     return NotFound();
@@ -101,13 +100,32 @@ namespace OnlineLibraryBack.Controllers
             return BadRequest(GeneralConfiguration.InvalidModel);
         }
 
-        [HttpPost]
-        [Route("GetFilteredBooksAsync")]
-        public async Task<IActionResult> GetFilteredBooksAsync([FromBody] FilterByRequest filterBy)
+        [HttpGet]
+        [Route("GetAllBooksAsync")]
+        public async Task<IActionResult> GetAllBooksAsync()
         {
             if (ModelState.IsValid)
             {
-                var books = await _userService.GetFilteredBooksAsync(filterBy.Text);
+                var books = await _userService.GetAllBooksAsync();
+
+                if (books == null)
+                    return NotFound();
+
+                var booksResponse = _mapper.Map<IReadOnlyCollection<BookResponse>>(books);
+
+                return Ok(booksResponse);
+            }
+
+            return BadRequest(GeneralConfiguration.InvalidModel);
+        }
+
+        [HttpGet]
+        [Route("GetFilteredBooksAsync")]
+        public async Task<IActionResult> GetFilteredBooksAsync([FromQuery] string filterBy)
+        {
+            if (ModelState.IsValid)
+            {
+                var books = await _userService.GetFilteredBooksAsync(filterBy);
 
                 if (books == null)
                     return NotFound();

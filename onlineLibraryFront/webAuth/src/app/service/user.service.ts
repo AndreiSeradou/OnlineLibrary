@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { responceBookModel } from '../Models/responceBookModel';
 import { ResponceModel } from '../Models/responceModel';
@@ -38,30 +38,36 @@ export class UserService {
   {
     let token = localStorage.getItem("token");
 
-    const body={
-      Text:text
-    }
+    const headers=new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    });
+    return  this.httpClient.get<responceBookModel[]>(this.baseURL+"User/GetAllBooksAsync",{headers:headers});
+  }
+
+  public getAllSortedBooks(text : string)
+  {
+    let token = localStorage.getItem("token");
+
+    const params = new HttpParams()
+    .set('orderBy', text);
 
     const headers=new HttpHeaders({
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${token}`
     });
-    return  this.httpClient.post<responceBookModel[]>(this.baseURL+"User/GetAllBooksAsync",body,{headers:headers});
+    return  this.httpClient.get<responceBookModel[]>(this.baseURL+"User/GetAllSortedBooksAsync?orderBy="+text,{headers:headers});
   }
 
   public getFilteredBooks(text : string)
   {
     let token = localStorage.getItem("token");
 
-    const body={
-      Text:text
-    }
-
     const headers=new HttpHeaders({
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${token}`
     });
-    return  this.httpClient.post<responceBookModel[]>(this.baseURL+"User/GetFilteredBooksAsync",body,{headers:headers});
+    return  this.httpClient.get<responceBookModel[]>(this.baseURL+"User/GetFilteredBooksAsync?filterBy="+text,{headers:headers});
   }
 
   public getUserBooks()

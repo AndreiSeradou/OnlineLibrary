@@ -37,7 +37,7 @@ export class UserGetAllBooksComponent implements OnInit {
    }
 
    onSubmitOrderByName(){
-    this.userService.getAllBooks("Name").subscribe((data:any)=>{
+    this.userService.getAllSortedBooks("Name").subscribe((data:any)=>{
       this.bookList = data;
     })
    }
@@ -50,19 +50,19 @@ export class UserGetAllBooksComponent implements OnInit {
   }
 
    onSubmitOrderByCount(){
-    this.userService.getAllBooks("Count").subscribe((data:any)=>{
+    this.userService.getAllSortedBooks("Count").subscribe((data:any)=>{
       this.bookList = data;
     })
    }
 
    onSubmitOrderById(){
-    this.userService.getAllBooks("Id").subscribe((data:any)=>{
+    this.userService.getAllSortedBooks("Id").subscribe((data:any)=>{
       this.bookList = data;
     })
    }
 
    onSubmitOrderByDescription(){
-    this.userService.getAllBooks("Text").subscribe((data:any)=>{
+    this.userService.getAllSortedBooks("Text").subscribe((data:any)=>{
       this.bookList = data;
     })
    }

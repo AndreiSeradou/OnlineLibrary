@@ -6223,35 +6223,37 @@
     ]
   },
   "packageFolders": {
-    "/Users/kamron/.nuget/packages/": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/OnlineLibraryBack/OnlineLibraryPresentationLayer.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\OnlineLibrary\\OnlineLibraryBack\\OnlineLibraryBack\\OnlineLibraryPresentationLayer.csproj",
       "projectName": "OnlineLibraryPresentationLayer",
-      "projectPath": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/OnlineLibraryBack/OnlineLibraryPresentationLayer.csproj",
-      "packagesPath": "/Users/kamron/.nuget/packages/",
-      "outputPath": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/OnlineLibraryBack/obj/",
+      "projectPath": "C:\\Users\\user\\Desktop\\OnlineLibrary\\OnlineLibraryBack\\OnlineLibraryBack\\OnlineLibraryPresentationLayer.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\OnlineLibrary\\OnlineLibraryBack\\OnlineLibraryBack\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/kamron/.config/NuGet/NuGet.Config"
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/BusinessLayer.csproj": {
-              "projectPath": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/BusinessLayer.csproj"
+            "C:\\Users\\user\\Desktop\\OnlineLibrary\\OnlineLibraryBack\\BusinessLayer\\BusinessLayer.csproj": {
+              "projectPath": "C:\\Users\\user\\Desktop\\OnlineLibrary\\OnlineLibraryBack\\BusinessLayer\\BusinessLayer.csproj"
             },
-            "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/Configuration.csproj": {
-              "projectPath": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/Configuration.csproj"
+            "C:\\Users\\user\\Desktop\\OnlineLibrary\\OnlineLibraryBack\\Configuration\\Configuration.csproj": {
+              "projectPath": "C:\\Users\\user\\Desktop\\OnlineLibrary\\OnlineLibraryBack\\Configuration\\Configuration.csproj"
             }
           }
         }
@@ -6327,7 +6329,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.201/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
