@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace OnlineLibraryPresentationLayer.Migrations
+namespace OnlineLibrary.PresentationLayer.Migrations
 {
     public partial class last : Migration
     {

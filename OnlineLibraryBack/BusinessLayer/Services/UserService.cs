@@ -1,15 +1,13 @@
 ﻿using AutoMapper;
-using BusinessLayer.Interfaces.Services;
-using BusinessLayer.Models.DTOs;
-using DataAccessLayer.Interfaces.Repositories;
+using OnlineLibrary.BusinessLayer.Interfaces.Services;
+using OnlineLibrary.BusinessLayer.Models.DTOs;
+using OnlineLibrary.DataAccessLayer.Interfaces.Repositories;
 using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace BusinessLayer.Services
+namespace OnlineLibrary.BusinessLayer.Services
 {
     public class UserService : IUserService
     {

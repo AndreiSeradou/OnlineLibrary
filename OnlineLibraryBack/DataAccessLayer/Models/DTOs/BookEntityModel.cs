@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using DataAccessLayer.Entities;
+﻿using System.Collections.Generic;
+using OnlineLibrary.DataAccessLayer.Entities;
 
-namespace DataAccessLayer.Models.DTOs
+namespace OnlineLibrary.DataAccessLayer.Models.DTOs
 {
     public class BookEntityModel
     {

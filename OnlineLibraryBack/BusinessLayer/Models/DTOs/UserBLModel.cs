@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using DataAccessLayer.Entities;
+using OnlineLibrary.DataAccessLayer.Entities;
 using Microsoft.AspNetCore.Identity;
 
-namespace BusinessLayer.Models.DTOs
+namespace OnlineLibrary.BusinessLayer.Models.DTOs
 {
     public class UserBLModel : IdentityUser
     {

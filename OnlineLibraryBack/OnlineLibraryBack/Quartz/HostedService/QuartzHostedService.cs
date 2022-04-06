@@ -2,11 +2,11 @@
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
-using OnlineLibraryPresentationLayer.Quartz.Jobs;
+using OnlineLibrary.PresentationLayer.Quartz.Jobs;
 using Quartz;
 using Quartz.Spi;
 
-namespace OnlineLibraryPresentationLayer.Quartz.Service
+namespace OnlineLibrary.PresentationLayer.Quartz.HostedService
 {
     public class QuartzHostedService : IHostedService
     {

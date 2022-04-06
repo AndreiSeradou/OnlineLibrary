@@ -1,9 +1,9 @@
-﻿using BusinessLayer.Interfaces.Services;
-using BusinessLayer.Mapping;
-using BusinessLayer.Services;
+﻿using OnlineLibrary.BusinessLayer.Interfaces.Services;
+using OnlineLibrary.BusinessLayer.Mapping;
+using OnlineLibrary.BusinessLayer.Services;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace BusinessLayer.Configuration
+namespace OnlineLibrary.BusinessLayer.Configuration
 {
     public static class DependenciesConfiguration
     {

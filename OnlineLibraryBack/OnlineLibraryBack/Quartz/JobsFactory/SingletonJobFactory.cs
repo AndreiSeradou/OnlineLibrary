@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Quartz;
 using Quartz.Spi;
 
-namespace OnlineLibraryPresentationLayer.Quartz.Service
+namespace OnlineLibrary.PresentationLayer.Quartz.JobsFactory
 {
     public class SingletonJobFactory : IJobFactory
     {

@@ -1,15 +1,15 @@
 ﻿using AutoMapper;
-using DataAccessLayer.Data;
-using DataAccessLayer.Entities;
-using DataAccessLayer.Interfaces.Repositories;
-using DataAccessLayer.Models.DTOs;
+using OnlineLibrary.DataAccessLayer.Data;
+using OnlineLibrary.DataAccessLayer.Entities;
+using OnlineLibrary.DataAccessLayer.Interfaces.Repositories;
+using OnlineLibrary.DataAccessLayer.Models.DTOs;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.Repositories
+namespace OnlineLibrary.DataAccessLayer.Repositories
 {
     public class OrderRepository : IOrderRepository
     {

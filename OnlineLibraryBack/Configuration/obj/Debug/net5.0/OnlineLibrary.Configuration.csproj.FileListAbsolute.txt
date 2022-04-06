@@ -1,0 +1,12 @@
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/bin/Debug/net5.0/OnlineLibrary.Configuration.deps.json
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/bin/Debug/net5.0/OnlineLibrary.Configuration.dll
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/bin/Debug/net5.0/ref/OnlineLibrary.Configuration.dll
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/bin/Debug/net5.0/OnlineLibrary.Configuration.pdb
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/obj/Debug/net5.0/OnlineLibrary.Configuration.csproj.AssemblyReference.cache
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/obj/Debug/net5.0/OnlineLibrary.Configuration.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/obj/Debug/net5.0/OnlineLibrary.Configuration.AssemblyInfoInputs.cache
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/obj/Debug/net5.0/OnlineLibrary.Configuration.AssemblyInfo.cs
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/obj/Debug/net5.0/OnlineLibrary.Configuration.csproj.CoreCompileInputs.cache
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/obj/Debug/net5.0/OnlineLibrary.Configuration.dll
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/obj/Debug/net5.0/ref/OnlineLibrary.Configuration.dll
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/obj/Debug/net5.0/OnlineLibrary.Configuration.pdb

@@ -1,7 +1,7 @@
-﻿using DataAccessLayer.Models.DTOs;
+﻿using OnlineLibrary.DataAccessLayer.Models.DTOs;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.Interfaces.Repositories
+namespace OnlineLibrary.DataAccessLayer.Interfaces.Repositories
 {
     public interface IUserRepository
     {

@@ -1,11 +1,10 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System.Collections.Generic;
 
-namespace DataAccessLayer.Entities
+namespace OnlineLibrary.DataAccessLayer.Entities
 {
-    public class User :IdentityUser
+    public class User : IdentityUser
     {
-        
         public ICollection<Order> Orders { get; set; }
         public ICollection<Book> Books { get; set; }
     }

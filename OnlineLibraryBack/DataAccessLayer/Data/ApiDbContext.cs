@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using DataAccessLayer.Entities;
+using OnlineLibrary.DataAccessLayer.Entities;
 
-namespace DataAccessLayer.Data
+namespace OnlineLibrary.DataAccessLayer.Data
 {
     public class ApiDbContext : IdentityDbContext<User>
     {

@@ -1,12 +1,12 @@
 ﻿using System;
-using DataAccessLayer.Data;
-using DataAccessLayer.Interfaces.Repositories;
-using DataAccessLayer.Mapping;
-using DataAccessLayer.Repositories;
+using OnlineLibrary.DataAccessLayer.Data;
+using OnlineLibrary.DataAccessLayer.Interfaces.Repositories;
+using OnlineLibrary.DataAccessLayer.Mapping;
+using OnlineLibrary.DataAccessLayer.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace DataAccessLayer.Configuration
+namespace OnlineLibrary.DataAccessLayer.Configuration
 {
     public static class DependenciesConfiguration
     {

@@ -1,9 +1,8 @@
-﻿using DataAccessLayer.Entities;
-using DataAccessLayer.Models.DTOs;
+﻿using OnlineLibrary.DataAccessLayer.Models.DTOs;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.Interfaces.Repositories
+namespace OnlineLibrary.DataAccessLayer.Interfaces.Repositories
 {
     public interface IBookRepository
     {

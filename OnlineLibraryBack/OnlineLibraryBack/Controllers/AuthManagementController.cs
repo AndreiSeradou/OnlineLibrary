@@ -9,13 +9,13 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using OnlineLibraryBack.Configuration;
-using DataAccessLayer.Entities;
-using OnlineLibraryBack.Models.DTOs.Requests;
-using Configuration.GeneralConfiguration;
+using OnlineLibrary.DataAccessLayer.Entities;
+using OnlineLibrary.PresentationLayer.Configuration;
+using OnlineLibrary.PresentationLayer.Models.DTOs.Requests;
+using OnlineLibrary.Configuration.GeneralConfiguration;
+using OnlineLibrary.PresentationLayer.Models.DTOs.Responses;
 
-
-namespace OnlineLibraryBack.Controllers
+namespace OnlineLibrary.PresentationLayer.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

@@ -1,7 +1,6 @@
-﻿using Microsoft.AspNetCore.Identity;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace DataAccessLayer.Entities
+namespace OnlineLibrary.DataAccessLayer.Entities
 {
     public class Book
     {

@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
-using BusinessLayer.Models.DTOs;
-using DataAccessLayer.Entities;
-using OnlineLibraryBack.Models.DTOs.Requests;
-using OnlineLibraryBack.Models.DTOs.Responses;
+using OnlineLibrary.BusinessLayer.Models.DTOs;
+using OnlineLibrary.DataAccessLayer.Entities;
+using OnlineLibrary.PresentationLayer.Models.DTOs.Requests;
+using OnlineLibrary.PresentationLayer.Models.DTOs.Responses;
 
-namespace OnlineLibraryPresentationLayer.Mapping
+namespace OnlineLibrary.PresentationLayer.Mapping
 {
     public class MappingPLConfiguration : Profile
     {

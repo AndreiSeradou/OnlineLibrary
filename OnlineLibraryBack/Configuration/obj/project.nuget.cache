@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TYF/cCkI+wp50X0petNDfc2Iah22hdZrJCnzHOua7gfCoSzav3YLhiXNzq8Yqx/VeWEA9qTc1XdkrFJenjxhOg==",
+  "dgSpecHash": "Q/juRho5Zrqln5nwT3HN6c80p61yDBcLyCNcHIVxBnfFU+oyeD6MNBWC1qHIbyzqLSrl+/2GsKRocuME8Zq/mg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\Desktop\\OnlineLibrary\\OnlineLibraryBack\\Configuration\\Configuration.csproj",
+  "projectFilePath": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/OnlineLibrary.Configuration.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

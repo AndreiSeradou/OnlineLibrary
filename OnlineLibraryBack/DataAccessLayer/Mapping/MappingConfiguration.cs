@@ -1,9 +1,8 @@
-﻿using System;
-using AutoMapper;
-using DataAccessLayer.Entities;
-using DataAccessLayer.Models.DTOs;
+﻿using AutoMapper;
+using OnlineLibrary.DataAccessLayer.Entities;
+using OnlineLibrary.DataAccessLayer.Models.DTOs;
 
-namespace DataAccessLayer.Mapping
+namespace OnlineLibrary.DataAccessLayer.Mapping
 {
     public class MappingDLConfiguration : Profile
     {
@@ -12,7 +11,6 @@ namespace DataAccessLayer.Mapping
             CreateMap<Book, BookEntityModel>().ReverseMap();
             CreateMap<Order, OrderEntityModel>().ReverseMap();
             CreateMap<User, UserEntityModel>().ReverseMap();
-            CreateMap<User, User>().ReverseMap();
         }
     }
 }

@@ -1,8 +1,8 @@
-using Configuration.GeneralConfiguration;
+using OnlineLibrary.Configuration.GeneralConfiguration;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace OnlineLibraryBack
+namespace OnlineLibrary.PresentationLayer
 {
     public static class Program
     {

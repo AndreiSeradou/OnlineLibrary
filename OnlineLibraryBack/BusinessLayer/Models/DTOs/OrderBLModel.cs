@@ -1,7 +1,7 @@
 ﻿using System;
-using DataAccessLayer.Entities;
+using OnlineLibrary.DataAccessLayer.Entities;
 
-namespace BusinessLayer.Models.DTOs
+namespace OnlineLibrary.BusinessLayer.Models.DTOs
 {
     public class OrderBLModel
     {

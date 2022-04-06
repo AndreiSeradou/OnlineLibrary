@@ -1,17 +1,16 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using BusinessLayer.Interfaces.Services;
-using System.Linq;
+using OnlineLibrary.BusinessLayer.Interfaces.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using OnlineLibraryBack.Models.DTOs.Requests;
+using OnlineLibrary.PresentationLayer.Models.DTOs.Requests;
 using AutoMapper;
-using BusinessLayer.Models.DTOs;
-using OnlineLibraryBack.Models.DTOs.Responses;
+using OnlineLibrary.BusinessLayer.Models.DTOs;
+using OnlineLibrary.PresentationLayer.Models.DTOs.Responses;
 using System.Collections.Generic;
-using Configuration.GeneralConfiguration;
+using OnlineLibrary.Configuration.GeneralConfiguration;
 
-namespace OnlineLibraryBack.Controllers
+namespace OnlineLibrary.PresentationLayer.Controllers
 {
     [Route("api/[controller]")] 
     [ApiController]

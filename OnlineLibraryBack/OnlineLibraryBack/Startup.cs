@@ -7,17 +7,16 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using OnlineLibraryBack.Configuration;
-using DataAccessLayer.Data;
+using OnlineLibrary.PresentationLayer.Configuration;
+using OnlineLibrary.DataAccessLayer.Data;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Identity;
-using DataAccessLayer.Entities;
-using DataAccessLayer.Configuration;
-using BusinessLayer.Configuration;
-using OnlineLibraryPresentationLayer.Configuration;
-using Configuration.GeneralConfiguration;
+using OnlineLibrary.DataAccessLayer.Entities;
+using OnlineLibrary.DataAccessLayer.Configuration;
+using OnlineLibrary.BusinessLayer.Configuration;
+using OnlineLibrary.Configuration.GeneralConfiguration;
 
-namespace OnlineLibraryBack
+namespace OnlineLibrary.PresentationLayer
 {
     public class Startup
     {

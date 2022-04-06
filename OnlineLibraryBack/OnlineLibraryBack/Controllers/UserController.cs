@@ -2,14 +2,14 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
-using BusinessLayer.Interfaces.Services;
-using OnlineLibraryBack.Models.DTOs.Requests;
+using OnlineLibrary.BusinessLayer.Interfaces.Services;
+using OnlineLibrary.PresentationLayer.Models.DTOs.Requests;
 using AutoMapper;
 using System.Collections.Generic;
-using OnlineLibraryBack.Models.DTOs.Responses;
-using Configuration.GeneralConfiguration;
+using OnlineLibrary.PresentationLayer.Models.DTOs.Responses;
+using OnlineLibrary.Configuration.GeneralConfiguration;
 
-namespace OnlineLibraryBack.Controllers
+namespace OnlineLibrary.PresentationLayer.Controllers
 {
     [Route("api/[controller]")] 
     [ApiController]

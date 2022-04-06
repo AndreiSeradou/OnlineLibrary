@@ -1,4 +1,4 @@
-namespace OnlineLibraryBack.Configuration
+namespace OnlineLibrary.PresentationLayer.Configuration
 {
     public class JwtConfig
     {

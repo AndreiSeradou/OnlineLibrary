@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using DataAccessLayer.Data;
-using DataAccessLayer.Entities;
-using DataAccessLayer.Interfaces.Repositories;
-using DataAccessLayer.Models.DTOs;
+using OnlineLibrary.DataAccessLayer.Data;
+using OnlineLibrary.DataAccessLayer.Entities;
+using OnlineLibrary.DataAccessLayer.Interfaces.Repositories;
+using OnlineLibrary.DataAccessLayer.Models.DTOs;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,8 +10,9 @@ using System.Globalization;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
+using OnlineLibrary.Configuration.GeneralConfiguration;
 
-namespace DataAccessLayer.Repositories
+namespace OnlineLibrary.DataAccessLayer.Repositories
 {
     public class BookRepository : IBookRepository
     {
@@ -27,8 +28,7 @@ namespace DataAccessLayer.Repositories
 
         public async Task<IReadOnlyCollection<BookEntityModel>> GetAllAsync()
         {
-            var books = await _dbContext.Books
-                .AsNoTracking().ToListAsync();
+            var books = await _dbContext.Books.AsNoTracking().ToListAsync();
 
             return _mapper.Map<IReadOnlyCollection<BookEntityModel>>(books);
         }
@@ -41,28 +41,26 @@ namespace DataAccessLayer.Repositories
             }
 
             Expression<Func<Book, object>> orderByExp;
+            var name = nameof(Book.Name).ToUpper();
 
             orderBy = orderBy.ToUpper(CultureInfo.CurrentCulture);
 
-            if (orderBy == nameof(Book.Name).ToUpper())
+            switch (orderBy)
             {
-                orderByExp = entity => entity.Name;
-            }
-            else if (orderBy == nameof(Book.Text).ToUpper())
-            {
-                orderByExp = entity => entity.Text;
-            }
-            else if (orderBy == nameof(Book.Count).ToUpper())
-            {
-                orderByExp = entity => entity.Count;
-            }
-            else if (orderBy == nameof(Book.Id).ToUpper())
-            {
-                orderByExp = entity => entity.Id;
-            }
-            else
-            {
-                return await GetAllAsync();
+                case GeneralConfiguration.NameOfBookId:
+                    orderByExp = entity => entity.Id;
+                    break;
+                case GeneralConfiguration.NameOfBookName:
+                    orderByExp = entity => entity.Name;
+                    break;
+                case GeneralConfiguration.NameOfBookCount:
+                    orderByExp = entity => entity.Count;
+                    break;
+                case GeneralConfiguration.NameOfBookText:
+                    orderByExp = entity => entity.Text;
+                    break;
+                default:
+                    return await GetAllAsync();
             }
 
             var result = await _dbContext.Books.OrderBy(orderByExp).ToListAsync();
@@ -72,8 +70,7 @@ namespace DataAccessLayer.Repositories
 
         public async Task<BookEntityModel> GetByIdAsync(int bookId)
         {
-            var entity = await _dbContext.Books
-                .FirstOrDefaultAsync(b => b.Id == bookId);
+            var entity = await _dbContext.Books.FirstOrDefaultAsync(b => b.Id == bookId);
 
             return _mapper.Map<BookEntityModel>(entity);
         }

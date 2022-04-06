@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace OnlineLibraryPresentationLayer.Migrations
+namespace OnlineLibrary.PresentationLayer.Migrations
 {
     public partial class FKey : Migration
     {

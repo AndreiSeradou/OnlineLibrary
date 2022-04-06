@@ -1,5 +1,4 @@
-﻿using System;
-namespace Configuration.GeneralConfiguration
+﻿namespace OnlineLibrary.Configuration.GeneralConfiguration
 {
     public static class GeneralConfiguration
     {
@@ -23,5 +22,10 @@ namespace Configuration.GeneralConfiguration
         public const string MailSmtp = "smtp.gmail.com";
         public const string MailSubject = "Library alert";
         public const string Expression = "0/10 0/1 * 1/1 * ? *";
+        public const string EmailMessage = "Hello, {0}, book {1} expired, please come back the book.";
+        public const string NameOfBookId = "ID";
+        public const string NameOfBookName = "NAME";
+        public const string NameOfBookCount = "COUNT";
+        public const string NameOfBookText = "TEXT";
     }
 }

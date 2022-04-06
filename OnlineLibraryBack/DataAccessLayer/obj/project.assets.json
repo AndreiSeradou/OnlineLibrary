@@ -1613,14 +1613,14 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "Configuration/1.0.0": {
+      "OnlineLibrary.Configuration/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "compile": {
-          "bin/placeholder/Configuration.dll": {}
+          "bin/placeholder/OnlineLibrary.Configuration.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Configuration.dll": {}
+          "bin/placeholder/OnlineLibrary.Configuration.dll": {}
         }
       }
     }
@@ -6035,51 +6035,49 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
-    "Configuration/1.0.0": {
+    "OnlineLibrary.Configuration/1.0.0": {
       "type": "project",
-      "path": "../Configuration/Configuration.csproj",
-      "msbuildProject": "../Configuration/Configuration.csproj"
+      "path": "../Configuration/OnlineLibrary.Configuration.csproj",
+      "msbuildProject": "../Configuration/OnlineLibrary.Configuration.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "AutoMapper >= 11.0.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 11.0.0",
-      "Configuration >= 1.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 5.0.14",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.14",
+      "OnlineLibrary.Configuration >= 1.0.0",
       "Pomelo.EntityFrameworkCore.MySql >= 5.0.4"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {}
+    "/Users/kamron/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Desktop\\OnlineLibrary\\OnlineLibraryBack\\DataAccessLayer\\DataAccessLayer.csproj",
-      "projectName": "DataAccessLayer",
-      "projectPath": "C:\\Users\\user\\Desktop\\OnlineLibrary\\OnlineLibraryBack\\DataAccessLayer\\DataAccessLayer.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Desktop\\OnlineLibrary\\OnlineLibraryBack\\DataAccessLayer\\obj\\",
+      "projectUniqueName": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/OnlineLibrary.DataAccessLayer.csproj",
+      "projectName": "OnlineLibrary.DataAccessLayer",
+      "projectPath": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/OnlineLibrary.DataAccessLayer.csproj",
+      "packagesPath": "/Users/kamron/.nuget/packages/",
+      "outputPath": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/kamron/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\user\\Desktop\\OnlineLibrary\\OnlineLibraryBack\\Configuration\\Configuration.csproj": {
-              "projectPath": "C:\\Users\\user\\Desktop\\OnlineLibrary\\OnlineLibraryBack\\Configuration\\Configuration.csproj"
+            "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/OnlineLibrary.Configuration.csproj": {
+              "projectPath": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/OnlineLibrary.Configuration.csproj"
             }
           }
         }
@@ -6130,7 +6128,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.201/RuntimeIdentifierGraph.json"
       }
     }
   }

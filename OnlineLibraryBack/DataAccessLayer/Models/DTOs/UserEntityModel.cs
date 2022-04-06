@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using DataAccessLayer.Entities;
+using OnlineLibrary.DataAccessLayer.Entities;
 using Microsoft.AspNetCore.Identity;
 
-namespace DataAccessLayer.Models.DTOs
+namespace OnlineLibrary.DataAccessLayer.Models.DTOs
 {
     public class UserEntityModel : IdentityUser
     {

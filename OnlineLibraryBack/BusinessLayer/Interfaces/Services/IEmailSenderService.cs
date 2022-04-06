@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace BusinessLayer.Interfaces.Services
+namespace OnlineLibrary.BusinessLayer.Interfaces.Services
 {
     public interface IEmailSenderService
     {

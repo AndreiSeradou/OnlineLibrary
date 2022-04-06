@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Net.Mail;
 using System.Threading.Tasks;
-using BusinessLayer.Interfaces.Services;
-using Configuration.GeneralConfiguration;
-using DataAccessLayer.Data;
+using OnlineLibrary.BusinessLayer.Interfaces.Services;
+using OnlineLibrary.Configuration.GeneralConfiguration;
+using OnlineLibrary.DataAccessLayer.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace BusinessLayer.Services
+namespace OnlineLibrary.BusinessLayer.Services
 {
     public class EmailSenderService : IEmailSenderService
     {
@@ -42,7 +42,7 @@ namespace BusinessLayer.Services
                         var mail = new MailMessage(GeneralConfiguration.QuartzEmail, order.User.Email);
 
                         mail.Subject = GeneralConfiguration.MailSubject;
-                        mail.Body = $"Hello, {order.User.UserName}, book {order.Book.Name} expired, please come back the book.";
+                        mail.Body = string.Format(GeneralConfiguration.EmailMessage, order.User.UserName, order.Book.Name);
                         mail.IsBodyHtml = true;
 
                         await client.SendMailAsync(mail);

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
-using BusinessLayer.Interfaces.Services;
+using OnlineLibrary.BusinessLayer.Interfaces.Services;
 using Quartz;
 
-namespace OnlineLibraryPresentationLayer.Quartz.Service
+namespace OnlineLibrary.PresentationLayer.Quartz.Jobs
 {
     public class JobReminders : IJob
     {
@@ -16,7 +16,6 @@ namespace OnlineLibraryPresentationLayer.Quartz.Service
 
         public async Task Execute(IJobExecutionContext context)
         {
-            Console.WriteLine("send");
             await _emailSenderService.SendEmail();
         }
     }

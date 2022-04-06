@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
-using DataAccessLayer.Data;
-using DataAccessLayer.Entities;
-using DataAccessLayer.Interfaces.Repositories;
-using DataAccessLayer.Models.DTOs;
+using OnlineLibrary.DataAccessLayer.Data;
+using OnlineLibrary.DataAccessLayer.Entities;
+using OnlineLibrary.DataAccessLayer.Interfaces.Repositories;
+using OnlineLibrary.DataAccessLayer.Models.DTOs;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.Repositories
+namespace OnlineLibrary.DataAccessLayer.Repositories
 {
     public class UserRepository : IUserRepository
     {

@@ -1,0 +1,17 @@
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/OnlineLibrary.BusinessLayer.csproj.AssemblyReference.cache
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/OnlineLibrary.BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/OnlineLibrary.BusinessLayer.AssemblyInfoInputs.cache
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/OnlineLibrary.BusinessLayer.AssemblyInfo.cs
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/OnlineLibrary.BusinessLayer.csproj.CoreCompileInputs.cache
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/OnlineLibrary.BusinessLayer.deps.json
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/OnlineLibrary.BusinessLayer.dll
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/ref/OnlineLibrary.BusinessLayer.dll
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/OnlineLibrary.BusinessLayer.pdb
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/OnlineLibrary.Configuration.dll
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/OnlineLibrary.DataAccessLayer.dll
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/OnlineLibrary.Configuration.pdb
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/bin/Debug/net5.0/OnlineLibrary.DataAccessLayer.pdb
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/OnlineLibrary.BusinessLayer.csproj.CopyComplete
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/OnlineLibrary.BusinessLayer.dll
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/ref/OnlineLibrary.BusinessLayer.dll
+/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/Debug/net5.0/OnlineLibrary.BusinessLayer.pdb

@@ -1,8 +1,8 @@
-﻿using BusinessLayer.Models.DTOs;
+﻿using OnlineLibrary.BusinessLayer.Models.DTOs;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace BusinessLayer.Interfaces.Services
+namespace OnlineLibrary.BusinessLayer.Interfaces.Services
 {
     public interface IUserService
     {

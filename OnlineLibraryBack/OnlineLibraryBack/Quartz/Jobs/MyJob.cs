@@ -1,5 +1,5 @@
 ﻿using System;
-namespace OnlineLibraryPresentationLayer.Quartz.Jobs
+namespace OnlineLibrary.PresentationLayer.Quartz.Jobs
 {
     public class MyJob
     {

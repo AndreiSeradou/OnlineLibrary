@@ -1,13 +1,14 @@
-﻿using Configuration.GeneralConfiguration;
+﻿using OnlineLibrary.Configuration.GeneralConfiguration;
 using Microsoft.Extensions.DependencyInjection;
-using OnlineLibraryPresentationLayer.Mapping;
-using OnlineLibraryPresentationLayer.Quartz.Jobs;
-using OnlineLibraryPresentationLayer.Quartz.Service;
+using OnlineLibrary.PresentationLayer.Mapping;
+using OnlineLibrary.PresentationLayer.Quartz.Jobs;
+using OnlineLibrary.PresentationLayer.Quartz.HostedService;
 using Quartz;
 using Quartz.Impl;
 using Quartz.Spi;
+using OnlineLibrary.PresentationLayer.Quartz.JobsFactory;
 
-namespace OnlineLibraryPresentationLayer.Configuration
+namespace OnlineLibrary.PresentationLayer.Configuration
 {
     public static class DependenciesConfiguration
     {

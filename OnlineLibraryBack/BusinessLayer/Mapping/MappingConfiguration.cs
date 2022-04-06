@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
-using BusinessLayer.Models.DTOs;
-using DataAccessLayer.Entities;
-using DataAccessLayer.Models.DTOs;
+using OnlineLibrary.BusinessLayer.Models.DTOs;
+using OnlineLibrary.DataAccessLayer.Entities;
+using OnlineLibrary.DataAccessLayer.Models.DTOs;
 
-namespace BusinessLayer.Mapping
+namespace OnlineLibrary.BusinessLayer.Mapping
 {
     public class MappingBLConfiguration : Profile
     {
