@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/OnlineLibrary.Configuration.csproj": {}
+    "C:\\Users\\User\\Desktop\\Andrey\\OnlineLibrary\\OnlineLibraryBack\\Configuration\\OnlineLibrary.Configuration.csproj": {}
   },
   "projects": {
-    "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/OnlineLibrary.Configuration.csproj": {
+    "C:\\Users\\User\\Desktop\\Andrey\\OnlineLibrary\\OnlineLibraryBack\\Configuration\\OnlineLibrary.Configuration.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/OnlineLibrary.Configuration.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\Andrey\\OnlineLibrary\\OnlineLibraryBack\\Configuration\\OnlineLibrary.Configuration.csproj",
         "projectName": "OnlineLibrary.Configuration",
-        "projectPath": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/OnlineLibrary.Configuration.csproj",
-        "packagesPath": "/Users/kamron/.nuget/packages/",
-        "outputPath": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/obj/",
+        "projectPath": "C:\\Users\\User\\Desktop\\Andrey\\OnlineLibrary\\OnlineLibraryBack\\Configuration\\OnlineLibrary.Configuration.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\Andrey\\OnlineLibrary\\OnlineLibraryBack\\Configuration\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/kamron/.config/NuGet/NuGet.Config"
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -47,12 +49,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

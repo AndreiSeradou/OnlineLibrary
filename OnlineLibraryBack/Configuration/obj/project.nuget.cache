@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Q/juRho5Zrqln5nwT3HN6c80p61yDBcLyCNcHIVxBnfFU+oyeD6MNBWC1qHIbyzqLSrl+/2GsKRocuME8Zq/mg==",
+  "dgSpecHash": "7yxUIedtPspOCdDHoMEz1OlKKCbrGnpUMnaxcYRQV/ldjawJRgWMDrffhNvihdanPL+1OvB0pve5eXa52PQbUA==",
   "success": true,
-  "projectFilePath": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/OnlineLibrary.Configuration.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\User\\Desktop\\Andrey\\OnlineLibrary\\OnlineLibraryBack\\Configuration\\OnlineLibrary.Configuration.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

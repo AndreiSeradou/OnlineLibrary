@@ -10,3 +10,15 @@
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/obj/Debug/net5.0/OnlineLibrary.Configuration.dll
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/obj/Debug/net5.0/ref/OnlineLibrary.Configuration.dll
 /Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/obj/Debug/net5.0/OnlineLibrary.Configuration.pdb
+C:\Users\User\Desktop\Andrey\OnlineLibrary\OnlineLibraryBack\Configuration\bin\Debug\net5.0\OnlineLibrary.Configuration.deps.json
+C:\Users\User\Desktop\Andrey\OnlineLibrary\OnlineLibraryBack\Configuration\bin\Debug\net5.0\OnlineLibrary.Configuration.dll
+C:\Users\User\Desktop\Andrey\OnlineLibrary\OnlineLibraryBack\Configuration\bin\Debug\net5.0\ref\OnlineLibrary.Configuration.dll
+C:\Users\User\Desktop\Andrey\OnlineLibrary\OnlineLibraryBack\Configuration\bin\Debug\net5.0\OnlineLibrary.Configuration.pdb
+C:\Users\User\Desktop\Andrey\OnlineLibrary\OnlineLibraryBack\Configuration\obj\Debug\net5.0\OnlineLibrary.Configuration.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Andrey\OnlineLibrary\OnlineLibraryBack\Configuration\obj\Debug\net5.0\OnlineLibrary.Configuration.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Andrey\OnlineLibrary\OnlineLibraryBack\Configuration\obj\Debug\net5.0\OnlineLibrary.Configuration.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Andrey\OnlineLibrary\OnlineLibraryBack\Configuration\obj\Debug\net5.0\OnlineLibrary.Configuration.AssemblyInfo.cs
+C:\Users\User\Desktop\Andrey\OnlineLibrary\OnlineLibraryBack\Configuration\obj\Debug\net5.0\OnlineLibrary.Configuration.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Andrey\OnlineLibrary\OnlineLibraryBack\Configuration\obj\Debug\net5.0\OnlineLibrary.Configuration.dll
+C:\Users\User\Desktop\Andrey\OnlineLibrary\OnlineLibraryBack\Configuration\obj\Debug\net5.0\ref\OnlineLibrary.Configuration.dll
+C:\Users\User\Desktop\Andrey\OnlineLibrary\OnlineLibraryBack\Configuration\obj\Debug\net5.0\OnlineLibrary.Configuration.pdb

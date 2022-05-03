@@ -22,7 +22,7 @@ namespace OnlineLibrary.DataAccessLayer.Configuration
         public static IServiceCollection RegisterDbContext(this IServiceCollection serviceProvider, string connectionString)
         {
             serviceProvider.AddDbContext<ApiDbContext>(
-                options => options.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 17)),b => b.MigrationsAssembly("OnlineLibraryPresentationLayer")));
+                options => options.UseSqlServer(connectionString, b => b.MigrationsAssembly("OnlineLibraryPresentationLayer")));
 
 
             return serviceProvider;

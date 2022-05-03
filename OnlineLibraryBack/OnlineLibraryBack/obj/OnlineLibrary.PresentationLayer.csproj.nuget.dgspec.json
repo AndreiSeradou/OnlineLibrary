@@ -1,36 +1,38 @@
 {
   "format": 1,
   "restore": {
-    "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/OnlineLibraryBack/OnlineLibrary.PresentationLayer.csproj": {}
+    "C:\\Users\\User\\Desktop\\Andrey\\OnlineLibrary\\OnlineLibraryBack\\OnlineLibraryBack\\OnlineLibrary.PresentationLayer.csproj": {}
   },
   "projects": {
-    "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/OnlineLibrary.BusinessLayer.csproj": {
+    "C:\\Users\\User\\Desktop\\Andrey\\OnlineLibrary\\OnlineLibraryBack\\BusinessLayer\\OnlineLibrary.BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/OnlineLibrary.BusinessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\Andrey\\OnlineLibrary\\OnlineLibraryBack\\BusinessLayer\\OnlineLibrary.BusinessLayer.csproj",
         "projectName": "OnlineLibrary.BusinessLayer",
-        "projectPath": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/OnlineLibrary.BusinessLayer.csproj",
-        "packagesPath": "/Users/kamron/.nuget/packages/",
-        "outputPath": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/obj/",
+        "projectPath": "C:\\Users\\User\\Desktop\\Andrey\\OnlineLibrary\\OnlineLibraryBack\\BusinessLayer\\OnlineLibrary.BusinessLayer.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\Andrey\\OnlineLibrary\\OnlineLibraryBack\\BusinessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/kamron/.config/NuGet/NuGet.Config"
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/OnlineLibrary.Configuration.csproj": {
-                "projectPath": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/OnlineLibrary.Configuration.csproj"
+              "C:\\Users\\User\\Desktop\\Andrey\\OnlineLibrary\\OnlineLibraryBack\\Configuration\\OnlineLibrary.Configuration.csproj": {
+                "projectPath": "C:\\Users\\User\\Desktop\\Andrey\\OnlineLibrary\\OnlineLibraryBack\\Configuration\\OnlineLibrary.Configuration.csproj"
               },
-              "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/OnlineLibrary.DataAccessLayer.csproj": {
-                "projectPath": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/OnlineLibrary.DataAccessLayer.csproj"
+              "C:\\Users\\User\\Desktop\\Andrey\\OnlineLibrary\\OnlineLibraryBack\\DataAccessLayer\\OnlineLibrary.DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\User\\Desktop\\Andrey\\OnlineLibrary\\OnlineLibraryBack\\DataAccessLayer\\OnlineLibrary.DataAccessLayer.csproj"
               }
             }
           }
@@ -72,31 +74,47 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/OnlineLibrary.Configuration.csproj": {
+    "C:\\Users\\User\\Desktop\\Andrey\\OnlineLibrary\\OnlineLibraryBack\\Configuration\\OnlineLibrary.Configuration.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/OnlineLibrary.Configuration.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\Andrey\\OnlineLibrary\\OnlineLibraryBack\\Configuration\\OnlineLibrary.Configuration.csproj",
         "projectName": "OnlineLibrary.Configuration",
-        "projectPath": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/OnlineLibrary.Configuration.csproj",
-        "packagesPath": "/Users/kamron/.nuget/packages/",
-        "outputPath": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/obj/",
+        "projectPath": "C:\\Users\\User\\Desktop\\Andrey\\OnlineLibrary\\OnlineLibraryBack\\Configuration\\OnlineLibrary.Configuration.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\Andrey\\OnlineLibrary\\OnlineLibraryBack\\Configuration\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/kamron/.config/NuGet/NuGet.Config"
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -124,39 +142,55 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/OnlineLibrary.DataAccessLayer.csproj": {
+    "C:\\Users\\User\\Desktop\\Andrey\\OnlineLibrary\\OnlineLibraryBack\\DataAccessLayer\\OnlineLibrary.DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/OnlineLibrary.DataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\Andrey\\OnlineLibrary\\OnlineLibraryBack\\DataAccessLayer\\OnlineLibrary.DataAccessLayer.csproj",
         "projectName": "OnlineLibrary.DataAccessLayer",
-        "projectPath": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/OnlineLibrary.DataAccessLayer.csproj",
-        "packagesPath": "/Users/kamron/.nuget/packages/",
-        "outputPath": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/obj/",
+        "projectPath": "C:\\Users\\User\\Desktop\\Andrey\\OnlineLibrary\\OnlineLibraryBack\\DataAccessLayer\\OnlineLibrary.DataAccessLayer.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\Andrey\\OnlineLibrary\\OnlineLibraryBack\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/kamron/.config/NuGet/NuGet.Config"
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/OnlineLibrary.Configuration.csproj": {
-                "projectPath": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/OnlineLibrary.Configuration.csproj"
+              "C:\\Users\\User\\Desktop\\Andrey\\OnlineLibrary\\OnlineLibraryBack\\Configuration\\OnlineLibrary.Configuration.csproj": {
+                "projectPath": "C:\\Users\\User\\Desktop\\Andrey\\OnlineLibrary\\OnlineLibraryBack\\Configuration\\OnlineLibrary.Configuration.csproj"
               }
             }
           }
@@ -202,45 +236,61 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/OnlineLibraryBack/OnlineLibrary.PresentationLayer.csproj": {
+    "C:\\Users\\User\\Desktop\\Andrey\\OnlineLibrary\\OnlineLibraryBack\\OnlineLibraryBack\\OnlineLibrary.PresentationLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/OnlineLibraryBack/OnlineLibrary.PresentationLayer.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\Andrey\\OnlineLibrary\\OnlineLibraryBack\\OnlineLibraryBack\\OnlineLibrary.PresentationLayer.csproj",
         "projectName": "OnlineLibrary.PresentationLayer",
-        "projectPath": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/OnlineLibraryBack/OnlineLibrary.PresentationLayer.csproj",
-        "packagesPath": "/Users/kamron/.nuget/packages/",
-        "outputPath": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/OnlineLibraryBack/obj/",
+        "projectPath": "C:\\Users\\User\\Desktop\\Andrey\\OnlineLibrary\\OnlineLibraryBack\\OnlineLibraryBack\\OnlineLibrary.PresentationLayer.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\Andrey\\OnlineLibrary\\OnlineLibraryBack\\OnlineLibraryBack\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/kamron/.config/NuGet/NuGet.Config"
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/OnlineLibrary.BusinessLayer.csproj": {
-                "projectPath": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/BusinessLayer/OnlineLibrary.BusinessLayer.csproj"
+              "C:\\Users\\User\\Desktop\\Andrey\\OnlineLibrary\\OnlineLibraryBack\\BusinessLayer\\OnlineLibrary.BusinessLayer.csproj": {
+                "projectPath": "C:\\Users\\User\\Desktop\\Andrey\\OnlineLibrary\\OnlineLibraryBack\\BusinessLayer\\OnlineLibrary.BusinessLayer.csproj"
               },
-              "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/OnlineLibrary.Configuration.csproj": {
-                "projectPath": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/Configuration/OnlineLibrary.Configuration.csproj"
+              "C:\\Users\\User\\Desktop\\Andrey\\OnlineLibrary\\OnlineLibraryBack\\Configuration\\OnlineLibrary.Configuration.csproj": {
+                "projectPath": "C:\\Users\\User\\Desktop\\Andrey\\OnlineLibrary\\OnlineLibraryBack\\Configuration\\OnlineLibrary.Configuration.csproj"
               },
-              "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/OnlineLibrary.DataAccessLayer.csproj": {
-                "projectPath": "/Users/kamron/Desktop/OnlineLibrary/OnlineLibraryBack/DataAccessLayer/OnlineLibrary.DataAccessLayer.csproj"
+              "C:\\Users\\User\\Desktop\\Andrey\\OnlineLibrary\\OnlineLibraryBack\\DataAccessLayer\\OnlineLibrary.DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\User\\Desktop\\Andrey\\OnlineLibrary\\OnlineLibraryBack\\DataAccessLayer\\OnlineLibrary.DataAccessLayer.csproj"
               }
             }
           }
@@ -308,6 +358,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.12, 5.0.12]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -316,7 +384,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
